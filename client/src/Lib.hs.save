@@ -1,0 +1,22 @@
+module Lib
+  (mainMethod
+  )where
+
+
+import Network.HTTP
+import System.Environment           (getArgs, getProgName, lookupEnv)
+
+mainMethod :: String -> IO String
+mainMethod url = do
+ 
+
+getReadme :: IO String
+getReadme = do simpleHTTP (getRequest ("http://" ++ url ++ "/getREADME")) >>= getResponseBody
+
+searchMessage :: String -> IO String
+searchMessage name = 
+
+ -- simpleHTTP (getRequest ("http://" ++ url ++ "/load_environment_variables?name=David")) >>= getResponseBody 
+     simpleHTTP (getRequest ("http://" ++ url ++ "/performRESTCall")) >>=getResponseBody
+  -- simpleHTTP (postRequestWithBody ("http://" ++ url ++ "/storeMessage") ("application/json") ("{\"name\":\"David\",\"message\": \"hi\"}")) >>= getResponseBody 
+  -- simpleHTTP (getRequest ("http://" ++ url ++ "/searchMessage?name=David")) >>= getResponseBody 

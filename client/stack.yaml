@@ -36,12 +36,6 @@ resolver: lts-7.12
 # will not be run. This is useful for tweaking upstream packages.
 packages:
   - '.'
-  - location:
-      git: https://github.com/Palmik/bson-generic.git
-      commit: e078def65d0dee1ea7e3205f445e47d5937851f3
-  - location:
-      git: https://esjmb@bitbucket.org/esjmb/use-haskell-api.git
-      commit: a0d9e66
 # (e.g., acme-missiles-0.3)
 extra-deps: [servant-client-0.9.1.1, servant-0.9.1.1, servant-server-0.9.1.1, http-api-data-0.3.2]
 

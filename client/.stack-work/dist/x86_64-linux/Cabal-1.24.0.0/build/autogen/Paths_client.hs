@@ -29,11 +29,11 @@ version :: Version
 version = Version [0,1,0,0] []
 bindir, libdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "/root/client/.stack-work/install/x86_64-linux/lts-7.12/8.0.1/bin"
-libdir     = "/root/client/.stack-work/install/x86_64-linux/lts-7.12/8.0.1/lib/x86_64-linux-ghc-8.0.1/client-0.1.0.0-1JAj5tlaaKwDt62W2Bk2WH"
-datadir    = "/root/client/.stack-work/install/x86_64-linux/lts-7.12/8.0.1/share/x86_64-linux-ghc-8.0.1/client-0.1.0.0"
-libexecdir = "/root/client/.stack-work/install/x86_64-linux/lts-7.12/8.0.1/libexec"
-sysconfdir = "/root/client/.stack-work/install/x86_64-linux/lts-7.12/8.0.1/etc"
+bindir     = "/root/cs4032-Project/client/.stack-work/install/x86_64-linux/lts-7.12/8.0.1/bin"
+libdir     = "/root/cs4032-Project/client/.stack-work/install/x86_64-linux/lts-7.12/8.0.1/lib/x86_64-linux-ghc-8.0.1/client-0.1.0.0-EEgiCzJFiPjKJ5tOLpyGxs"
+datadir    = "/root/cs4032-Project/client/.stack-work/install/x86_64-linux/lts-7.12/8.0.1/share/x86_64-linux-ghc-8.0.1/client-0.1.0.0"
+libexecdir = "/root/cs4032-Project/client/.stack-work/install/x86_64-linux/lts-7.12/8.0.1/libexec"
+sysconfdir = "/root/cs4032-Project/client/.stack-work/install/x86_64-linux/lts-7.12/8.0.1/etc"
 
 getBinDir, getLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "client_bindir") (\_ -> return bindir)

@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-09 16:40:40.158895 UTC
+2016-12-12 14:07:26.580976 UTC
 
 interface main@main:Main 8001
-  interface hash: 5302e4f7cbbaf44c7557bd0e84e2336c
-  ABI hash: 34e004f7b6e5f1d4104e74f3c46ef621
+  interface hash: 95cb0928350b337e7117e8cdcb0a07fd
+  ABI hash: 56cea0156bf2a421fe9d22fef9f36577
   export-list hash: 273de555a1283a9fbc24187c11c3cad7
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: df440aaab301f2489aff57c04e5ae4f0
@@ -53,7 +53,7 @@ family instance modules: base-4.9.0.0:Control.Applicative
                          text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Lazy
 import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
-import  -/  client-0.1.0.0@client-0.1.0.0-EEgiCzJFiPjKJ5tOLpyGxs:Lib 180e8ba5edb38da60964b1c575085dca
+import  -/  client-0.1.0.0@client-0.1.0.0-EEgiCzJFiPjKJ5tOLpyGxs:Lib 585a38a47f0e4e60380ce8a137cf8c29
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
 d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule :: GHC.Types.Module
@@ -67,27 +67,23 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-d02f47ce3e2cba8040f4cc7ddac0c3b7
+59e1470d9a62285e30dd542afec2dd3b
   main :: GHC.Types.IO GHC.Base.String
-  {- Arity: 1,
+  {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
-                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R)) -}
-6e86d2b6cf229b06f129527cc2853b00
+                Lib.mainMethod1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R)) -}
+710aca99bf141afb2b3dfca0ae268dd1
   main1 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
-  {- Arity: 1, Unfolding: (Lib.mainMethod1 Main.main2) -}
-23d0f4c536db36f8a45a2fc6f6994434
-  main2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "10.62.0.213:8080"#) -}
-1838212244c3f1c534b28edb8b37615d
-  main3 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
   {- Arity: 1,
      Unfolding: (GHC.TopHandler.runMainIO1
                    @ GHC.Base.String
-                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R))) -}
+                   Lib.mainMethod1
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R))) -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:
