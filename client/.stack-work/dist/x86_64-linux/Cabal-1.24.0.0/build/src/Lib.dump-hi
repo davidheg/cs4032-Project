@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-12 14:07:24.696681 UTC
+2016-12-14 00:19:37.282571 UTC
 
-interface client-0.1.0.0-EEgiCzJFiPjKJ5tOLpyGxs:Lib 8001
-  interface hash: c47547c50d95a783ad4ff9992ab0c31e
-  ABI hash: 585a38a47f0e4e60380ce8a137cf8c29
-  export-list hash: 54bd50649a1e6344b02027bbc4d14be0
+interface client-0.1.0.0-E4EaKbmWGeo7fwWOCxfTyl:Lib 8001
+  interface hash: 3c6b4bc575d93bd6585db36543b3ba47
+  ABI hash: 86261540b3af3d02a6fb7d7877e803ff
+  export-list hash: d1ce1e70988f46e6010b73a997b6705c
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: b159a15c55fa7c6870cb2eb79bbae5a5
   sig of: Nothing
@@ -15,24 +15,64 @@ exports:
   Lib.mainMethod
 module dependencies:
 package dependencies: HTTP-4000.3.3@HTTP-4000.3.3-JMFhmeoXqbBIjfEWxmijf9
-                      array-0.5.1.1@array-0.5.1.1 base-4.9.0.0
+                      array-0.5.1.1@array-0.5.1.1
+                      asn1-encoding-0.9.4@asn1-encoding-0.9.4-2Zu5ldLYD571Aw26w0CWF6
+                      asn1-parse-0.9.4@asn1-parse-0.9.4-Ai83ACtrOir9VlSOQtWm2F
+                      asn1-types-0.3.2@asn1-types-0.3.2-4Rz223aP8OG6vnHYiLX5Ab
+                      async-2.1.1@async-2.1.1-xFiBzw9xoB8HPZAuxUY2o base-4.9.0.0
+                      base64-bytestring-1.0.0.1@base64-bytestring-1.0.0.1-In9M41tLtcS9QYt3QpGpNY
                       binary-0.8.3.0@binary-0.8.3.0
+                      blaze-builder-0.4.0.2@blaze-builder-0.4.0.2-KWDLbdBYSBoALiMW0LHIz1
+                      byteable-0.1.1@byteable-0.1.1-15aIBCArSOBEnGxArzrDTM
                       bytestring-0.10.8.1@bytestring-0.10.8.1
+                      case-insensitive-1.2.0.7@case-insensitive-1.2.0.7-FlqweN7AuKj9EdU2arVEt4
+                      cereal-0.5.4.0@cereal-0.5.4.0-2FJYHGgtE5C3SxaZjt25xS
+                      connection-0.2.6@connection-0.2.6-HdqI1haOFiwKHVrIKjItoA
                       containers-0.5.7.1@containers-0.5.7.1
-                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
-                      integer-gmp-1.0.0.1 mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM
+                      cookie-0.4.2.1@cookie-0.4.2.1-2a2c54yIyBn79Ul3iLWclJ
+                      cryptonite-0.19@cryptonite-0.19-G9PYO4oOEqhDTta2u9rAaU
+                      data-default-class-0.1.2.0@data-default-class-0.1.2.0-FYQpjIylblBDctdkHAFeXA
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 directory-1.2.6.2@directory-1.2.6.2
+                      exceptions-0.8.3@exceptions-0.8.3-7py7fmRxowDFpHmiHGKrTb
+                      filepath-1.4.1.0@filepath-1.4.1.0
+                      ghc-boot-th-8.0.1@ghc-boot-th-8.0.1 ghc-prim-0.5.0.0
+                      hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G
+                      hourglass-0.2.10@hourglass-0.2.10-I8h0J4RSF89FN6CuD9x2Xx
+                      http-client-0.4.31.2@http-client-0.4.31.2-81NyMkNcWWADaJ0Cq5FYRE
+                      http-client-tls-0.2.4.1@http-client-tls-0.2.4.1-IQsASD4utohJimtrNCGUuI
+                      http-types-0.9.1@http-types-0.9.1-8WdUZL4twHzANJbxvb1Aoj
+                      integer-gmp-1.0.0.1 memory-0.13@memory-0.13-ABHR5331zHK9scHPRr7afU
+                      mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM
                       network-2.6.3.1@network-2.6.3.1-G4Up1CPKbp7DeFsnywOnGG
                       network-uri-2.6.1.0@network-uri-2.6.1.0-DDHh2FNiPirBRgkuU9DEt2
                       parsec-3.1.11@parsec-3.1.11-BCos4GEVCuDB8dnOCBHO6X
+                      pem-0.2.2@pem-0.2.2-qPMQP6sZm3HgQEmiBojNt
+                      socks-0.5.5@socks-0.5.5-GieRokcgjQCIzUyRn9wVby
+                      stm-2.4.4.1@stm-2.4.4.1-4z2NRWnB0NIIUvSJsHW0kF
+                      streaming-commons-0.1.16@streaming-commons-0.1.16-KtRawhq8O97EWCabefpk66
+                      template-haskell-2.11.0.0
                       text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s
-                      transformers-0.5.2.0@transformers-0.5.2.0
+                      time-1.6.0.1@time-1.6.0.1
+                      tls-1.3.8@tls-1.3.8-5FNpX1ar5fUDvPXr9oTBwU
+                      transformers-0.5.2.0@transformers-0.5.2.0 unix-2.7.2.0@unix-2.7.2.0
+                      x509-1.6.5@x509-1.6.5-HjCowFpmcM8HnxtXMnFeKC
+                      x509-store-1.6.2@x509-store-1.6.2-7384mRFE6N95dT3g57GZ4k
+                      x509-system-1.6.4@x509-system-1.6.4-GZ2eHV03TV52Kz7CzPq5ks
+                      x509-validation-1.6.5@x509-validation-1.6.5-CWrkfsWQ7JuF1tW2ozdqZN
+                      zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV
 orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
          binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
          bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G:Data.Hashable.Generic
+         http-client-0.4.31.2@http-client-0.4.31.2-81NyMkNcWWADaJ0Cq5FYRE:Network.HTTP.Client.Request
          network-2.6.3.1@network-2.6.3.1-G4Up1CPKbp7DeFsnywOnGG:Network.Socket
+         stm-2.4.4.1@stm-2.4.4.1-4z2NRWnB0NIIUvSJsHW0kF:Control.Monad.STM
          text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
          text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Lazy
          text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Show
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
          transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
 family instance modules: base-4.9.0.0:Control.Applicative
                          base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
@@ -47,164 +87,156 @@ family instance modules: base-4.9.0.0:Control.Applicative
                          containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
                          containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         http-client-0.4.31.2@http-client-0.4.31.2-81NyMkNcWWADaJ0Cq5FYRE:Network.HTTP.Client
                          network-uri-2.6.1.0@network-uri-2.6.1.0-DDHh2FNiPirBRgkuU9DEt2:Network.URI
+                         template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
                          text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
                          text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Lazy
+                         zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
 import  -/  HTTP-4000.3.3@HTTP-4000.3.3-JMFhmeoXqbBIjfEWxmijf9:Network.HTTP 9b32c953a89e9a6b8e29f9b69b192142
 import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.IO.Handle.FD adf0145182d1c6eb38b2b8ce5a292e84
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  base-4.9.0.0:System.Environment ee0914a962f5508d0fd404c89ee4999b
+import  -/  base-4.9.0.0:System.IO eb1d40aa793a4047069a5023f2ebcfe3
+import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString 870c31f42ec324353c13bc791ac05fc3
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
-e759078d4d2c3593595a7394c5145c81
+import  -/  http-client-0.4.31.2@http-client-0.4.31.2-81NyMkNcWWADaJ0Cq5FYRE:Network.HTTP.Client 8c31602f44dbd2cc18bd07c76bc0453c
+import  -/  http-client-0.4.31.2@http-client-0.4.31.2-81NyMkNcWWADaJ0Cq5FYRE:Network.HTTP.Client.Body 669144f84754be87d4e00bf8b4212dfb
+import  -/  http-client-0.4.31.2@http-client-0.4.31.2-81NyMkNcWWADaJ0Cq5FYRE:Network.HTTP.Client.Core e5e437d7d6f54a94cf4ab897047596d3
+import  -/  http-client-0.4.31.2@http-client-0.4.31.2-81NyMkNcWWADaJ0Cq5FYRE:Network.HTTP.Client.Manager e07649b973bb21d02bf327f94e8a831b
+import  -/  http-client-0.4.31.2@http-client-0.4.31.2-81NyMkNcWWADaJ0Cq5FYRE:Network.HTTP.Client.Request 32fbf41df573bb4e687920d822667615
+import  -/  http-client-0.4.31.2@http-client-0.4.31.2-81NyMkNcWWADaJ0Cq5FYRE:Network.HTTP.Client.Types ea02a3fe82ef43f8a97ef8232c5415ba
+import  -/  http-client-tls-0.2.4.1@http-client-tls-0.2.4.1-IQsASD4utohJimtrNCGUuI:Network.HTTP.Client.TLS 52d6e9f186cb7205a7f4ab08457f9d2a
+import  -/  http-types-0.9.1@http-types-0.9.1-8WdUZL4twHzANJbxvb1Aoj:Network.HTTP.Types.Status 35195e448f2d9cabe4b416fff482e5fb
+ed5feb48469121f6cc36aa7c6dfb9e12
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module Lib.$trModule2 Lib.$trModule1) -}
-89bbbea4a7be947a2fa20288eb5a89e0
+09149dcf9c20e169a5ed780b031aa9ea
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Lib"#) -}
-21fb03977e87a8afcaee83e1d4b3857e
+180819b371873ceccb564b3051a8b8f4
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "client-0.1.0.0-EEgiCzJFiPjKJ5tOLpyGxs"#) -}
-6aa6140772d62e211a7ab0adb473d6fa
+                   "client-0.1.0.0-E4EaKbmWGeo7fwWOCxfTyl"#) -}
+4371997fa07282636ca89ce3896ee1fc
   mainMethod :: GHC.Types.IO GHC.Base.String
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.mainMethod1
                   `cast`
                 (Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R)) -}
-1bb3c050cd0588177e092354313956aa
+249c423695edfb96ba4fecff6f4a314e
   mainMethod1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case Network.HTTP.simpleHTTP1
-                        @ GHC.Base.String
-                        Network.TCP.$fHStream[]
-                        Lib.mainMethod12
+                 case Network.HTTP.Client.TLS.tlsManagerSettings of ww { Network.HTTP.Client.Types.ManagerSettings ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ->
+                 case Network.HTTP.Client.Manager.$wnewManager
+                        ww1
+                        ww2
+                        ww3
+                        ww4
+                        ww5
+                        ww6
+                        ww7
+                        ww8
+                        ww9
+                        ww10
+                        ww11
                         s of ds1 { (#,#) ipv ipv1 ->
-                 case ipv1 of wild {
-                   Data.Either.Left err
-                   -> GHC.Prim.raiseIO#
-                        @ GHC.Exception.SomeException
+                 case (Network.HTTP.Client.Request.parseRequest
+                         @ GHC.Types.IO
+                         Control.Monad.Catch.$fMonadThrowIO
+                         Lib.mainMethod11)
+                        `cast`
+                      (GHC.Types.N:IO[0] <Network.HTTP.Client.Types.Request>_R)
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case Control.Exception.Base.bracket1
+                        @ (Network.HTTP.Client.Types.Response
+                             Network.HTTP.Client.Types.BodyReader)
+                        @ ()
+                        @ ()
+                        (Network.HTTP.Client.Core.httpLbs3 ipv3 ipv1)
+                          `cast`
+                        (Sym (GHC.Types.N:IO[0]
+                                  <Network.HTTP.Client.Types.Response
+                                     Network.HTTP.Client.Types.BodyReader>_R))
+                        (Network.HTTP.Client.Types.responseClose'
+                           @ Network.HTTP.Client.Types.BodyReader)
+                          `cast`
+                        (<Network.HTTP.Client.Types.Response
+                            Network.HTTP.Client.Types.BodyReader>_R
+                         ->_R Network.HTTP.Client.Types.N:ResponseClose[0])
+                        Lib.mainMethod9
+                          `cast`
+                        (<Network.HTTP.Client.Types.Response
+                            Network.HTTP.Client.Types.BodyReader>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        Lib.mainMethod8
+                        GHC.Types.True
+                        ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                 case GHC.IO.Handle.Internals.wantReadableHandle_1
                         @ GHC.Base.String
-                        (GHC.IO.Exception.$fExceptionIOException_$ctoException
-                           (GHC.IO.Exception.IOError
-                              (GHC.Base.Nothing @ GHC.IO.Handle.Types.Handle)
-                              GHC.IO.Exception.UserError
-                              (GHC.Types.[] @ GHC.Types.Char)
-                              (Network.Stream.$fShowConnError_$cshow err)
-                              (GHC.Base.Nothing @ Foreign.C.Types.CInt)
-                              (GHC.Base.Nothing @ GHC.IO.FilePath)))
-                        ipv
-                   Data.Either.Right r
-                   -> case Network.HTTP.simpleHTTP1
-                             @ GHC.Base.String
-                             Network.TCP.$fHStream[]
-                             Lib.mainMethod8
-                             ipv of ds2 { (#,#) ipv2 ipv3 ->
-                      case ipv3 of wild1 {
-                        Data.Either.Left err
-                        -> GHC.Prim.raiseIO#
-                             @ GHC.Exception.SomeException
-                             @ GHC.Base.String
-                             (GHC.IO.Exception.$fExceptionIOException_$ctoException
-                                (GHC.IO.Exception.IOError
-                                   (GHC.Base.Nothing @ GHC.IO.Handle.Types.Handle)
-                                   GHC.IO.Exception.UserError
-                                   (GHC.Types.[] @ GHC.Types.Char)
-                                   (Network.Stream.$fShowConnError_$cshow err)
-                                   (GHC.Base.Nothing @ Foreign.C.Types.CInt)
-                                   (GHC.Base.Nothing @ GHC.IO.FilePath)))
-                             ipv2
-                        Data.Either.Right r1
+                        GHC.IO.Handle.Text.hGetLine4
+                        GHC.IO.Handle.FD.stdin
+                        GHC.IO.Handle.Text.hGetLine2
+                          `cast`
+                        (<GHC.IO.Handle.Types.Handle__>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <GHC.Base.String>_R))
+                        ipv6 of ds5 { (#,#) ipv8 ipv9 ->
+                 case GHC.Base.eqString ipv9 Lib.mainMethod7 of wild {
+                   GHC.Types.False
+                   -> case GHC.Base.eqString ipv9 Lib.mainMethod6 of wild1 {
+                        GHC.Types.False
+                        -> case Control.Exception.Base.patError
+                                  @ 'GHC.Types.PtrRepLifted
+                                  @ (GHC.Types.IO GHC.Base.String)
+                                  "src/Lib.hs:(38,1)-(39,38)|function selectTask"#
+                           ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Base.String #)
+                           of {}
+                        GHC.Types.True
                         -> case Network.HTTP.simpleHTTP1
                                   @ GHC.Base.String
                                   Network.TCP.$fHStream[]
-                                  Lib.mainMethod6
-                                  ipv2 of ds3 { (#,#) ipv4 ipv5 ->
-                           case ipv5 of wild2 {
-                             Data.Either.Left err
-                             -> GHC.Prim.raiseIO#
-                                  @ GHC.Exception.SomeException
-                                  @ GHC.Base.String
-                                  (GHC.IO.Exception.$fExceptionIOException_$ctoException
-                                     (GHC.IO.Exception.IOError
-                                        (GHC.Base.Nothing @ GHC.IO.Handle.Types.Handle)
-                                        GHC.IO.Exception.UserError
-                                        (GHC.Types.[] @ GHC.Types.Char)
-                                        (Network.Stream.$fShowConnError_$cshow err)
-                                        (GHC.Base.Nothing @ Foreign.C.Types.CInt)
-                                        (GHC.Base.Nothing @ GHC.IO.FilePath)))
-                                  ipv4
-                             Data.Either.Right r2
-                             -> case Network.HTTP.simpleHTTP1
-                                       @ GHC.Base.String
-                                       Network.TCP.$fHStream[]
-                                       Lib.mainMethod4
-                                       ipv4 of ds4 { (#,#) ipv6 ipv7 ->
-                                case ipv7 of wild3 {
-                                  Data.Either.Left err
-                                  -> GHC.Prim.raiseIO#
-                                       @ GHC.Exception.SomeException
-                                       @ GHC.Base.String
-                                       (GHC.IO.Exception.$fExceptionIOException_$ctoException
-                                          (GHC.IO.Exception.IOError
-                                             (GHC.Base.Nothing @ GHC.IO.Handle.Types.Handle)
-                                             GHC.IO.Exception.UserError
-                                             (GHC.Types.[] @ GHC.Types.Char)
-                                             (Network.Stream.$fShowConnError_$cshow err)
-                                             (GHC.Base.Nothing @ Foreign.C.Types.CInt)
-                                             (GHC.Base.Nothing @ GHC.IO.FilePath)))
-                                       ipv6
-                                  Data.Either.Right r3
-                                  -> case Network.HTTP.simpleHTTP1
-                                            @ GHC.Base.String
-                                            Network.TCP.$fHStream[]
-                                            Lib.mainMethod2
-                                            ipv6 of ds5 { (#,#) ipv8 ipv9 ->
-                                     Network.HTTP.getResponseBody1
-                                       @ GHC.Base.String
-                                       ipv9
-                                       ipv8 } } } } } } } } }) -}
-c578371c865adffc9c6cd4172172adeb
-  mainMethod10 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "application/json"#) -}
-6b952b3ce8d83150f1177dc49ac62ec9
-  mainMethod11 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "/storeMessage"#) -}
-2f35436800894c1ed0fa3df7e1d7cee0
-  mainMethod12 :: Network.HTTP.Base.Request GHC.Base.String
-  {- Unfolding: (case (Network.URI.isAbsoluteURI2
-                         @ Network.URI.URI
-                         Network.URI.isURI1
-                           `cast`
-                         (Sym (Text.Parsec.Prim.N:ParsecT[0]
-                                   <[GHC.Types.Char]>_R
-                                   <()>_R
-                                   <Data.Functor.Identity.Identity>_R
-                                   <Network.URI.URI>_R))
-                         (GHC.Types.[] @ GHC.Types.Char)
-                         Lib.mainMethod_w4)
-                        `cast`
-                      (Data.Functor.Identity.N:Identity[0]
-                           <Data.Either.Either
-                              Text.Parsec.Error.ParseError Network.URI.URI>_R) of wild {
-                   Data.Either.Left ds -> Network.HTTP.getRequest1 Lib.mainMethod_w4
-                   Data.Either.Right u
-                   -> Network.HTTP.Base.Request
+                                  Lib.mainMethod4
+                                  ipv8 of ds6 { (#,#) ipv10 ipv11 ->
+                           Network.HTTP.getResponseBody1 @ GHC.Base.String ipv11 ipv10 } }
+                   GHC.Types.True
+                   -> case Network.HTTP.simpleHTTP1
+                             @ GHC.Base.String
+                             Network.TCP.$fHStream[]
+                             Lib.mainMethod2
+                             ipv8 of ds6 { (#,#) ipv10 ipv11 ->
+                      Network.HTTP.getResponseBody1
                         @ GHC.Base.String
-                        u
-                        Network.HTTP.Base.GET
-                        Network.HTTP.Base.defaultGETRequest1
-                        (GHC.Types.[] @ GHC.Types.Char) }) -}
-2322533727f609a2350e77a511177e1d
-  mainMethod13 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "/getREADME"#) -}
-d9921f4491cdde5daa3691e4f23cda2e
+                        ipv11
+                        ipv10 } } } } } } } }) -}
+d493fc93ad07a4b6e9229129ad447ef8
+  mainMethod10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "\n\
+                   \Finished response body"#) -}
+a861a546272b80260631f617b220577d
+  mainMethod11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.Base.++
+                   @ GHC.Types.Char
+                   Lib.server
+                   Lib.mainMethod12) -}
+2b9be149a1a54f910c583d145f8cd45b
+  mainMethod12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   "/searchMessage?name=David"#) -}
+012fd315b249205ddef5f1739f0f2c99
   mainMethod2 :: Network.HTTP.Base.Request GHC.Base.String
   {- Unfolding: (case (Network.URI.isAbsoluteURI2
                          @ Network.URI.URI
@@ -229,10 +261,10 @@ d9921f4491cdde5daa3691e4f23cda2e
                         Network.HTTP.Base.GET
                         Network.HTTP.Base.defaultGETRequest1
                         (GHC.Types.[] @ GHC.Types.Char) }) -}
-dad30fe0f43eaf7f1a3b18f9abb00776
+e5263af1fca1202ef5e72d2fd5efd234
   mainMethod3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "/performRESTCall"#) -}
-b6cc7113b0d209835d31726cd49dbc9d
+f7b4edd3f69b09742a0af1a02732255c
   mainMethod4 :: Network.HTTP.Base.Request GHC.Base.String
   {- Unfolding: (case (Network.URI.isAbsoluteURI2
                          @ Network.URI.URI
@@ -257,104 +289,95 @@ b6cc7113b0d209835d31726cd49dbc9d
                         Network.HTTP.Base.GET
                         Network.HTTP.Base.defaultGETRequest1
                         (GHC.Types.[] @ GHC.Types.Char) }) -}
-e90dd30cb3e62493632cf58480586fbb
+c7c70d4dbbd1e9f3a9f71cc3c2acf017
   mainMethod5 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString#
-                   "/load_environment_variables?name=David"#) -}
-6212a13a3ca7d6a7f464f4c4cc560cbf
-  mainMethod6 :: Network.HTTP.Base.Request GHC.Base.String
-  {- Unfolding: (case (Network.URI.isAbsoluteURI2
-                         @ Network.URI.URI
-                         Network.URI.isURI1
-                           `cast`
-                         (Sym (Text.Parsec.Prim.N:ParsecT[0]
-                                   <[GHC.Types.Char]>_R
-                                   <()>_R
-                                   <Data.Functor.Identity.Identity>_R
-                                   <Network.URI.URI>_R))
-                         (GHC.Types.[] @ GHC.Types.Char)
-                         Lib.mainMethod_w2)
-                        `cast`
-                      (Data.Functor.Identity.N:Identity[0]
-                           <Data.Either.Either
-                              Text.Parsec.Error.ParseError Network.URI.URI>_R) of wild {
-                   Data.Either.Left ds -> Network.HTTP.getRequest1 Lib.mainMethod_w2
-                   Data.Either.Right u
-                   -> Network.HTTP.Base.Request
-                        @ GHC.Base.String
-                        u
-                        Network.HTTP.Base.GET
-                        Network.HTTP.Base.defaultGETRequest1
-                        (GHC.Types.[] @ GHC.Types.Char) }) -}
-fc3238e8371314269b9a6efa015523b0
+  {- Unfolding: (GHC.CString.unpackCString# "/getREADME"#) -}
+445c982c4f6233f5c7cf49d8e75ef13a
+  mainMethod6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "getReadme"#) -}
+cfdb630545ab80c79e4ac831462b9adf
   mainMethod7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "REST"#) -}
+979c0619d9b780be518e84faafc114a3
+  mainMethod8 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
-                   "/searchMessage?name=David"#) -}
-4f8bedebc2ef98655c1cc108d1399480
-  mainMethod8 :: Network.HTTP.Base.Request GHC.Base.String
-  {- Unfolding: (case (Network.URI.isAbsoluteURI2
-                         @ Network.URI.URI
-                         Network.URI.isURI1
-                           `cast`
-                         (Sym (Text.Parsec.Prim.N:ParsecT[0]
-                                   <[GHC.Types.Char]>_R
-                                   <()>_R
-                                   <Data.Functor.Identity.Identity>_R
-                                   <Network.URI.URI>_R))
-                         (GHC.Types.[] @ GHC.Types.Char)
-                         Lib.mainMethod_w3)
-                        `cast`
-                      (Data.Functor.Identity.N:Identity[0]
-                           <Data.Either.Either
-                              Text.Parsec.Error.ParseError Network.URI.URI>_R) of wild {
-                   Data.Either.Left ds
-                   -> Network.HTTP.postRequestWithBody1 Lib.mainMethod_w3
-                   Data.Either.Right u
-                   -> case Network.HTTP.Base.$wsetRequestBody
-                             (Network.HTTP.Base.Request
-                                @ GHC.Base.String
-                                u
-                                Network.HTTP.Base.POST
-                                Network.HTTP.Base.defaultGETRequest1
-                                (GHC.Types.[] @ GHC.Types.Char))
-                             Lib.mainMethod10
-                             Lib.mainMethod9 of ww { (#,,,#) ww1 ww2 ww3 ww4 ->
-                      Network.HTTP.Base.Request @ GHC.Base.String ww1 ww2 ww3 ww4 } }) -}
-0e204951c53d34b2bbfaff7f74248888
-  mainMethod9 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString#
-                   "{\"name\":\"David\",\"message\": \"Hello\"}"#) -}
-8c450a972cf3eb73f037f1fe911ed52c
+                   "Please enter what task you wish to perform"#) -}
+673b507978e7665db5205c2a06c8f4d4
+  mainMethod9 ::
+    Network.HTTP.Client.Types.Response
+      Network.HTTP.Client.Types.BodyReader
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2,
+     Unfolding: (\ (response :: Network.HTTP.Client.Types.Response
+                                  Network.HTTP.Client.Types.BodyReader)[OneShot]
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        (GHC.CString.unpackAppendCString#
+                           "The status code was: "#
+                           (case response of wild { Network.HTTP.Client.Types.Response ds1 ds2 ds3 ds4 ds5 ds6 ->
+                            case ds1 of wild1 { Network.HTTP.Types.Status.Status ds7 ds8 ->
+                            case ds7 of ww2 { GHC.Types.I# ww3 ->
+                            case GHC.Show.$wshowSignedInt
+                                   0#
+                                   ww3
+                                   (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                            GHC.Types.: @ GHC.Types.Char ww5 ww6 } } } }))
+                        GHC.Types.True
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 letrec {
+                   loop :: GHC.Prim.State# GHC.Prim.RealWorld
+                           -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     {- Arity: 1, Strictness: <S,U> -}
+                   = \ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case response of wild { Network.HTTP.Client.Types.Response ds2 ds3 ds4 ds5 ds6 ds7 ->
+                     case ds5
+                            `cast`
+                          (GHC.Types.N:IO[0] <Data.ByteString.Internal.ByteString>_R)
+                            s1 of ds8 { (#,#) ipv2 ipv3 ->
+                     case ipv3 of wild1 { Data.ByteString.Internal.PS dt dt1 dt2 dt3 ->
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.<=# dt3 0#) of wild2 {
+                       GHC.Types.False
+                       -> case dt3 of ds {
+                            DEFAULT
+                            -> case GHC.IO.Handle.Text.$whPutBuf'
+                                      @ GHC.Prim.Any
+                                      GHC.IO.Handle.FD.stdout
+                                      (GHC.Ptr.Ptr @ GHC.Prim.Any (GHC.Prim.plusAddr# dt dt2))
+                                      ds
+                                      GHC.Types.True
+                                      ipv2 of ds9 { (#,#) ipv4 ipv5 ->
+                               case GHC.Prim.touch#
+                                      @ 'GHC.Types.PtrRepLifted
+                                      @ GHC.ForeignPtr.ForeignPtrContents
+                                      dt1
+                                      ipv4 of s' { DEFAULT ->
+                               loop s' } }
+                            0# -> loop ipv2 }
+                       GHC.Types.True
+                       -> GHC.IO.Handle.Text.hPutStr2
+                            GHC.IO.Handle.FD.stdout
+                            Lib.mainMethod10
+                            GHC.Types.True
+                            ipv2 } } } }
+                 } in
+                 loop ipv }) -}
+e21b62503f8c610b36fbee0a57e84407
   mainMethod_w :: GHC.Base.String
   {- Unfolding: (GHC.Base.++
                    @ GHC.Types.Char
                    Lib.server
                    Lib.mainMethod3) -}
-352d85646fb0d9b7ae0375538ecb092b
+716d4ebf15cd9e58e950fa175bfc9fb2
   mainMethod_w1 :: GHC.Base.String
   {- Unfolding: (GHC.Base.++
                    @ GHC.Types.Char
                    Lib.server
                    Lib.mainMethod5) -}
-1e6dd430ce801a1c33d083ff0a455ab5
-  mainMethod_w2 :: GHC.Base.String
-  {- Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Lib.server
-                   Lib.mainMethod7) -}
-66df23c760325628efc4005eeaea0e53
-  mainMethod_w3 :: GHC.Base.String
-  {- Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Lib.server
-                   Lib.mainMethod11) -}
-823fa7300e5a834d970c3442507b280b
-  mainMethod_w4 :: GHC.Base.String
-  {- Unfolding: (GHC.Base.++
-                   @ GHC.Types.Char
-                   Lib.server
-                   Lib.mainMethod13) -}
-1f1cab442bd87cbd3df6d2b808d2e154
+4bf9d5e67e3b031bd38cc12c49dbccc2
   server :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "http://10.62.0.213:8080"#) -}

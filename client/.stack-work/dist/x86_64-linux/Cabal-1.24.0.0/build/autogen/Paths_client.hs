@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/root/cs4032-Project/client/.stack-work/install/x86_64-linux/lts-7.12/8.0.1/bin"
-libdir     = "/root/cs4032-Project/client/.stack-work/install/x86_64-linux/lts-7.12/8.0.1/lib/x86_64-linux-ghc-8.0.1/client-0.1.0.0-EEgiCzJFiPjKJ5tOLpyGxs"
+libdir     = "/root/cs4032-Project/client/.stack-work/install/x86_64-linux/lts-7.12/8.0.1/lib/x86_64-linux-ghc-8.0.1/client-0.1.0.0-E4EaKbmWGeo7fwWOCxfTyl"
 datadir    = "/root/cs4032-Project/client/.stack-work/install/x86_64-linux/lts-7.12/8.0.1/share/x86_64-linux-ghc-8.0.1/client-0.1.0.0"
 libexecdir = "/root/cs4032-Project/client/.stack-work/install/x86_64-linux/lts-7.12/8.0.1/libexec"
 sysconfdir = "/root/cs4032-Project/client/.stack-work/install/x86_64-linux/lts-7.12/8.0.1/etc"
