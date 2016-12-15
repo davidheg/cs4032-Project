@@ -18,10 +18,12 @@ library
   exposed-modules:     Lib
   build-depends: base >= 4.7 && < 5,
                  HTTP,
+                 http-conduit,
                  http-client,
                  http-client-tls,
                  http-types,
-                 bytestring
+                 bytestring,
+                 aeson
   default-language:    Haskell2010
 
 executable client-exe

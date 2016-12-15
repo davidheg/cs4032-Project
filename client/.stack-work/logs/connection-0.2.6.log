@@ -20,5 +20,5 @@ Network/Connection.hs:339:21: warning: [-Wdeprecations]
     In the use of ‘breakByte’ (imported from Data.ByteString):
     Deprecated: "It is an internal function and should never have been exported. Use 'break (== x)' instead. (There are rewrite rules that handle this special case of 'break'.)"
 Installing library in
-/root/.stack/snapshots/x86_64-linux/lts-7.12/8.0.1/lib/x86_64-linux-ghc-8.0.1/connection-0.2.6-HdqI1haOFiwKHVrIKjItoA
+/home/dheg/.stack/snapshots/x86_64-linux/lts-7.12/8.0.1/lib/x86_64-linux-ghc-8.0.1/connection-0.2.6-HdqI1haOFiwKHVrIKjItoA
 Registering connection-0.2.6...
