@@ -12,6 +12,7 @@ module UseHaskellAPI where
 
 import           Data.Aeson
 import           Data.Aeson.TH
+import 			 Data.ByteString
 import           Data.Bson.Generic
 import           GHC.Generics
 import           Servant
@@ -31,11 +32,32 @@ data Message = Message { name    :: String
 deriving instance FromBSON String  -- we need these as BSON does not provide
 deriving instance ToBSON   String
 
+data File = File { filename :: String
+                 , path :: String
+                 , user :: String
+                 , contents :: ByteString
+                 } deriving (Show, Generic, FromJSON, ToJSON)
+
+instance ToJSON File where
+
+    toJSON (File filename path user contents ) =
+        object ["filename" .= filename, "path" .= path, "user" .= user, contents .= "contents"]
+
+instance FromJSON File where
+  parseJSON (Object v) = File    <$>
+                         v .: "filename" <*>
+                         v .: "path"
+                         v .: "user"
+                         v .: "contents"
+
+
 -- | We will also define a simple data type for returning data from a REST call, again with nothing special or
 -- particular in the response, but instead merely as a demonstration.
 
 data ResponseData = ResponseData { response :: String
                                  } deriving (Generic, ToJSON, FromJSON,FromBSON, Show)
+
+
 
 -- | Next we will define the API for the REST service. This is defined as a 'type' using a special syntax from the
 -- Servant Library. A REST endpoint is defined by chaining together a series of elements in the format `A :> B :> C`. A
@@ -52,3 +74,4 @@ type API = "load_environment_variables" :> QueryParam "name" String :> Get '[JSO
       :<|> "storeMessage"               :> ReqBody '[JSON] Message  :> Post '[JSON] Bool
       :<|> "searchMessage"              :> QueryParam "name" String :> Get '[JSON] [Message]
       :<|> "performRESTCall"            :> QueryParam "filter" String  :> Get '[JSON] ResponseData
+      :<|> "uploadFile"                 :> ReqBody '[JSON] File  :> Post '[JSON] Bool

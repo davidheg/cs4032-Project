@@ -17,6 +17,7 @@ import System.IO                 (stdout)
 import Data.Aeson   
 import GHC.Generics
 import Data.List
+import System.Exit
 
 ip_address = "192.168.60.128"
 port_number = 8080
@@ -51,6 +52,7 @@ selectTask parameters
             |isPrefixOf "storeMessage" parameters = storeMessage (drop 13 parameters)
             |isPrefixOf "loadEnvironmentVar" parameters = loadEnvironmentVar (drop 19 parameters)
             |isPrefixOf "doRestCall" parameters = doRestCall (Just ((drop 11 parameters)))
+            |parameters == "exit" = exitWith ExitSuccess
 
 outputResponse ::Network.HTTP.Client.Response BodyReader -> IO ()
 outputResponse response = do 
