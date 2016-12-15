@@ -63,6 +63,13 @@
   (major1) == 0 && (major2) <  9 || \
   (major1) == 0 && (major2) == 9 && (minor) <= 1)
 
+/* package split-0.2.3.1 */
+#define VERSION_split "0.2.3.1"
+#define MIN_VERSION_split(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  2 || \
+  (major1) == 0 && (major2) == 2 && (minor) <= 3)
+
 /* tool gcc-5.4.0 */
 #define TOOL_VERSION_gcc "5.4.0"
 #define MIN_TOOL_VERSION_gcc(major1,major2,minor) (\
@@ -119,7 +126,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "client-0.1.0.0-2okKN25nz0c3QaAajkcp9F"
+#define CURRENT_COMPONENT_ID "client-0.1.0.0-HKICQZRSEVqDYM24NkvIaM"
 
-#define CURRENT_PACKAGE_KEY "client-0.1.0.0-2okKN25nz0c3QaAajkcp9F"
+#define CURRENT_PACKAGE_KEY "client-0.1.0.0-HKICQZRSEVqDYM24NkvIaM"
 

@@ -1,5 +1,6 @@
 {-# LANGUAGE DeriveGeneric #-}
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE DeriveAnyClass     #-}
 
 module Lib
   (mainMethod
@@ -15,37 +16,41 @@ import System.Environment      (getArgs, getProgName, lookupEnv)
 import System.IO                 (stdout)
 import Data.Aeson   
 import GHC.Generics
+import Data.List
 
 ip_address = "192.168.60.128"
 port_number = 8080
 server = "http://192.168.60.128:8080"
 
-data Message = Message {
-      name :: String
-    , message  :: String
-} deriving (Generic, Show)
+data Message = Message { name    :: String
+                       , message :: String
+                       } deriving (Show, Generic)
 
 instance ToJSON Message where
 
-    toJSON (Message name age) =
-        object ["name" .= name, "age" .= age]
+    toJSON (Message name message) =
+        object ["name" .= name, "message" .= message]
 
 mainMethod :: IO()
 mainMethod = do
-           --request <- parseRequest (server ++ "/searchMessage?name=David")
-           --withResponse request manager $ \response -> do
            manager <- newManager tlsManagerSettings
            setGlobalManager manager
-           --putStrLn "Please enter what task you wish to perform"
-           --name <- getLine
-           --selectTask name
-           storeMessage "David" "Hi"
-           --mainMethod
+           startLoop 
+
+startLoop :: IO()
+startLoop = do
+           putStrLn "Please enter what task you wish to perform"
+           name <- getLine
+           selectTask name
+           startLoop
 
 selectTask :: String -> IO ()
 selectTask "getReadme" = getReadme
---selectTask "REST" = doRestCall Nothing
---selectTask _ = select
+selectTask parameters
+            |isPrefixOf "searchMessage" parameters = searchMessage (drop 14 parameters)
+            |isPrefixOf "storeMessage" parameters = storeMessage (drop 13 parameters)
+            |isPrefixOf "loadEnvironmentVar" parameters = loadEnvironmentVar (drop 19 parameters)
+            |isPrefixOf "doRestCall" parameters = doRestCall (Just ((drop 11 parameters)))
 
 outputResponse ::Network.HTTP.Client.Response BodyReader -> IO ()
 outputResponse response = do 
@@ -71,22 +76,35 @@ searchMessage name = do
                 withResponse request manager $ \response  -> do
                   outputResponse response
 
-storeMessage :: String -> String -> IO()
-storeMessage name message = do
+storeMessage :: String -> IO()
+storeMessage inputs = do
+                  print inputs
+                  let strings = words inputs
+                  let name = strings !! 0
+                  let message = strings !! 1
                   initialRequest <-  parseRequest ("POST " ++ server ++ "/storeMessage")
-                  let request= setRequestBodyJSON message initialRequest
+                  let newMessage = Message name message
+                  let request= setRequestBodyJSON newMessage initialRequest
                   manager <- getGlobalManager
                   withResponse request manager $ \response  -> do
                     outputResponse response
 
---loadEnvironmentVar :: String -> IO String
---loadEnvironmentVar name = do
-  --                simpleHTTP (getRequest (server ++ "/load_environment_variables?name=" ++ name)) >>= getResponseBody
+loadEnvironmentVar :: String -> IO()
+loadEnvironmentVar var = do
+                  request <- parseRequest (server ++ "/load_environment_variables?name=" ++ var)
+                  manager <- getGlobalManager
+                  withResponse request manager $ \response  -> do
+                    outputResponse response
 
---doRestCall :: Maybe String -> IO String
---doRestCall (Just filter) = do
---                       simpleHTTP (getRequest (server ++ "/performRESTCall?filter=" ++ filter)) >>=getResponseBody
---doRestCall Nothing = do
---            simpleHTTP (getRequest (server  ++ "/performRESTCall")) >>=getResponseBody
-
+doRestCall :: Maybe String -> IO()
+doRestCall (Just filter) = do
+                            request <- parseRequest (server ++ "/performRESTCall?filer=" ++ filter)
+                            manager <- getGlobalManager
+                            withResponse request manager $ \response  -> do
+                              outputResponse response
+doRestCall Nothing = do
+                      request <- parseRequest (server ++ "/performRESTCall")
+                      manager <- getGlobalManager
+                      withResponse request manager $ \response  -> do
+                        outputResponse response
 
