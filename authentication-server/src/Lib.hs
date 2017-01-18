@@ -32,7 +32,7 @@ module Lib
 -- must be prefixed with `Y.`. One can always prefix a libraries functions with the import string, when calling them.
 -- You will occasionally have reason to import libraries that have common function names by coincidence. You can use
 -- qualified imports of full prefixes to disambiguate. The compiler will tell you where the problem is if this occurs.
-
+import           UseHaskellAPI
 import           Control.Concurrent           (forkIO, threadDelay)
 import           Control.Monad                (when)
 import           Control.Monad.IO.Class
@@ -64,7 +64,6 @@ import           System.Log.Handler           (setFormatter)
 import           System.Log.Handler.Simple
 import           System.Log.Handler.Syslog
 import           System.Log.Logger
-import           UseHaskellAPI
 
 -- | The Servant library has a very elegant model for defining a REST API. We shall demonstrate here. First, we shall
 -- define the data types that will be passed in the REST calls. We will define a simple data type that passes some data
@@ -134,6 +133,8 @@ import           UseHaskellAPI
 -- I have added a second scheduled thread tot he startApp function to demonstrate how one can create a mutithteaded
 -- server. The taskScheduler function is launched before teh startApp function enters its rest loop. The taskScheduler
 -- function simply perfroms a loop with a 5 second delay, outputting a warning to the log on each pass.
+
+
 startApp :: IO ()    -- set up wai logger for service to output apache style logging for rest calls
 startApp = withLogging $ \ aplogger -> do
   warnLog "Starting use-haskell."
@@ -173,6 +174,7 @@ server = loadEnvironmentVariable
     :<|> storeMessage
     :<|> searchMessage
     :<|> performRESTCall
+    :<|> uploadFile
 
   where
     -- | where is just a way of ensuring that the following functions are scoped to the server function. Each function
@@ -224,6 +226,7 @@ server = loadEnvironmentVariable
     --   ResponseData getREADME ( ){
     --         // code goes here
     --   }
+
 
     getREADME, getREADME' :: Handler ResponseData -- fns with no input, second getREADME' is for demo below
     getREADME = liftIO $ do
@@ -346,6 +349,17 @@ server = loadEnvironmentVariable
       where env = do
              manager <- newManager defaultManagerSettings
              return (SC.ClientEnv manager (SC.BaseUrl SC.Http "hackage.haskell.org" 80 ""))
+
+    uploadFile :: UserFile -> Handler Bool
+    uploadFile file@(UserFile key _ _ _) = liftIO $ do
+      warnLog $ "Storing file under key " ++ key ++ "."
+
+      -- upsert creates a new record if the identified record does not exist, or if
+      -- it does exist, it updates the record with the passed document content
+      -- As you can see, this takes a single line of code
+      withMongoDbConnection $ upsert (select ["filename" =: key] "MESSAGE_RECORD") $ toBSON file
+
+      return True  -- as this is a simple demo I'm not checking anything
 
 
 -- What follows next is some helper function code that makes it easier to do warious things such as use

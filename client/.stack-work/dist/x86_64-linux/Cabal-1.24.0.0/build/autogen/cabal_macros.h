@@ -14,6 +14,13 @@
   (major1) == 4000 && (major2) <  3 || \
   (major1) == 4000 && (major2) == 3 && (minor) <= 3)
 
+/* package MissingH-1.4.0.1 */
+#define VERSION_MissingH "1.4.0.1"
+#define MIN_VERSION_MissingH(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  4 || \
+  (major1) == 1 && (major2) == 4 && (minor) <= 0)
+
 /* package aeson-0.11.2.1 */
 #define VERSION_aeson "0.11.2.1"
 #define MIN_VERSION_aeson(major1,major2,minor) (\
@@ -69,6 +76,13 @@
   (major1) <  0 || \
   (major1) == 0 && (major2) <  2 || \
   (major1) == 0 && (major2) == 2 && (minor) <= 3)
+
+/* package use-haskell-api-0.1.0.0 */
+#define VERSION_use_haskell_api "0.1.0.0"
+#define MIN_VERSION_use_haskell_api(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  1 || \
+  (major1) == 0 && (major2) == 1 && (minor) <= 0)
 
 /* tool gcc-5.4.0 */
 #define TOOL_VERSION_gcc "5.4.0"
@@ -126,7 +140,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "client-0.1.0.0-HKICQZRSEVqDYM24NkvIaM"
+#define CURRENT_COMPONENT_ID "client-0.1.0.0-9XGaYTNnsYoFH8RofQzZNs"
 
-#define CURRENT_PACKAGE_KEY "client-0.1.0.0-HKICQZRSEVqDYM24NkvIaM"
+#define CURRENT_PACKAGE_KEY "client-0.1.0.0-9XGaYTNnsYoFH8RofQzZNs"
 

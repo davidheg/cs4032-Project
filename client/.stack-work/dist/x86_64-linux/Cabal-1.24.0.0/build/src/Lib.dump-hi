@@ -1,13 +1,13 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-15 20:41:32.322124 UTC
+2017-01-18 20:11:59.021828 UTC
 
-interface client-0.1.0.0-HKICQZRSEVqDYM24NkvIaM:Lib [family instance module] 8001
-  interface hash: b37dd59b0c24544bf7d5e9f5353b1a06
-  ABI hash: 3db8ee1e5c65b3837ff63d9f42f0eabd
-  export-list hash: 66787f67b4b446400ecd91cd77c7eca2
+interface client-0.1.0.0-9XGaYTNnsYoFH8RofQzZNs:Lib 8001
+  interface hash: 5445a43271a1d398f7df2bd36010f759
+  ABI hash: 7259b88674689524447cab59977e2559
+  export-list hash: 9cc4ff12ddad29473e75bebc349c379b
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
-  flag hash: 1f2e0c279c450a753672b3310efab2a1
+  flag hash: 572b5b759962bfb7b26242ee5d07baf1
   sig of: Nothing
   used TH splices: False
   where
@@ -15,6 +15,7 @@ exports:
   Lib.mainMethod
 module dependencies:
 package dependencies: HTTP-4000.3.3@HTTP-4000.3.3-JMFhmeoXqbBIjfEWxmijf9
+                      MissingH-1.4.0.1@MissingH-1.4.0.1-EKn7kuoDq1aaX1Pfc3iyM
                       aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz
                       array-0.5.1.1@array-0.5.1.1
                       asn1-encoding-0.9.4@asn1-encoding-0.9.4-2Zu5ldLYD571Aw26w0CWF6
@@ -23,9 +24,14 @@ package dependencies: HTTP-4000.3.3@HTTP-4000.3.3-JMFhmeoXqbBIjfEWxmijf9
                       async-2.1.1@async-2.1.1-xFiBzw9xoB8HPZAuxUY2o
                       attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR
                       base-4.9.0.0
+                      base-compat-0.9.1@base-compat-0.9.1-tmPpmtbHbvIDjFWbkjGrR
                       base64-bytestring-1.0.0.1@base64-bytestring-1.0.0.1-In9M41tLtcS9QYt3QpGpNY
                       binary-0.8.3.0@binary-0.8.3.0
                       blaze-builder-0.4.0.2@blaze-builder-0.4.0.2-KWDLbdBYSBoALiMW0LHIz1
+                      blaze-html-0.8.1.3@blaze-html-0.8.1.3-8MBPJsFNBtBBD2gWERenva
+                      blaze-markup-0.7.1.1@blaze-markup-0.7.1.1-IE161DWDHNXF9O8bBguli5
+                      bson-0.3.2.3@bson-0.3.2.3-3QA3aP5EtCyCltXUzEKOsQ
+                      bson-generic-0.0.8@bson-generic-0.0.8-DtORpoUHwQhDReLJ5Keop0
                       byteable-0.1.1@byteable-0.1.1-15aIBCArSOBEnGxArzrDTM
                       bytestring-0.10.8.1@bytestring-0.10.8.1
                       case-insensitive-1.2.0.7@case-insensitive-1.2.0.7-FlqweN7AuKj9EdU2arVEt4
@@ -35,22 +41,28 @@ package dependencies: HTTP-4000.3.3@HTTP-4000.3.3-JMFhmeoXqbBIjfEWxmijf9
                       connection-0.2.6@connection-0.2.6-HdqI1haOFiwKHVrIKjItoA
                       containers-0.5.7.1@containers-0.5.7.1
                       cookie-0.4.2.1@cookie-0.4.2.1-2a2c54yIyBn79Ul3iLWclJ
+                      cryptohash-0.11.9@cryptohash-0.11.9-9KNu0EEbreBFrmNJAeHgYz
                       cryptonite-0.19@cryptonite-0.19-G9PYO4oOEqhDTta2u9rAaU
                       data-default-class-0.1.2.0@data-default-class-0.1.2.0-FYQpjIylblBDctdkHAFeXA
                       deepseq-1.4.2.0@deepseq-1.4.2.0 directory-1.2.6.2@directory-1.2.6.2
                       dlist-0.8.0.2@dlist-0.8.0.2-GWAMmbX9rLg3tqrbOizHGv
                       exceptions-0.8.3@exceptions-0.8.3-7py7fmRxowDFpHmiHGKrTb
+                      file-embed-0.0.10@file-embed-0.0.10-IXfudWSq57y1Athysk5ifZ
                       filepath-1.4.1.0@filepath-1.4.1.0
                       ghc-boot-th-8.0.1@ghc-boot-th-8.0.1 ghc-prim-0.5.0.0
                       hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G
                       hourglass-0.2.10@hourglass-0.2.10-I8h0J4RSF89FN6CuD9x2Xx
+                      http-api-data-0.3.2@http-api-data-0.3.2-A22DPUhAmUlrIoBZ4qkGB
                       http-client-0.4.31.2@http-client-0.4.31.2-81NyMkNcWWADaJ0Cq5FYRE
                       http-client-tls-0.2.4.1@http-client-tls-0.2.4.1-IQsASD4utohJimtrNCGUuI
                       http-conduit-2.1.11@http-conduit-2.1.11-oytfPdWim9ENu0B97daP9
+                      http-date-0.0.6.1@http-date-0.0.6.1-150spKQYCuoIrltdbMmYGs
+                      http-media-0.6.4@http-media-0.6.4-82jDVCpdN5H696EFF5l5I4
                       http-types-0.9.1@http-types-0.9.1-8WdUZL4twHzANJbxvb1Aoj
                       integer-gmp-1.0.0.1
                       lifted-base-0.2.3.8@lifted-base-0.2.3.8-KLkd0w1UJqu6nE8oVTTEBy
                       memory-0.13@memory-0.13-ABHR5331zHK9scHPRr7afU
+                      mime-types-0.1.0.7@mime-types-0.1.0.7-AxQ64wFjikqCSdK5pSeZvh
                       mmorph-1.0.9@mmorph-1.0.9-DmSwQqk5nLj7roLAcydGz
                       monad-control-1.0.1.0@monad-control-1.0.1.0-HoNEBoNfniX3vjSfkI7WTT
                       mtl-2.2.1@mtl-2.2.1-6qsR1PHUy5lL47Hpoa4jCM
@@ -58,22 +70,40 @@ package dependencies: HTTP-4000.3.3@HTTP-4000.3.3-JMFhmeoXqbBIjfEWxmijf9
                       network-uri-2.6.1.0@network-uri-2.6.1.0-DDHh2FNiPirBRgkuU9DEt2
                       parsec-3.1.11@parsec-3.1.11-BCos4GEVCuDB8dnOCBHO6X
                       pem-0.2.2@pem-0.2.2-qPMQP6sZm3HgQEmiBojNt
+                      pretty-1.1.3.3@pretty-1.1.3.3
                       primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa
+                      random-1.1@random-1.1-54KmMHXjttlERYcr1mvsAe
+                      regex-base-0.93.2@regex-base-0.93.2-4lnOy3Rb1yfISFVEXVfJuH
+                      regex-compat-0.95.1@regex-compat-0.95.1-JPDhOGKcrkD8S1t3VsLLUt
+                      regex-posix-0.95.2@regex-posix-0.95.2-Fy6xYMm8dnjHHt23b8RdmR
                       resourcet-1.1.8.1@resourcet-1.1.8.1-1XWaZ7RmVde330DM5PRI3Z
                       scientific-0.3.4.9@scientific-0.3.4.9-6oTYuCcx6H5BsTGU7D2Gk3
+                      servant-0.9.1.1@servant-0.9.1.1-JzVvK9yk6sQ1E4UZympEK1
+                      servant-server-0.9.1.1@servant-server-0.9.1.1-9171CElIoTq4wzgmteNLu3
                       socks-0.5.5@socks-0.5.5-GieRokcgjQCIzUyRn9wVby
                       stm-2.4.4.1@stm-2.4.4.1-4z2NRWnB0NIIUvSJsHW0kF
                       streaming-commons-0.1.16@streaming-commons-0.1.16-KtRawhq8O97EWCabefpk66
+                      string-conversions-0.4@string-conversions-0.4-8T0UFmRDEly2gsNJzmHrNQ
                       tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx
                       template-haskell-2.11.0.0
                       text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s
                       time-1.6.0.1@time-1.6.0.1
+                      time-locale-compat-0.1.1.3@time-locale-compat-0.1.1.3-1j5dGjxxtiTDuAsO86iSk0
                       tls-1.3.8@tls-1.3.8-5FNpX1ar5fUDvPXr9oTBwU
                       transformers-0.5.2.0@transformers-0.5.2.0
                       transformers-base-0.4.4@transformers-base-0.4.4-25SoAegOdaF8rLEnnb5jPI
                       unix-2.7.2.0@unix-2.7.2.0
+                      unix-compat-0.4.2.0@unix-compat-0.4.2.0-GNHotEMWE5dJ4oYFhgibIV
                       unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW
+                      uri-bytestring-0.2.2.1@uri-bytestring-0.2.2.1-LMJUdG9s1QpIQ10mPWMO6d
+                      use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-EdnpBvWpPgDKwne0Uqr5h3
+                      utf8-string-1.0.1.1@utf8-string-1.0.1.1-2T8mBCuEDlXDo8zed8Onw4
+                      uuid-types-1.0.3@uuid-types-1.0.3-1qmdgBeDGlbCUibOmxVGqx
+                      vault-0.3.0.6@vault-0.3.0.6-CA9Xj82tAPe9nD32xVMgDG
                       vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6
+                      wai-3.2.1.1@wai-3.2.1.1-f77bMYZGLQBAD3XJrvGiW
+                      wai-app-static-3.1.6.1@wai-app-static-3.1.6.1-I87kXUnC7uoJHoj38CLHrC
+                      word8-0.1.2@word8-0.1.2-2E1SgvvAV2fK8vZPDHbRan
                       x509-1.6.5@x509-1.6.5-HjCowFpmcM8HnxtXMnFeKC
                       x509-store-1.6.2@x509-store-1.6.2-7384mRFE6N95dT3g57GZ4k
                       x509-system-1.6.4@x509-system-1.6.4-GZ2eHV03TV52Kz7CzPq5ks
@@ -85,10 +115,16 @@ orphans: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.G
          attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Text.Internal
          base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
          binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bson-generic-0.0.8@bson-generic-0.0.8-DtORpoUHwQhDReLJ5Keop0:Data.Bson.Generic
          bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
          hashable-1.2.4.0@hashable-1.2.4.0-EMu4H7FB10MAl6hwKw992G:Data.Hashable.Generic
          http-client-0.4.31.2@http-client-0.4.31.2-81NyMkNcWWADaJ0Cq5FYRE:Network.HTTP.Client.Request
          network-2.6.3.1@network-2.6.3.1-G4Up1CPKbp7DeFsnywOnGG:Network.Socket
+         regex-base-0.93.2@regex-base-0.93.2-4lnOy3Rb1yfISFVEXVfJuH:Text.Regex.Base.Context
+         regex-posix-0.95.2@regex-posix-0.95.2-Fy6xYMm8dnjHHt23b8RdmR:Text.Regex.Posix.ByteString
+         regex-posix-0.95.2@regex-posix-0.95.2-Fy6xYMm8dnjHHt23b8RdmR:Text.Regex.Posix.ByteString.Lazy
+         regex-posix-0.95.2@regex-posix-0.95.2-Fy6xYMm8dnjHHt23b8RdmR:Text.Regex.Posix.Sequence
+         regex-posix-0.95.2@regex-posix-0.95.2-Fy6xYMm8dnjHHt23b8RdmR:Text.Regex.Posix.String
          stm-2.4.4.1@stm-2.4.4.1-4z2NRWnB0NIIUvSJsHW0kF:Control.Monad.STM
          text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
          text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Lazy
@@ -97,6 +133,7 @@ orphans: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.G
          time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
          time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
          transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-EdnpBvWpPgDKwne0Uqr5h3:UseHaskellAPI
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
 family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Internal.Types
@@ -109,6 +146,7 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          base-4.9.0.0:Data.Void base-4.9.0.0:GHC.Exts
                          base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
                          base-4.9.0.0:GHC.TypeLits
+                         bson-generic-0.0.8@bson-generic-0.0.8-DtORpoUHwQhDReLJ5Keop0:Data.Bson.Generic
                          containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
                          containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
@@ -116,17 +154,30 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
                          dlist-0.8.0.2@dlist-0.8.0.2-GWAMmbX9rLg3tqrbOizHGv:Data.DList
                          ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         http-api-data-0.3.2@http-api-data-0.3.2-A22DPUhAmUlrIoBZ4qkGB:Web.Internal.FormUrlEncoded
                          http-client-0.4.31.2@http-client-0.4.31.2-81NyMkNcWWADaJ0Cq5FYRE:Network.HTTP.Client
                          monad-control-1.0.1.0@monad-control-1.0.1.0-HoNEBoNfniX3vjSfkI7WTT:Control.Monad.Trans.Control
                          network-uri-2.6.1.0@network-uri-2.6.1.0-DDHh2FNiPirBRgkuU9DEt2:Network.URI
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
                          primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa:Control.Monad.Primitive
                          resourcet-1.1.8.1@resourcet-1.1.8.1-1XWaZ7RmVde330DM5PRI3Z:Control.Monad.Trans.Resource.Internal
+                         servant-0.9.1.1@servant-0.9.1.1-JzVvK9yk6sQ1E4UZympEK1:Servant.API.ContentTypes
+                         servant-0.9.1.1@servant-0.9.1.1-JzVvK9yk6sQ1E4UZympEK1:Servant.API.IsSecure
+                         servant-0.9.1.1@servant-0.9.1.1-JzVvK9yk6sQ1E4UZympEK1:Servant.API.Verbs
+                         servant-0.9.1.1@servant-0.9.1.1-JzVvK9yk6sQ1E4UZympEK1:Servant.Utils.Links
+                         servant-server-0.9.1.1@servant-server-0.9.1.1-9171CElIoTq4wzgmteNLu3:Servant.Server.Internal
+                         servant-server-0.9.1.1@servant-server-0.9.1.1-9171CElIoTq4wzgmteNLu3:Servant.Server.Internal.BasicAuth
                          tagged-0.8.5@tagged-0.8.5-CtgV6EcN0do8F92i1S6iYx:Data.Tagged
                          template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
                          text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text
                          text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Lazy
                          unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashMap.Base
                          unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashSet
+                         uri-bytestring-0.2.2.1@uri-bytestring-0.2.2.1-LMJUdG9s1QpIQ10mPWMO6d:URI.ByteString.Types
+                         use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-EdnpBvWpPgDKwne0Uqr5h3:UseHaskellAPI
+                         uuid-types-1.0.3@uuid-types-1.0.3-1qmdgBeDGlbCUibOmxVGqx:Data.UUID.Types.Internal
+                         uuid-types-1.0.3@uuid-types-1.0.3-1qmdgBeDGlbCUibOmxVGqx:Data.UUID.Types.Internal.Builder
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Primitive
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Storable
@@ -134,9 +185,10 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
 import  -/  HTTP-4000.3.3@HTTP-4000.3.3-JMFhmeoXqbBIjfEWxmijf9:Network.HTTP 9b32c953a89e9a6b8e29f9b69b192142
+import  -/  MissingH-1.4.0.1@MissingH-1.4.0.1-EKn7kuoDq1aaX1Pfc3iyM:Data.List.Utils 5bd3d5065588c83ad5f70f9eef12f0ca
+import  -/  MissingH-1.4.0.1@MissingH-1.4.0.1-EKn7kuoDq1aaX1Pfc3iyM:Data.String.Utils 8e6b1a4697ce917d98d0ffa57d5c87b6
 import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson 94b59824488f369f190c261b6e39e7ba
-import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Class c9d74667288c52e23279e16b75c64023
-import  -/  aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.Internal fd763f29fceeda2453c690ef7d94155c
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
 import  -/  base-4.9.0.0:Data.List 49b86831b79b49ce5d4d9416ecba61df
 import  -/  base-4.9.0.0:Data.OldList 0058409f994fb13ae0616e3f1e5b4dae
 import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
@@ -144,11 +196,12 @@ import  -/  base-4.9.0.0:GHC.Generics 8e2a7658e8b966c1d29d0d5fd4129f38
 import  -/  base-4.9.0.0:GHC.IO.Exception 6616e78328d3d532254cd5e593c9c639
 import  -/  base-4.9.0.0:GHC.IO.Handle.FD adf0145182d1c6eb38b2b8ce5a292e84
 import  -/  base-4.9.0.0:GHC.List 13d2451194c1c6e53b4f4f07947736dd
-import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  base-4.9.0.0:System.Environment ee0914a962f5508d0fd404c89ee4999b
 import  -/  base-4.9.0.0:System.Exit 4df7be78e54bbe200276120bd44e7e2a
 import  -/  base-4.9.0.0:System.IO eb1d40aa793a4047069a5023f2ebcfe3
+import  -/  base-4.9.0.0:Text.Read 9c1be14f7e5eac8b18bcb566c5763677
 import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString 870c31f42ec324353c13bc791ac05fc3
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
@@ -161,503 +214,26 @@ import  -/  http-client-0.4.31.2@http-client-0.4.31.2-81NyMkNcWWADaJ0Cq5FYRE:Net
 import  -/  http-client-tls-0.2.4.1@http-client-tls-0.2.4.1-IQsASD4utohJimtrNCGUuI:Network.HTTP.Client.TLS 52d6e9f186cb7205a7f4ab08457f9d2a
 import  -/  http-conduit-2.1.11@http-conduit-2.1.11-oytfPdWim9ENu0B97daP9:Network.HTTP.Simple 743c3c5896fb5964c4d3e4ad9a3b11e7
 import  -/  http-types-0.9.1@http-types-0.9.1-8WdUZL4twHzANJbxvb1Aoj:Network.HTTP.Types.Status 35195e448f2d9cabe4b416fff482e5fb
-c313d0001f25453b4109ab9c6b80ede7
-  $fGenericMessage :: GHC.Generics.Generic Lib.Message
-  DFunId
-  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ Lib.Message
-                  Lib.$fGenericMessage_$cfrom
-                  Lib.$fGenericMessage_$cto -}
-c313d0001f25453b4109ab9c6b80ede7
-  $fGenericMessage_$cfrom ::
-    Lib.Message -> GHC.Generics.Rep Lib.Message x
-  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
-     Unfolding: InlineRule (1, True, False)
-                (\ @ x (ds :: Lib.Message) ->
-                 case ds of wild { Lib.Message g1 g2 ->
-                 (GHC.Generics.:*:
-                    @ (GHC.Generics.M1
-                         GHC.Generics.S
-                         ('GHC.Generics.MetaSel
-                            ('GHC.Base.Just "name")
-                            'GHC.Generics.NoSourceUnpackedness
-                            'GHC.Generics.NoSourceStrictness
-                            'GHC.Generics.DecidedLazy)
-                         (GHC.Generics.K1 GHC.Generics.R GHC.Base.String))
-                    @ (GHC.Generics.M1
-                         GHC.Generics.S
-                         ('GHC.Generics.MetaSel
-                            ('GHC.Base.Just "message")
-                            'GHC.Generics.NoSourceUnpackedness
-                            'GHC.Generics.NoSourceStrictness
-                            'GHC.Generics.DecidedLazy)
-                         (GHC.Generics.K1 GHC.Generics.R GHC.Base.String))
-                    @ x
-                    g1
-                      `cast`
-                    (Trans
-                         (Sym (GHC.Generics.N:K1[0]
-                                   <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))
-                         (Sym (GHC.Generics.N:M1[0]
-                                   <GHC.Generics.S>_P
-                                   <'GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "name")
-                                      'GHC.Generics.NoSourceUnpackedness
-                                      'GHC.Generics.NoSourceStrictness
-                                      'GHC.Generics.DecidedLazy>_P
-                                   <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R) <x>_N))
-                    g2
-                      `cast`
-                    (Trans
-                         (Sym (GHC.Generics.N:K1[0]
-                                   <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))
-                         (Sym (GHC.Generics.N:M1[0]
-                                   <GHC.Generics.S>_P
-                                   <'GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "message")
-                                      'GHC.Generics.NoSourceUnpackedness
-                                      'GHC.Generics.NoSourceStrictness
-                                      'GHC.Generics.DecidedLazy>_P
-                                   <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R) <x>_N)))
-                   `cast`
-                 (Trans
-                      (Sym (GHC.Generics.N:M1[0]
-                                <GHC.Generics.C>_P
-                                <'GHC.Generics.MetaCons
-                                   "Message" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
-                                <GHC.Generics.M1
-                                   GHC.Generics.S
-                                   ('GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "name")
-                                      'GHC.Generics.NoSourceUnpackedness
-                                      'GHC.Generics.NoSourceStrictness
-                                      'GHC.Generics.DecidedLazy)
-                                   (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
-                                 GHC.Generics.:*: GHC.Generics.M1
-                                                    GHC.Generics.S
-                                                    ('GHC.Generics.MetaSel
-                                                       ('GHC.Base.Just "message")
-                                                       'GHC.Generics.NoSourceUnpackedness
-                                                       'GHC.Generics.NoSourceStrictness
-                                                       'GHC.Generics.DecidedLazy)
-                                                    (GHC.Generics.K1
-                                                       GHC.Generics.R GHC.Base.String)>_R))
-                      (Trans
-                           (Sym (GHC.Generics.N:M1[0]
-                                     <GHC.Generics.D>_P
-                                     <'GHC.Generics.MetaData
-                                        "Message"
-                                        "Lib"
-                                        "client-0.1.0.0-HKICQZRSEVqDYM24NkvIaM"
-                                        'GHC.Types.False>_P
-                                     <GHC.Generics.M1
-                                        GHC.Generics.C
-                                        ('GHC.Generics.MetaCons
-                                           "Message" 'GHC.Generics.PrefixI 'GHC.Types.True)
-                                        (GHC.Generics.M1
-                                           GHC.Generics.S
-                                           ('GHC.Generics.MetaSel
-                                              ('GHC.Base.Just "name")
-                                              'GHC.Generics.NoSourceUnpackedness
-                                              'GHC.Generics.NoSourceStrictness
-                                              'GHC.Generics.DecidedLazy)
-                                           (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
-                                         GHC.Generics.:*: GHC.Generics.M1
-                                                            GHC.Generics.S
-                                                            ('GHC.Generics.MetaSel
-                                                               ('GHC.Base.Just "message")
-                                                               'GHC.Generics.NoSourceUnpackedness
-                                                               'GHC.Generics.NoSourceStrictness
-                                                               'GHC.Generics.DecidedLazy)
-                                                            (GHC.Generics.K1
-                                                               GHC.Generics.R GHC.Base.String))>_R))
-                           (Sub (Sym (Lib.Rep_Message[0])))) <x>_N) }) -}
-c313d0001f25453b4109ab9c6b80ede7
-  $fGenericMessage_$cto ::
-    GHC.Generics.Rep Lib.Message x -> Lib.Message
-  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
-     Unfolding: InlineRule (1, True, False)
-                (\ @ x (ds :: GHC.Generics.Rep Lib.Message x) ->
-                 case ds
-                        `cast`
-                      (Trans
-                           (Sub (Lib.Rep_Message[0]))
-                           (Trans
-                                (GHC.Generics.N:M1[0]
-                                     <GHC.Generics.D>_P
-                                     <'GHC.Generics.MetaData
-                                        "Message"
-                                        "Lib"
-                                        "client-0.1.0.0-HKICQZRSEVqDYM24NkvIaM"
-                                        'GHC.Types.False>_P
-                                     <GHC.Generics.M1
-                                        GHC.Generics.C
-                                        ('GHC.Generics.MetaCons
-                                           "Message" 'GHC.Generics.PrefixI 'GHC.Types.True)
-                                        (GHC.Generics.M1
-                                           GHC.Generics.S
-                                           ('GHC.Generics.MetaSel
-                                              ('GHC.Base.Just "name")
-                                              'GHC.Generics.NoSourceUnpackedness
-                                              'GHC.Generics.NoSourceStrictness
-                                              'GHC.Generics.DecidedLazy)
-                                           (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
-                                         GHC.Generics.:*: GHC.Generics.M1
-                                                            GHC.Generics.S
-                                                            ('GHC.Generics.MetaSel
-                                                               ('GHC.Base.Just "message")
-                                                               'GHC.Generics.NoSourceUnpackedness
-                                                               'GHC.Generics.NoSourceStrictness
-                                                               'GHC.Generics.DecidedLazy)
-                                                            (GHC.Generics.K1
-                                                               GHC.Generics.R GHC.Base.String))>_R)
-                                (GHC.Generics.N:M1[0]
-                                     <GHC.Generics.C>_P
-                                     <'GHC.Generics.MetaCons
-                                        "Message" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
-                                     <GHC.Generics.M1
-                                        GHC.Generics.S
-                                        ('GHC.Generics.MetaSel
-                                           ('GHC.Base.Just "name")
-                                           'GHC.Generics.NoSourceUnpackedness
-                                           'GHC.Generics.NoSourceStrictness
-                                           'GHC.Generics.DecidedLazy)
-                                        (GHC.Generics.K1 GHC.Generics.R GHC.Base.String)
-                                      GHC.Generics.:*: GHC.Generics.M1
-                                                         GHC.Generics.S
-                                                         ('GHC.Generics.MetaSel
-                                                            ('GHC.Base.Just "message")
-                                                            'GHC.Generics.NoSourceUnpackedness
-                                                            'GHC.Generics.NoSourceStrictness
-                                                            'GHC.Generics.DecidedLazy)
-                                                         (GHC.Generics.K1
-                                                            GHC.Generics.R
-                                                            GHC.Base.String)>_R)) <x>_N) of wild { GHC.Generics.:*: ds1 ds2 ->
-                 Lib.Message
-                   ds1
-                     `cast`
-                   (Trans
-                        (GHC.Generics.N:M1[0]
-                             <GHC.Generics.S>_P
-                             <'GHC.Generics.MetaSel
-                                ('GHC.Base.Just "name")
-                                'GHC.Generics.NoSourceUnpackedness
-                                'GHC.Generics.NoSourceStrictness
-                                'GHC.Generics.DecidedLazy>_P
-                             <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R <x>_N)
-                        (GHC.Generics.N:K1[0]
-                             <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P))
-                   ds2
-                     `cast`
-                   (Trans
-                        (GHC.Generics.N:M1[0]
-                             <GHC.Generics.S>_P
-                             <'GHC.Generics.MetaSel
-                                ('GHC.Base.Just "message")
-                                'GHC.Generics.NoSourceUnpackedness
-                                'GHC.Generics.NoSourceStrictness
-                                'GHC.Generics.DecidedLazy>_P
-                             <GHC.Generics.K1 GHC.Generics.R GHC.Base.String>_R <x>_N)
-                        (GHC.Generics.N:K1[0]
-                             <GHC.Generics.R>_P <GHC.Base.String>_R <x>_P)) }) -}
-c313d0001f25453b4109ab9c6b80ede7
-  $fShowMessage :: GHC.Show.Show Lib.Message
-  DFunId
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ Lib.Message
-                  Lib.$fShowMessage_$cshowsPrec
-                  Lib.$fShowMessage_$cshow
-                  Lib.$fShowMessage_$cshowList -}
-c313d0001f25453b4109ab9c6b80ede7
-  $fShowMessage1 :: Lib.Message -> GHC.Show.ShowS
-  {- Arity: 2,
-     Unfolding: (\ (w :: Lib.Message) (w1 :: GHC.Base.String) ->
-                 case w of ww { Lib.Message ww1 ww2 ->
-                 Lib.$w$cshowsPrec 0# ww1 ww2 w1 }) -}
-aea4f0ae706e27fa467289b492652eee
-  $fShowMessage2 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
-2edf59bd1effe252bee5d325e5f739e3
-  $fShowMessage3 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "message = "#) -}
-b5a1ca49a98dea8e776fddef5f1ff55b
-  $fShowMessage4 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
-e1fded3cedd69e3df58ccec01116bf6a
-  $fShowMessage5 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "name = "#) -}
-a6ffdf03e23f4287506e909cdac1d4e6
-  $fShowMessage6 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString# "Message {"#) -}
-c313d0001f25453b4109ab9c6b80ede7
-  $fShowMessage_$cshow :: Lib.Message -> GHC.Base.String
-  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
-     Unfolding: InlineRule (1, True, False)
-                (\ (x :: Lib.Message) ->
-                 Lib.$fShowMessage_$cshowsPrec
-                   GHC.Show.shows22
-                   x
-                   (GHC.Types.[] @ GHC.Types.Char)) -}
-c313d0001f25453b4109ab9c6b80ede7
-  $fShowMessage_$cshowList :: [Lib.Message] -> GHC.Show.ShowS
-  {- Arity: 2,
-     Unfolding: (GHC.Show.showList__
-                   @ Lib.Message
-                   Lib.$fShowMessage1) -}
-c313d0001f25453b4109ab9c6b80ede7
-  $fShowMessage_$cshowsPrec ::
-    GHC.Types.Int -> Lib.Message -> GHC.Show.ShowS
-  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U)><L,U>,
-     Inline: INLINE[0],
-     Unfolding: InlineRule (3, True, False)
-                (\ (w :: GHC.Types.Int)
-                   (w1 :: Lib.Message)
-                   (w2 :: GHC.Base.String) ->
-                 case w of ww { GHC.Types.I# ww1 ->
-                 case w1 of ww2 { Lib.Message ww3 ww4 ->
-                 Lib.$w$cshowsPrec ww1 ww3 ww4 w2 } }) -}
-c313d0001f25453b4109ab9c6b80ede7
-  $fToJSONMessage :: Data.Aeson.Types.Class.ToJSON Lib.Message
-  DFunId
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ Lib.Message
-                  Lib.$fToJSONMessage_$ctoJSON
-                  Lib.$fToJSONMessage_$ctoEncoding -}
-0bb0304ed1e009c186d86a710171ffab
-  $fToJSONMessage1 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "message"#) -}
-9b5acabe2373d7dbc3999fdd6e936770
-  $fToJSONMessage2 :: GHC.Types.Int
-  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 4#) -}
-78f887110346fea12ca5a6a86233202c
-  $fToJSONMessage3 :: Data.Text.Internal.Text
-  {- Unfolding: (Data.Text.Show.unpackCString# "name"#) -}
-c313d0001f25453b4109ab9c6b80ede7
-  $fToJSONMessage_$ctoEncoding ::
-    Lib.Message -> Data.Aeson.Types.Internal.Encoding
-  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>,
-     Inline: INLINE (sat-args=0),
-     Unfolding: InlineRule (0, False, False)
-                (\ (eta :: Lib.Message) ->
-                 Data.Aeson.Encode.Builder.encodeToBuilder
-                   (Lib.$fToJSONMessage_$ctoJSON eta))
-                  `cast`
-                (<Lib.Message>_R
-                 ->_R Sym (Data.Aeson.Types.Internal.N:Encoding[0])) -}
-c313d0001f25453b4109ab9c6b80ede7
-  $fToJSONMessage_$ctoJSON ::
-    Lib.Message -> Data.Aeson.Types.Internal.Value
-  {- Arity: 1, Strictness: <S,1*U(1*U,1*U)>m1, Inline: INLINE[0],
-     Unfolding: InlineRule (1, True, False)
-                (\ (w :: Lib.Message) ->
-                 case w of ww { Lib.Message ww1 ww2 ->
-                 case Lib.$w$ctoJSON ww1 ww2 of ww3 { Unit# ww4 ->
-                 Data.Aeson.Types.Internal.Object ww4 } }) -}
-6909d72f48fbfa51d8ff517de9fbaee7
-  $tc'Message :: GHC.Types.TyCon
-  {- HasNoCafRefs, Strictness: m,
-     Unfolding: (GHC.Types.TyCon
-                   1044629535393876289##
-                   9548563191527144015##
-                   Lib.$trModule
-                   Lib.$tc'Message1) -}
-5e53d56fb24c1854b14e0d743c8bc8cc
-  $tc'Message1 :: GHC.Types.TrName
-  {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS "'Message"#) -}
-7d817a1ba87221780ce983d4bbae5027
-  $tcMessage :: GHC.Types.TyCon
-  {- HasNoCafRefs, Strictness: m,
-     Unfolding: (GHC.Types.TyCon
-                   18124641746283701197##
-                   11677284626310338832##
-                   Lib.$trModule
-                   Lib.$tcMessage1) -}
-410d52cfdb0efd9a45f55c7d78c3fc20
-  $tcMessage1 :: GHC.Types.TrName
-  {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS "Message"#) -}
-5d531dce82187fb0600b8725945c96cb
+import  -/  use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-EdnpBvWpPgDKwne0Uqr5h3:UseHaskellAPI 2afd2eb5c47b4f2efb404f79c11f2604
+efd2cb4fe410461fbf48b5a59e7c41ef
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module Lib.$trModule2 Lib.$trModule1) -}
-7fa5686febd1d80546beb31ca3d18120
+3bc8974aa33188d148ec47ee0c6ed406
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Lib"#) -}
-bc28e136379da492af360c4d977f00e7
+72ea8a3ee3799055f867ce14f2f2cb27
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "client-0.1.0.0-HKICQZRSEVqDYM24NkvIaM"#) -}
-d7627084c483563e2fbe739b707f59dc
-  $w$cshowsPrec ::
-    GHC.Prim.Int#
-    -> GHC.Base.String
-    -> GHC.Base.String
-    -> GHC.Base.String
-    -> GHC.Base.String
-  {- Arity: 4, Strictness: <S,U><L,1*U><L,1*U><L,U>, Inline: [0],
-     Unfolding: (\ (ww :: GHC.Prim.Int#)
-                   (ww1 :: GHC.Base.String)
-                   (ww2 :: GHC.Base.String)
-                   (w :: GHC.Base.String) ->
-                 let {
-                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
-                   = \ (x :: GHC.Base.String)[OneShot] ->
-                     GHC.Base.++
-                       @ GHC.Types.Char
-                       Lib.$fShowMessage6
-                       (GHC.Base.++
-                          @ GHC.Types.Char
-                          Lib.$fShowMessage5
-                          (GHC.Types.:
-                             @ GHC.Types.Char
-                             GHC.Show.shows8
-                             (GHC.Show.showLitString
-                                ww1
-                                (GHC.Types.:
-                                   @ GHC.Types.Char
-                                   GHC.Show.shows8
-                                   (GHC.Base.++
-                                      @ GHC.Types.Char
-                                      Lib.$fShowMessage4
-                                      (GHC.Base.++
-                                         @ GHC.Types.Char
-                                         Lib.$fShowMessage3
-                                         (GHC.Types.:
-                                            @ GHC.Types.Char
-                                            GHC.Show.shows8
-                                            (GHC.Show.showLitString
-                                               ww2
-                                               (GHC.Types.:
-                                                  @ GHC.Types.Char
-                                                  GHC.Show.shows8
-                                                  (GHC.Base.++
-                                                     @ GHC.Types.Char
-                                                     Lib.$fShowMessage2
-                                                     x))))))))))
-                 } in
-                 case GHC.Prim.tagToEnum#
-                        @ GHC.Types.Bool
-                        (GHC.Prim.>=# ww 11#) of wild {
-                   GHC.Types.False -> p w
-                   GHC.Types.True
-                   -> GHC.Types.:
-                        @ GHC.Types.Char
-                        GHC.Show.shows9
-                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w)) }) -}
-ced234a24b9f15701263d72bec8ed422
-  $w$ctoJSON ::
-    GHC.Base.String
-    -> GHC.Base.String -> (# Data.Aeson.Types.Internal.Object #)
-  {- Arity: 2, Strictness: <L,1*U><L,1*U>, Inline: [0],
-     Unfolding: (\ (ww :: GHC.Base.String) (ww1 :: GHC.Base.String) ->
-                 case Data.Aeson.Types.Internal.$sfromList1
-                        @ Data.Aeson.Types.Internal.Value
-                        (GHC.Types.:
-                           @ Data.Aeson.Types.Internal.Pair
-                           (Lib.$fToJSONMessage3,
-                            case GHC.Magic.runRW#
-                                   @ 'GHC.Types.PtrRepLifted
-                                   @ Data.Text.Internal.Text
-                                   (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                                    case GHC.Prim.newByteArray#
-                                           @ GHC.Prim.RealWorld
-                                           8#
-                                           s1 of ds1 { (#,#) ipv ipv1 ->
-                                    Lib.$wouter1
-                                      (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                                      Lib.$fToJSONMessage2
-                                      ww
-                                      0#
-                                      ipv }) of ds1 { (#,#) ipv ipv1 ->
-                            case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
-                            Data.Aeson.Types.Internal.String dt } })
-                           (GHC.Types.:
-                              @ Data.Aeson.Types.Internal.Pair
-                              (Lib.$fToJSONMessage1,
-                               case GHC.Magic.runRW#
-                                      @ 'GHC.Types.PtrRepLifted
-                                      @ Data.Text.Internal.Text
-                                      (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                                       case GHC.Prim.newByteArray#
-                                              @ GHC.Prim.RealWorld
-                                              8#
-                                              s1 of ds1 { (#,#) ipv ipv1 ->
-                                       Lib.$wouter
-                                         (Data.Text.Array.MArray @ GHC.Prim.RealWorld ipv1)
-                                         Lib.$fToJSONMessage2
-                                         ww1
-                                         0#
-                                         ipv }) of ds1 { (#,#) ipv ipv1 ->
-                               case ipv1 of dt { Data.Text.Internal.Text ipv2 ipv3 ipv4 ->
-                               Data.Aeson.Types.Internal.String dt } })
-                              (GHC.Types.[] @ Data.Aeson.Types.Internal.Pair)))
-                        (Data.HashMap.Base.Empty
-                           @ Data.Text.Internal.Text
-                           @ Data.Aeson.Types.Internal.Value) of dt { DEFAULT ->
-                 (# dt #) }) -}
-ef36d0fe340d8f057c683e0073040833
-  $wouter ::
-    Data.Text.Array.MArray GHC.Prim.RealWorld
-    -> GHC.Types.Int
-    -> [GHC.Types.Char]
-    -> GHC.Prim.Int#
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
-     Inline: [0] -}
-044eb9bcf295b75f0b0efe689dd94eca
-  $wouter1 ::
-    Data.Text.Array.MArray GHC.Prim.RealWorld
-    -> GHC.Types.Int
-    -> [GHC.Types.Char]
-    -> GHC.Prim.Int#
-    -> GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
-          Data.Text.Internal.Text #)
-  {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,1*U><S,U><S,U>,
-     Inline: [0] -}
-c313d0001f25453b4109ab9c6b80ede7
-  data Message
-    = Message {name :: GHC.Base.String, message :: GHC.Base.String}
-c313d0001f25453b4109ab9c6b80ede7
-  axiom Rep_Message::
-      GHC.Generics.Rep Lib.Message
-        = GHC.Generics.D1
-            ('GHC.Generics.MetaData
-               "Message"
-               "Lib"
-               "client-0.1.0.0-HKICQZRSEVqDYM24NkvIaM"
-               'GHC.Types.False)
-            (GHC.Generics.C1
-               ('GHC.Generics.MetaCons
-                  "Message" 'GHC.Generics.PrefixI 'GHC.Types.True)
-               (GHC.Generics.S1
-                  ('GHC.Generics.MetaSel
-                     ('GHC.Base.Just "name")
-                     'GHC.Generics.NoSourceUnpackedness
-                     'GHC.Generics.NoSourceStrictness
-                     'GHC.Generics.DecidedLazy)
-                  (GHC.Generics.Rec0 GHC.Base.String)
-                GHC.Generics.:*: GHC.Generics.S1
-                                   ('GHC.Generics.MetaSel
-                                      ('GHC.Base.Just "message")
-                                      'GHC.Generics.NoSourceUnpackedness
-                                      'GHC.Generics.NoSourceStrictness
-                                      'GHC.Generics.DecidedLazy)
-                                   (GHC.Generics.Rec0 GHC.Base.String)))
-fcc4894b44d0b592a350fecf054f6514
+                   "client-0.1.0.0-9XGaYTNnsYoFH8RofQzZNs"#) -}
+973a668cc146f4de704a759b95e14bcb
   mainMethod :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.mainMethod1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-37a393e004db23ac6e605b924d4af826
+8635091d213fd8dfc3819861f05837ec
   mainMethod1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -692,34 +268,15 @@ fcc4894b44d0b592a350fecf054f6514
                         GHC.Types.True
                         s2# of ds2 { (#,#) ipv2 ipv3 ->
                  Lib.mainMethod2 ipv2 } } } } }) -}
-d42783c7e8c57499c8458a60c1c7ad30
+e01d1f9375b23d7413df998ebbeaf7fc
   mainMethod2 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1, Strictness: <S,U> -}
-929ee75cb31f2d5926b58e3fca9ed729
+00fff5c2da598ddac9ca1f3fe355364e
   mainMethod3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "Please enter what task you wish to perform"#) -}
-aaafb0a941c5ceb8c102aca0b609ae39
-  message :: Lib.Message -> GHC.Base.String
-  RecSel Left Lib.Message
-  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
-     Unfolding: InlineRule (1, True, False)
-                (\ (ds :: Lib.Message) ->
-                 case ds of wild { Lib.Message ds1 ds2 -> ds2 }) -}
-84def20836f5224edcc23d97e010f4a0
-  name :: Lib.Message -> GHC.Base.String
-  RecSel Left Lib.Message
-  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
-     Unfolding: InlineRule (1, True, False)
-                (\ (ds :: Lib.Message) ->
-                 case ds of wild { Lib.Message ds1 ds2 -> ds1 }) -}
-instance GHC.Generics.Generic [Lib.Message] = Lib.$fGenericMessage
-instance GHC.Show.Show [Lib.Message] = Lib.$fShowMessage
-instance Data.Aeson.Types.Class.ToJSON [Lib.Message]
-  = Lib.$fToJSONMessage
-family instance GHC.Generics.Rep [Lib.Message] = Lib.Rep_Message
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

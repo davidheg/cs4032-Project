@@ -1,37 +1,15 @@
-Configuring authentication-server-0.1.0.0...
 Preprocessing library authentication-server-0.1.0.0...
-[1 of 2] Compiling RestClient       ( src/RestClient.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/RestClient.o )
 [2 of 2] Compiling Lib              ( src/Lib.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Lib.o )
 
-src/Lib.hs:171:10: error:
-    • Couldn't match type ‘Maybe String -> Handler ResponseData’
-                     with ‘(Maybe [Char] -> ExceptT ServantErr IO ResponseData)
-                           :<|> (UserFile -> ExceptT ServantErr IO Bool)’
-      Expected type: Server API
-        Actual type: (Maybe String -> Handler ResponseData)
-                     :<|> (Handler ResponseData
-                           :<|> ((Message -> Handler Bool)
-                                 :<|> ((Maybe String -> Handler [Message])
-                                       :<|> (Maybe String -> Handler ResponseData))))
-    • In the expression:
-        loadEnvironmentVariable
-        :<|>
-          getREADME :<|> storeMessage :<|> searchMessage :<|> performRESTCall
-      In an equation for ‘server’:
-          server
-            = loadEnvironmentVariable
-              :<|>
-                getREADME :<|> storeMessage :<|> searchMessage :<|> performRESTCall
-            where
-                loadEnvironmentVariable :: Maybe String -> Handler ResponseData
-                loadEnvironmentVariable ms
-                  = liftIO
-                    $ do { warnLog
-                           $ "request to load environment variable: " ++ show ms;
-                           .... }
-                getREADME, getREADME' :: Handler ResponseData
-                getREADME
-                  = liftIO
-                    $ do { [rPath] <- getArgs;
-                           .... }
-                ....
+src/Lib.hs:372:1: warning: [-Woverlapping-patterns]
+    Pattern match is redundant
+    In an equation for ‘custom404Error’: custom404Error file = ...
+Preprocessing executable 'authentication-server-exe' for
+authentication-server-0.1.0.0...
+[1 of 1] Compiling Main             ( app/Main.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/authentication-server-exe/authentication-server-exe-tmp/Main.o ) [Lib changed]
+Linking .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/authentication-server-exe/authentication-server-exe ...
+Installing library in
+/home/dheg/Documents/cs4032-Project/authentication-server/.stack-work/install/x86_64-linux/nightly-2016-12-10/8.0.1/lib/x86_64-linux-ghc-8.0.1/authentication-server-0.1.0.0-I8DHertIJwM8Y89CQu4UW0
+Installing executable(s) in
+/home/dheg/Documents/cs4032-Project/authentication-server/.stack-work/install/x86_64-linux/nightly-2016-12-10/8.0.1/bin
+Registering authentication-server-0.1.0.0...
