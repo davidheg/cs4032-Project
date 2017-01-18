@@ -29,11 +29,11 @@ version :: Version
 version = Version [0,1,0,0] []
 bindir, libdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "/home/dheg/Documents/authentication-server/.stack-work/install/x86_64-linux/nightly-2016-12-10/8.0.1/bin"
-libdir     = "/home/dheg/Documents/authentication-server/.stack-work/install/x86_64-linux/nightly-2016-12-10/8.0.1/lib/x86_64-linux-ghc-8.0.1/authentication-server-0.1.0.0-EL65wcLMo4x1suxTm87fD9"
-datadir    = "/home/dheg/Documents/authentication-server/.stack-work/install/x86_64-linux/nightly-2016-12-10/8.0.1/share/x86_64-linux-ghc-8.0.1/authentication-server-0.1.0.0"
-libexecdir = "/home/dheg/Documents/authentication-server/.stack-work/install/x86_64-linux/nightly-2016-12-10/8.0.1/libexec"
-sysconfdir = "/home/dheg/Documents/authentication-server/.stack-work/install/x86_64-linux/nightly-2016-12-10/8.0.1/etc"
+bindir     = "/home/dheg/Documents/cs4032-Project/authentication-server/.stack-work/install/x86_64-linux/nightly-2016-12-10/8.0.1/bin"
+libdir     = "/home/dheg/Documents/cs4032-Project/authentication-server/.stack-work/install/x86_64-linux/nightly-2016-12-10/8.0.1/lib/x86_64-linux-ghc-8.0.1/authentication-server-0.1.0.0-I8DHertIJwM8Y89CQu4UW0"
+datadir    = "/home/dheg/Documents/cs4032-Project/authentication-server/.stack-work/install/x86_64-linux/nightly-2016-12-10/8.0.1/share/x86_64-linux-ghc-8.0.1/authentication-server-0.1.0.0"
+libexecdir = "/home/dheg/Documents/cs4032-Project/authentication-server/.stack-work/install/x86_64-linux/nightly-2016-12-10/8.0.1/libexec"
+sysconfdir = "/home/dheg/Documents/cs4032-Project/authentication-server/.stack-work/install/x86_64-linux/nightly-2016-12-10/8.0.1/etc"
 
 getBinDir, getLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "authentication_server_bindir") (\_ -> return bindir)

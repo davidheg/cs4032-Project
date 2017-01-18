@@ -50,8 +50,8 @@ packages:
       git: https://github.com/Palmik/bson-generic.git
       commit: e078def65d0dee1ea7e3205f445e47d5937851f3
   - location:
-      git: https://esjmb@bitbucket.org/esjmb/use-haskell-api.git
-      commit: 9a48929
+      git: https://github.com/davidheg/Cs4032-use-haskell-api.git
+      commit: 1a4a00d3c0b99ee9e13d2ea539ad100ba01d8acf
 
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)

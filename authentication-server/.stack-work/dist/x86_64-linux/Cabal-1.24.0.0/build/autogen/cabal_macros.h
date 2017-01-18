@@ -203,7 +203,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "authentication-server-0.1.0.0-EL65wcLMo4x1suxTm87fD9"
+#define CURRENT_COMPONENT_ID "authentication-server-0.1.0.0-I8DHertIJwM8Y89CQu4UW0"
 
-#define CURRENT_PACKAGE_KEY "authentication-server-0.1.0.0-EL65wcLMo4x1suxTm87fD9"
+#define CURRENT_PACKAGE_KEY "authentication-server-0.1.0.0-I8DHertIJwM8Y89CQu4UW0"
 
