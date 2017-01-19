@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-18 20:11:59.021828 UTC
+2017-01-19 21:05:47.441706 UTC
 
 interface client-0.1.0.0-9XGaYTNnsYoFH8RofQzZNs:Lib 8001
-  interface hash: 5445a43271a1d398f7df2bd36010f759
+  interface hash: a3afe8474ead60fbb7a84a4e2dc6b15e
   ABI hash: 7259b88674689524447cab59977e2559
   export-list hash: 9cc4ff12ddad29473e75bebc349c379b
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
@@ -214,7 +214,7 @@ import  -/  http-client-0.4.31.2@http-client-0.4.31.2-81NyMkNcWWADaJ0Cq5FYRE:Net
 import  -/  http-client-tls-0.2.4.1@http-client-tls-0.2.4.1-IQsASD4utohJimtrNCGUuI:Network.HTTP.Client.TLS 52d6e9f186cb7205a7f4ab08457f9d2a
 import  -/  http-conduit-2.1.11@http-conduit-2.1.11-oytfPdWim9ENu0B97daP9:Network.HTTP.Simple 743c3c5896fb5964c4d3e4ad9a3b11e7
 import  -/  http-types-0.9.1@http-types-0.9.1-8WdUZL4twHzANJbxvb1Aoj:Network.HTTP.Types.Status 35195e448f2d9cabe4b416fff482e5fb
-import  -/  use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-EdnpBvWpPgDKwne0Uqr5h3:UseHaskellAPI 2afd2eb5c47b4f2efb404f79c11f2604
+import  -/  use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-EdnpBvWpPgDKwne0Uqr5h3:UseHaskellAPI f6cf17f16c8b09bfaca41c25fbf5d79a
 efd2cb4fe410461fbf48b5a59e7c41ef
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,

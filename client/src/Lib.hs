@@ -50,6 +50,7 @@ selectTask parameters
             |isPrefixOf "loadEnvironmentVar" parameters = loadEnvironmentVar (drop 19 parameters)
             |isPrefixOf "doRestCall" parameters = doRestCall (Just ((drop 11 parameters)))
             |isPrefixOf "uploadFile" parameters = uploadFile (drop 10 parameters)
+            |isPrefixOf "searchFiles" parameters = searchFiles (drop 11 parameters)
             |parameters == "exit" = exitWith ExitSuccess
 
 outputResponse ::Network.HTTP.Client.Response BodyReader -> IO ()
@@ -78,7 +79,6 @@ searchMessage name = do
 
 storeMessage :: String -> IO()
 storeMessage inputs = do
-                  print inputs
                   let strings = words inputs
                   let name = strings !! 0
                   let message = strings !! 1
@@ -91,27 +91,28 @@ storeMessage inputs = do
 
 uploadFile :: String -> IO()
 uploadFile inputs = do
-                  print inputs
                   let strings = words (strip inputs)
-                  print strings
                   let user = strings !! 0
-                  print user
                   let path = strings !! 1
-                  print path
                   let components = split "/" path
-                  print components
                   let i = length components
                   let name = components !! (i -1)
                   print name
                   initialRequest <-  parseRequest ("POST " ++ server ++ "/uploadFile")
                   contents <- readFile path
-                  print contents
                   let content = read ("\"" ++ contents ++ "\"") :: String
                   let newFile = UserFile name path user content
                   let request= setRequestBodyJSON newFile initialRequest
                   manager <- getGlobalManager
                   withResponse request manager $ \response  -> do
                     outputResponse response
+
+searchFiles :: String -> IO()
+searchFiles filename = do
+                request <- parseRequest (server ++ "/searchFiles?filename=" ++ filename)
+                manager <- getGlobalManager
+                withResponse request manager $ \response  -> do
+                  outputResponse response
 
 loadEnvironmentVar :: String -> IO()
 loadEnvironmentVar var = do
