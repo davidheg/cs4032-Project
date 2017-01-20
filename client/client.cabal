@@ -26,7 +26,8 @@ library
                  aeson,
                  split,
                  use-haskell-api,
-                 MissingH
+                 MissingH,
+                 json
   default-language:    Haskell2010
 
 executable client-exe

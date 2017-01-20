@@ -1,0 +1,25 @@
+Configuring json-0.9.1...
+Building json-0.9.1...
+Preprocessing library json-0.9.1...
+[1 of 7] Compiling Text.JSON.Types  ( Text/JSON/Types.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Text/JSON/Types.o )
+[2 of 7] Compiling Text.JSON.String ( Text/JSON/String.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Text/JSON/String.o )
+
+Text/JSON/String.hs:176:1: warning: [-Wtabs]
+    Tab character found here, and in one further location.
+    Please use spaces instead.
+[3 of 7] Compiling Text.JSON.ReadP  ( Text/JSON/ReadP.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Text/JSON/ReadP.o )
+[4 of 7] Compiling Text.JSON.Parsec ( Text/JSON/Parsec.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Text/JSON/Parsec.o )
+[5 of 7] Compiling Text.JSON.Pretty ( Text/JSON/Pretty.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Text/JSON/Pretty.o )
+[6 of 7] Compiling Text.JSON        ( Text/JSON.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Text/JSON.o )
+
+Text/JSON.hs:219:1: warning: [-Wtabs]
+    Tab character found here, and in 18 further locations.
+    Please use spaces instead.
+[7 of 7] Compiling Text.JSON.Generic ( Text/JSON/Generic.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Text/JSON/Generic.o )
+
+Text/JSON/Generic.hs:110:1: warning: [-Wtabs]
+    Tab character found here, and in five further locations.
+    Please use spaces instead.
+Installing library in
+/home/dheg/.stack/snapshots/x86_64-linux/lts-7.12/8.0.1/lib/x86_64-linux-ghc-8.0.1/json-0.9.1-1Q9f2G8ehKh5ClNzHgeHuy
+Registering json-0.9.1...

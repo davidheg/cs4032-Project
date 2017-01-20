@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-20 16:46:33.457456 UTC
+2017-01-20 21:11:45.26095 UTC
 
-interface client-0.1.0.0-9XGaYTNnsYoFH8RofQzZNs:Lib 8001
-  interface hash: a3afe8474ead60fbb7a84a4e2dc6b15e
-  ABI hash: 7259b88674689524447cab59977e2559
-  export-list hash: 9cc4ff12ddad29473e75bebc349c379b
+interface client-0.1.0.0-L02FaxzkW9hIFrSTcWhZGH:Lib 8001
+  interface hash: b3bd85680ae90286ca1658b3b2d8736c
+  ABI hash: 68ebc1e86016ac0b1e7314c46e286c9b
+  export-list hash: fac574efe4f7575bf1e170c215740d39
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 572b5b759962bfb7b26242ee5d07baf1
   sig of: Nothing
@@ -215,25 +215,25 @@ import  -/  http-client-tls-0.2.4.1@http-client-tls-0.2.4.1-IQsASD4utohJimtrNCGU
 import  -/  http-conduit-2.1.11@http-conduit-2.1.11-oytfPdWim9ENu0B97daP9:Network.HTTP.Simple 743c3c5896fb5964c4d3e4ad9a3b11e7
 import  -/  http-types-0.9.1@http-types-0.9.1-8WdUZL4twHzANJbxvb1Aoj:Network.HTTP.Types.Status 35195e448f2d9cabe4b416fff482e5fb
 import  -/  use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-EdnpBvWpPgDKwne0Uqr5h3:UseHaskellAPI f6cf17f16c8b09bfaca41c25fbf5d79a
-efd2cb4fe410461fbf48b5a59e7c41ef
+f13cc520f246d29fe3d3f1ec7ab80f3f
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module Lib.$trModule2 Lib.$trModule1) -}
-3bc8974aa33188d148ec47ee0c6ed406
+b49479b59062fcbd5f6635bf9b09abc9
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Lib"#) -}
-72ea8a3ee3799055f867ce14f2f2cb27
+c301fa591b6a572bba2ef5a4c38e5385
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "client-0.1.0.0-9XGaYTNnsYoFH8RofQzZNs"#) -}
-973a668cc146f4de704a759b95e14bcb
+                   "client-0.1.0.0-L02FaxzkW9hIFrSTcWhZGH"#) -}
+fc07d02292cfee3fd380a1b8ffb5b2f0
   mainMethod :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.mainMethod1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-8635091d213fd8dfc3819861f05837ec
+6f47792a9ff34d2cd6b8c1aad4a76363
   mainMethod1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -268,12 +268,12 @@ efd2cb4fe410461fbf48b5a59e7c41ef
                         GHC.Types.True
                         s2# of ds2 { (#,#) ipv2 ipv3 ->
                  Lib.mainMethod2 ipv2 } } } } }) -}
-e01d1f9375b23d7413df998ebbeaf7fc
+f1fc02739c9f1e556bb06ca0942438d7
   mainMethod2 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1, Strictness: <S,U> -}
-00fff5c2da598ddac9ca1f3fe355364e
+7e91f7e25239e9c2a1abc96488aab76e
   mainMethod3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    "Please enter what task you wish to perform"#) -}

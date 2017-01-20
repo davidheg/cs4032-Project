@@ -19,6 +19,7 @@ import System.IO                 (stdout)
 import Data.Aeson   
 import GHC.Generics
 import Data.List
+import Data.List.Utils
 import System.Exit
 import UseHaskellAPI
 import Data.String.Utils
@@ -97,10 +98,13 @@ uploadFile inputs = do
                   let components = split "/" path
                   let i = length components
                   let name = components !! (i -1)
+                  putStrLn "Please enter the usernames of anyone you would like to share to the file with"
+                  names <- getLine
+                  let users =  user ++ " " ++ names 
                   initialRequest <-  parseRequest ("POST " ++ server ++ "/uploadFile")
                   contents <- readFile path
                   let content = read ("\"" ++ contents ++ "\"") :: String
-                  let newFile = UserFile name path user content
+                  let newFile = UserFile name path users content
                   let request= setRequestBodyJSON newFile initialRequest
                   manager <- getGlobalManager
                   withResponse request manager $ \response  -> do
@@ -131,3 +135,7 @@ doRestCall Nothing = do
                       manager <- getGlobalManager
                       withResponse request manager $ \response  -> do
                         outputResponse response
+
+getUsernames :: String -> String -> [String]
+getUsernames user [] = return user
+getUsernames user names = merge [user] (words (strip names))

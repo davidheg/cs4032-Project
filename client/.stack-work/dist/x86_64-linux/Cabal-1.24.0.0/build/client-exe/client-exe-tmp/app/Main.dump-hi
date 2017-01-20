@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-18 19:02:55.864868 UTC
+2017-01-20 21:11:49.75284 UTC
 
 interface main@main:Main 8001
-  interface hash: 8ed5d90172819befc2391b32b75dfe88
-  ABI hash: 6a54e5731587b3204b985daf233992ba
-  export-list hash: 9b560db5cb0886557f33c20ed8d2227a
+  interface hash: 067ce0f2a620c0776ca6363c43f9b640
+  ABI hash: 1bf4d97cbcb853a2c67ba0fff125b45e
+  export-list hash: 34bf67479bfe3b3a39b590e48e65a767
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: df440aaab301f2489aff57c04e5ae4f0
   sig of: Nothing
@@ -36,7 +36,7 @@ package dependencies: HTTP-4000.3.3@HTTP-4000.3.3-JMFhmeoXqbBIjfEWxmijf9
                       bytestring-0.10.8.1@bytestring-0.10.8.1
                       case-insensitive-1.2.0.7@case-insensitive-1.2.0.7-FlqweN7AuKj9EdU2arVEt4
                       cereal-0.5.4.0@cereal-0.5.4.0-2FJYHGgtE5C3SxaZjt25xS
-                      client-0.1.0.0@client-0.1.0.0-9XGaYTNnsYoFH8RofQzZNs
+                      client-0.1.0.0@client-0.1.0.0-L02FaxzkW9hIFrSTcWhZGH
                       conduit-1.2.8@conduit-1.2.8-5FcKXI45VDc6lGPbFuJAWM
                       conduit-extra-1.1.15@conduit-extra-1.1.15-53svZ1V22a02WgMiq2YICw
                       connection-0.2.6@connection-0.2.6-HdqI1haOFiwKHVrIKjItoA
@@ -186,7 +186,7 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
-import  -/  client-0.1.0.0@client-0.1.0.0-9XGaYTNnsYoFH8RofQzZNs:Lib 7259b88674689524447cab59977e2559
+import  -/  client-0.1.0.0@client-0.1.0.0-L02FaxzkW9hIFrSTcWhZGH:Lib 68ebc1e86016ac0b1e7314c46e286c9b
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
 d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule :: GHC.Types.Module
@@ -200,12 +200,12 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-cb391cf7387cc57574fbd603332a7d0f
+7eef345c27552f68dc6535b17e7a2e99
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.mainMethod1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-a6efd19625a3b824bc8f9586b447c2a9
+2c64091b6f0150023b004a8780cddc85
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
