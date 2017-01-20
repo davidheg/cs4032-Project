@@ -97,7 +97,6 @@ uploadFile inputs = do
                   let components = split "/" path
                   let i = length components
                   let name = components !! (i -1)
-                  print name
                   initialRequest <-  parseRequest ("POST " ++ server ++ "/uploadFile")
                   contents <- readFile path
                   let content = read ("\"" ++ contents ++ "\"") :: String
