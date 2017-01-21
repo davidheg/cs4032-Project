@@ -178,6 +178,7 @@ server = loadEnvironmentVariable
     :<|> performRESTCall
     :<|> uploadFile
     :<|> searchFiles
+    :<|> fileTypeTwo
 
   where
     -- | where is just a way of ensuring that the following functions are scoped to the server function. Each function
@@ -374,14 +375,25 @@ server = loadEnvironmentVariable
         return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe UserFile) docs
       warnLog $ show files
       return files
-      
+    
     searchFiles Nothing = liftIO $ do
       warnLog $ "No key for searching."
       return $ ([] :: [UserFile])
 
+    fileTypeTwo :: UserFile -> UserInfo -> Handler Bool
+    fileTypeTwo file@(UserFile key path users contents) _ = liftIO $ do
+      let usernames =  words (strip users)
+      warnLog $ "Storing file under name " ++ key ++ "."
+      --if (searchFiles key) == []
+      --    then withMongoDbConnection $ insert_ (select ["filename" =: key] "FILE_RECORD") $ toBSON file
+      --else do
+      withMongoDbConnection $ upsert (select ["filename" =: key] "FILE_RECORD") $ toBSON file
+      let otherusers = drop 1 usernames
+      updateUsers otherusers file
+      return True  -- as this is a simple demo I'm not checking anything  
+
     updateUsers:: [String]-> UserFile -> IO ()
-    updateUsers [] _ = return 
-    updateUsers (x:xs) filename = sendFile x file
+    updateUsers (x:xs) file = sendFile x file
 
     sendFile :: String -> UserFile -> IO ()
     sendFile user file = print user
