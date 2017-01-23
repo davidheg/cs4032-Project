@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-21 19:25:59.975862 UTC
+2017-01-23 19:22:35.957865 UTC
 
 interface main@main:Main 8001
-  interface hash: 81c1bcfdf6748baba531fae9eb716d8b
-  ABI hash: 9031f61aa770a952bd4ed9b0fd249835
-  export-list hash: 36e4f1bef12dbf2bbe4bcde8b4ae81c6
+  interface hash: e03fe3bf20dda8d1d9d0850529f4d825
+  ABI hash: 90bcb0995aa01792d0c5d5288f2914eb
+  export-list hash: 66d0542277b944712e4e7401fca4da44
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 94789b68d70c9e0732ee87d51a1d10c2
   sig of: Nothing
@@ -109,8 +109,8 @@ package dependencies: MissingH-1.4.0.1@MissingH-1.4.0.1-Fzdg8PAf99l9XGL8cb9djB
                       unix-time-0.3.7@unix-time-0.3.7-HcxGsrnTmTlC98pyanzoMW
                       unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW
                       uri-bytestring-0.2.2.1@uri-bytestring-0.2.2.1-LMJUdG9s1QpIQ10mPWMO6d
-                      use-haskell-0.1.0.0@use-haskell-0.1.0.0-7QmqqDCk8gaKs5Gg2dmi0k
-                      use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-GIwRPcjtS4L7np1mj7ueQk
+                      use-haskell-0.1.0.0@use-haskell-0.1.0.0-5SCHIACGjkIjwDQrTzyeI
+                      use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-1NpGsek0Yv0EZt95Ed1M4g
                       utf8-string-1.0.1.1@utf8-string-1.0.1.1-2T8mBCuEDlXDo8zed8Onw4
                       uuid-types-1.0.3@uuid-types-1.0.3-1qmdgBeDGlbCUibOmxVGqx
                       vault-0.3.0.6@vault-0.3.0.6-CA9Xj82tAPe9nD32xVMgDG
@@ -146,7 +146,7 @@ orphans: MonadRandom-0.4.2.3@MonadRandom-0.4.2.3-8TfCm6PGvGYB7omozORhov:Control.
          time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
          transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
          unix-time-0.3.7@unix-time-0.3.7-HcxGsrnTmTlC98pyanzoMW:Data.UnixTime.Diff
-         use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-GIwRPcjtS4L7np1mj7ueQk:UseHaskellAPI
+         use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-1NpGsek0Yv0EZt95Ed1M4g:UseHaskellAPI
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
 family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Internal.Types
@@ -193,8 +193,8 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashMap.Base
                          unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashSet
                          uri-bytestring-0.2.2.1@uri-bytestring-0.2.2.1-LMJUdG9s1QpIQ10mPWMO6d:URI.ByteString.Types
-                         use-haskell-0.1.0.0@use-haskell-0.1.0.0-7QmqqDCk8gaKs5Gg2dmi0k:RestClient
-                         use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-GIwRPcjtS4L7np1mj7ueQk:UseHaskellAPI
+                         use-haskell-0.1.0.0@use-haskell-0.1.0.0-5SCHIACGjkIjwDQrTzyeI:RestClient
+                         use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-1NpGsek0Yv0EZt95Ed1M4g:UseHaskellAPI
                          uuid-types-1.0.3@uuid-types-1.0.3-1qmdgBeDGlbCUibOmxVGqx:Data.UUID.Types.Internal
                          uuid-types-1.0.3@uuid-types-1.0.3-1qmdgBeDGlbCUibOmxVGqx:Data.UUID.Types.Internal.Builder
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector
@@ -205,7 +205,7 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
-import  -/  use-haskell-0.1.0.0@use-haskell-0.1.0.0-7QmqqDCk8gaKs5Gg2dmi0k:Lib 68562bb9f3e88db54e2c9f582bcaaadd
+import  -/  use-haskell-0.1.0.0@use-haskell-0.1.0.0-5SCHIACGjkIjwDQrTzyeI:Lib 18279a07ed4b1a2a6e434f1e978590b7
 d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -218,12 +218,12 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-332c39967cabf766e247b6eba9a40749
+762c4f5a63ce69f613d07e2762f77182
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.startApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-af8f546b26b7ca7977fba76640e98b65
+c3ecee7bb561c73686616c42538c65e6
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)

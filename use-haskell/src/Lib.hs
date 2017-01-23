@@ -362,8 +362,6 @@ server = loadEnvironmentVariable
       --    then withMongoDbConnection $ insert_ (select ["filename" =: key] "FILE_RECORD") $ toBSON file
       --else do
       withMongoDbConnection $ upsert (select ["filename" =: key] "FILE_RECORD") $ toBSON file
-      let otherusers = drop 1 usernames
-      updateUsers otherusers file
       return True  -- as this is a simple demo I'm not checking anything
 
     searchFiles :: Maybe String -> Handler [UserFile]
@@ -380,23 +378,19 @@ server = loadEnvironmentVariable
       warnLog $ "No key for searching."
       return $ ([] :: [UserFile])
 
-    fileTypeTwo :: UserFile -> UserInfo -> Handler Bool
-    fileTypeTwo file@(UserFile key path users contents) _ = liftIO $ do
-      let usernames =  words (strip users)
-      warnLog $ "Storing file under name " ++ key ++ "."
+    fileTypeTwo :: UserRequest -> Handler Bool
+    fileTypeTwo request@(UserRequest userString fileString) = liftIO $ do
+      let userArray = split "|" userString
+      let user = UserInfo (userArray !! 0) (userArray !! 1)
+      let fileArray = split "|" fileString
+      let file = UserFile (fileArray !! 0 ) (fileArray !! 1) (fileArray !! 2) (fileArray !! 3)
+      warnLog $ "Storing file under name " ++ (fileArray !! 0) ++ "."
       --if (searchFiles key) == []
       --    then withMongoDbConnection $ insert_ (select ["filename" =: key] "FILE_RECORD") $ toBSON file
       --else do
-      withMongoDbConnection $ upsert (select ["filename" =: key] "FILE_RECORD") $ toBSON file
-      let otherusers = drop 1 usernames
-      updateUsers otherusers file
+      withMongoDbConnection $ upsert (select ["filename" =: (fileArray !! 0)] "FILE_RECORD") $ toBSON file
+      withMongoDbConnection $ upsert (select ["username" =: (userArray !! 0)] "USER_RECORD") $ toBSON user
       return True  -- as this is a simple demo I'm not checking anything  
-
-    updateUsers:: [String]-> UserFile -> IO ()
-    updateUsers (x:xs) file = sendFile x file
-
-    sendFile :: String -> UserFile -> IO ()
-    sendFile user file = print user
                         
 -- | error stuff
 custom404Error msg = err404 { errBody = msg }

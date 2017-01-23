@@ -217,7 +217,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "use-haskell-0.1.0.0-7QmqqDCk8gaKs5Gg2dmi0k"
+#define CURRENT_COMPONENT_ID "use-haskell-0.1.0.0-5SCHIACGjkIjwDQrTzyeI"
 
-#define CURRENT_PACKAGE_KEY "use-haskell-0.1.0.0-7QmqqDCk8gaKs5Gg2dmi0k"
+#define CURRENT_PACKAGE_KEY "use-haskell-0.1.0.0-5SCHIACGjkIjwDQrTzyeI"
 
