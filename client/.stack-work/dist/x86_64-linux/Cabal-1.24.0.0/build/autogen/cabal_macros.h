@@ -84,6 +84,13 @@
   (major1) == 0 && (major2) <  2 || \
   (major1) == 0 && (major2) == 2 && (minor) <= 3)
 
+/* package time-1.6.0.1 */
+#define VERSION_time "1.6.0.1"
+#define MIN_VERSION_time(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  6 || \
+  (major1) == 1 && (major2) == 6 && (minor) <= 0)
+
 /* package use-haskell-api-0.1.0.0 */
 #define VERSION_use_haskell_api "0.1.0.0"
 #define MIN_VERSION_use_haskell_api(major1,major2,minor) (\
@@ -147,7 +154,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "client-0.1.0.0-L02FaxzkW9hIFrSTcWhZGH"
+#define CURRENT_COMPONENT_ID "client-0.1.0.0-I0irSA4gjQiBwQ8I5M9ABV"
 
-#define CURRENT_PACKAGE_KEY "client-0.1.0.0-L02FaxzkW9hIFrSTcWhZGH"
+#define CURRENT_PACKAGE_KEY "client-0.1.0.0-I0irSA4gjQiBwQ8I5M9ABV"
 
