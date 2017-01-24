@@ -179,6 +179,7 @@ server = loadEnvironmentVariable
     :<|> uploadFile
     :<|> searchFiles
     :<|> fileTypeTwo
+    :<|> fileUpdate    
 
   where
     -- | where is just a way of ensuring that the following functions are scoped to the server function. Each function
@@ -388,10 +389,20 @@ server = loadEnvironmentVariable
       --if (searchFiles key) == []
       --    then withMongoDbConnection $ insert_ (select ["filename" =: key] "FILE_RECORD") $ toBSON file
       --else do
+      let timestamp = FileTime (fileArray !! 0) (show(getCurrentTime))
       withMongoDbConnection $ upsert (select ["filename" =: (fileArray !! 0)] "FILE_RECORD") $ toBSON file
       withMongoDbConnection $ upsert (select ["username" =: (userArray !! 0)] "USER_RECORD") $ toBSON user
+      withMongoDbConnection $ upsert (select ["filename" =: (fileArray !! 0)] "TIME_RECORD") $ toBSON timestamp
       return True  -- as this is a simple demo I'm not checking anything  
-                        
+    
+    fileUpdate :: FileTime -> Handler Bool
+    fileUpdate filetime@(FileTime filename time) = liftIO $ do
+      timestamp <- withMongoDbConnection $ do
+        docs <- find (select ["filename" =: (strip filename)] "TIME_RECORD") >>= drainCursor
+        return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe UserFile) docs
+      warnLog $ show files
+      return files
+                    
 -- | error stuff
 custom404Error msg = err404 { errBody = msg }
 custom404Error file = err404 { errBody = file }

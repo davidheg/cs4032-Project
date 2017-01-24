@@ -15,7 +15,7 @@ import Network.HTTP.Client
 import Network.HTTP.Client.TLS 
 import Network.HTTP.Types.Status (statusCode)
 import System.Environment      (getArgs, getProgName, lookupEnv)
-import System.IO                 (stdout)
+import System.IO                 (stdout)s
 import Data.Aeson   
 import GHC.Generics
 import Data.List
@@ -32,10 +32,6 @@ port_number = 8080
 server = "http://192.168.60.128:8080"
 currentUser = UserInfo "davidheg" "distro"
 files = []
-
-data FileUploaded = FileUploaded { filename :: String
-                                 , time :: IO UTCTime
-                                 } 
 
 mainMethod :: IO()
 mainMethod = do
@@ -56,7 +52,7 @@ pollServer = do
                 polling files
                 pollServer
 
-polling :: [FileUploaded] -> IO ()
+polling :: [FileTime] -> IO ()
 polling [] = return ()
 polling (x:xs) = do 
                 request <- parseRequest (server ++ "/updatedFiles?filename=" ++ getName x)
@@ -85,7 +81,7 @@ outputResponse response = do
                             else do
                                 S.hPut stdout bs
                                 loop
-                  loop
+                  loop0
 getReadme ::IO ()
 getReadme = do 
         request <- parseRequest (server ++ "/getREADME")
@@ -156,7 +152,7 @@ uploadFileType2 inputs = do
                   let user = "davidheg|distro"
                   let userRequest = UserRequest user newFile
                   let request= setRequestBodyJSON userRequest initialRequest
-                  let newUploaded = FileUploaded name getCurrentTime
+                  let newUploaded = FileTime name getCurrentTime
                   let files = addFile files newUploaded
                   manager <- getGlobalManager
                   withResponse request manager $ \response  -> do
@@ -185,10 +181,10 @@ getUsernames :: String -> String -> [String]
 getUsernames user [] = return user
 getUsernames user names = merge [user] (words (strip names))
 
-getName :: FileUploaded -> String
+getName :: FileTime -> String
 getName _ = ""
-getName (FileUploaded name _) = name
+getName (FileTime name _) = name
 
-addFile :: [FileUploaded] -> FileUploaded -> [FileUploaded]
+addFile :: [FileTime] -> FileTime -> [FileTime]
 addFile [] file = [file]
 addFile files new = (files ++ [new])
