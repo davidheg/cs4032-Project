@@ -42,6 +42,13 @@
   (major1) == 0 && (major2) <  10 || \
   (major1) == 0 && (major2) == 10 && (minor) <= 8)
 
+/* package cipher-aes-0.2.11 */
+#define VERSION_cipher_aes "0.2.11"
+#define MIN_VERSION_cipher_aes(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  2 || \
+  (major1) == 0 && (major2) == 2 && (minor) <= 11)
+
 /* package http-client-0.4.31.2 */
 #define VERSION_http_client "0.4.31.2"
 #define MIN_VERSION_http_client(major1,major2,minor) (\
@@ -154,7 +161,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "client-0.1.0.0-8NXI3X32iBlLvxLevGv7c9"
+#define CURRENT_COMPONENT_ID "client-0.1.0.0-CJvieVI3ZKK2Ux7gcPiQG7"
 
-#define CURRENT_PACKAGE_KEY "client-0.1.0.0-8NXI3X32iBlLvxLevGv7c9"
+#define CURRENT_PACKAGE_KEY "client-0.1.0.0-CJvieVI3ZKK2Ux7gcPiQG7"
 

@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-26 17:50:20.202856 UTC
+2017-01-26 19:05:57.280584 UTC
 
-interface client-0.1.0.0-8NXI3X32iBlLvxLevGv7c9:Lib 8001
-  interface hash: 2a9da2bc352b5a59e1e2e1f99cc9c3e2
-  ABI hash: a7f21ba153f50cfe56eaee01836a3700
-  export-list hash: 632a3d7a7fc2bb5a74451b8a795d4b89
+interface client-0.1.0.0-CJvieVI3ZKK2Ux7gcPiQG7:Lib 8001
+  interface hash: e3699e3afe7690ac41d6dca69f4a2e0a
+  ABI hash: 60d9faf88ae7026158489ad576f2b9f6
+  export-list hash: fedcf5c74790c8b1acb6817ca83a79e3
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 572b5b759962bfb7b26242ee5d07baf1
   sig of: Nothing
@@ -36,11 +36,13 @@ package dependencies: HTTP-4000.3.3@HTTP-4000.3.3-JMFhmeoXqbBIjfEWxmijf9
                       bytestring-0.10.8.1@bytestring-0.10.8.1
                       case-insensitive-1.2.0.7@case-insensitive-1.2.0.7-FlqweN7AuKj9EdU2arVEt4
                       cereal-0.5.4.0@cereal-0.5.4.0-2FJYHGgtE5C3SxaZjt25xS
+                      cipher-aes-0.2.11@cipher-aes-0.2.11-6IDqXzfBW6B3WK2bKJbiBh
                       conduit-1.2.8@conduit-1.2.8-5FcKXI45VDc6lGPbFuJAWM
                       conduit-extra-1.1.15@conduit-extra-1.1.15-53svZ1V22a02WgMiq2YICw
                       connection-0.2.6@connection-0.2.6-HdqI1haOFiwKHVrIKjItoA
                       containers-0.5.7.1@containers-0.5.7.1
                       cookie-0.4.2.1@cookie-0.4.2.1-2a2c54yIyBn79Ul3iLWclJ
+                      crypto-cipher-types-0.0.9@crypto-cipher-types-0.0.9-Iwzx9devSK6HQoOjujg46u
                       cryptohash-0.11.9@cryptohash-0.11.9-9KNu0EEbreBFrmNJAeHgYz
                       cryptonite-0.19@cryptonite-0.19-G9PYO4oOEqhDTta2u9rAaU
                       data-default-class-0.1.2.0@data-default-class-0.1.2.0-FYQpjIylblBDctdkHAFeXA
@@ -78,6 +80,7 @@ package dependencies: HTTP-4000.3.3@HTTP-4000.3.3-JMFhmeoXqbBIjfEWxmijf9
                       regex-posix-0.95.2@regex-posix-0.95.2-Fy6xYMm8dnjHHt23b8RdmR
                       resourcet-1.1.8.1@resourcet-1.1.8.1-1XWaZ7RmVde330DM5PRI3Z
                       scientific-0.3.4.9@scientific-0.3.4.9-6oTYuCcx6H5BsTGU7D2Gk3
+                      securemem-0.1.9@securemem-0.1.9-AlUbMorzPNe4lwnV15ASIa
                       servant-0.9.1.1@servant-0.9.1.1-JzVvK9yk6sQ1E4UZympEK1
                       servant-server-0.9.1.1@servant-server-0.9.1.1-9171CElIoTq4wzgmteNLu3
                       socks-0.5.5@socks-0.5.5-GieRokcgjQCIzUyRn9wVby
@@ -207,6 +210,8 @@ import  -/  base-4.9.0.0:System.Exit 4df7be78e54bbe200276120bd44e7e2a
 import  -/  base-4.9.0.0:System.IO eb1d40aa793a4047069a5023f2ebcfe3
 import  -/  base-4.9.0.0:Text.Read 9c1be14f7e5eac8b18bcb566c5763677
 import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString 870c31f42ec324353c13bc791ac05fc3
+import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Char8 49426525406a134b63e5a11b574dbd77
+import  -/  cipher-aes-0.2.11@cipher-aes-0.2.11-6IDqXzfBW6B3WK2bKJbiBh:Crypto.Cipher.AES 8b159a0912baf11e38218d46be3732b4
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
 import  -/  http-client-0.4.31.2@http-client-0.4.31.2-81NyMkNcWWADaJ0Cq5FYRE:Network.HTTP.Client 8c31602f44dbd2cc18bd07c76bc0453c
@@ -225,25 +230,25 @@ import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Format b6d4cc5df3f9159b1156baa52
 import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Locale 2ce8413933ae0199a4bf6c15ee5db27c
 import  -/  use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-JqqAo5tB3F5rh963yPHwO:AuthenticationAPI 06a9247a5bcf4a76e3d1887900dfee87
 import  -/  use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-JqqAo5tB3F5rh963yPHwO:UseHaskellAPI 64ee961c9060fba1fb3b3a8715050352
-a227b098dac94588903fe8e2cd0d7d35
+c9d5c1e49a9907a72c35672c33cef3a0
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module Lib.$trModule2 Lib.$trModule1) -}
-ede995efefbda74dbd5c86ccdc8990e2
+c52bdbce1899aa17d8b908eb54a13ecc
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Lib"#) -}
-9423355ba1216fa500cfd2bcf4823aef
+d4f16fc4fcb67a8a8fe3f8672fa4c371
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "client-0.1.0.0-8NXI3X32iBlLvxLevGv7c9"#) -}
-d3afb09e69e39e16fbbbb61b00ef6cb2
+                   "client-0.1.0.0-CJvieVI3ZKK2Ux7gcPiQG7"#) -}
+0cff7f110818ecab8864613889b92956
   mainMethod :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.mainMethod1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-ea3cfb8ed054f6e7fef268e355aeccac
+1f6d3a5006c4d824ac28cfdd79e6372c
   mainMethod1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)

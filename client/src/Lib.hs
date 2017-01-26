@@ -9,6 +9,7 @@ module Lib
   )where
 
 import qualified Data.ByteString           as S
+import Data.ByteString.Char8     (pack, unpack)
 import Network.HTTP
 import Network.HTTP.Simple
 import Network.HTTP.Client
@@ -26,8 +27,8 @@ import AuthenticationAPI
 import Data.String.Utils
 import Control.Concurrent
 import Data.Time.Clock 
-import Data.Time.Format 
-
+import Data.Time.Format
+import Crypto.Cipher.AES
 
 ip_address = "192.168.60.128"
 port_number = 8080
@@ -96,6 +97,8 @@ outputResponse response = do
 register :: String -> IO ()
 register input = do 
           let inputs = words (strip input)
+          let key =   initAES (pack(inputs !! 1))
+          print (show key)
           let user = AuthenticationAPI.UserInfo (inputs !! 0) (inputs !! 1)
           initialRequest <-  parseRequest ("POST " ++ authentication_server ++ "/register")
           let request = setRequestBodyJSON user initialRequest
@@ -105,6 +108,8 @@ register input = do
 
 login :: String -> IO ()
 login input = do
+          let inputs = words (strip input)
+          let currentUser = AuthenticationAPI.UserInfo (inputs !! 0) (inputs !! 1)
           let loginReq = LoginRequest input "key"
           initialRequest <-  parseRequest ("GET " ++ authentication_server ++ "/login")
           let request = setRequestBodyJSON loginReq initialRequest

@@ -28,7 +28,8 @@ library
                  use-haskell-api,
                  MissingH,
                  json,
-                 time
+                 time,
+                 cipher-aes
   default-language:    Haskell2010
 
 executable client-exe

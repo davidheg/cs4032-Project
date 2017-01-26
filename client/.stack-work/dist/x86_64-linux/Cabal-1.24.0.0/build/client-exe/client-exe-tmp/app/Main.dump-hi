@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-26 17:27:36.064131 UTC
+2017-01-26 18:04:22.471443 UTC
 
 interface main@main:Main 8001
-  interface hash: 52ed2c3ae47f9fcaf4671f9bb8d03eb2
-  ABI hash: e2afe71ccc35d4b9219c8709317083d7
-  export-list hash: b79d6511617a8f4552bd602e9fe4657d
+  interface hash: 6971f95b8b5892835e2e55ddecf6a4a1
+  ABI hash: 23af6fa5ea0d92f99c45dddb4e2eb411
+  export-list hash: 37e7f22f9e91befe4c368077750b4e1d
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: df440aaab301f2489aff57c04e5ae4f0
   sig of: Nothing
@@ -36,12 +36,14 @@ package dependencies: HTTP-4000.3.3@HTTP-4000.3.3-JMFhmeoXqbBIjfEWxmijf9
                       bytestring-0.10.8.1@bytestring-0.10.8.1
                       case-insensitive-1.2.0.7@case-insensitive-1.2.0.7-FlqweN7AuKj9EdU2arVEt4
                       cereal-0.5.4.0@cereal-0.5.4.0-2FJYHGgtE5C3SxaZjt25xS
-                      client-0.1.0.0@client-0.1.0.0-8NXI3X32iBlLvxLevGv7c9
+                      cipher-aes-0.2.11@cipher-aes-0.2.11-6IDqXzfBW6B3WK2bKJbiBh
+                      client-0.1.0.0@client-0.1.0.0-CJvieVI3ZKK2Ux7gcPiQG7
                       conduit-1.2.8@conduit-1.2.8-5FcKXI45VDc6lGPbFuJAWM
                       conduit-extra-1.1.15@conduit-extra-1.1.15-53svZ1V22a02WgMiq2YICw
                       connection-0.2.6@connection-0.2.6-HdqI1haOFiwKHVrIKjItoA
                       containers-0.5.7.1@containers-0.5.7.1
                       cookie-0.4.2.1@cookie-0.4.2.1-2a2c54yIyBn79Ul3iLWclJ
+                      crypto-cipher-types-0.0.9@crypto-cipher-types-0.0.9-Iwzx9devSK6HQoOjujg46u
                       cryptohash-0.11.9@cryptohash-0.11.9-9KNu0EEbreBFrmNJAeHgYz
                       cryptonite-0.19@cryptonite-0.19-G9PYO4oOEqhDTta2u9rAaU
                       data-default-class-0.1.2.0@data-default-class-0.1.2.0-FYQpjIylblBDctdkHAFeXA
@@ -79,6 +81,7 @@ package dependencies: HTTP-4000.3.3@HTTP-4000.3.3-JMFhmeoXqbBIjfEWxmijf9
                       regex-posix-0.95.2@regex-posix-0.95.2-Fy6xYMm8dnjHHt23b8RdmR
                       resourcet-1.1.8.1@resourcet-1.1.8.1-1XWaZ7RmVde330DM5PRI3Z
                       scientific-0.3.4.9@scientific-0.3.4.9-6oTYuCcx6H5BsTGU7D2Gk3
+                      securemem-0.1.9@securemem-0.1.9-AlUbMorzPNe4lwnV15ASIa
                       servant-0.9.1.1@servant-0.9.1.1-JzVvK9yk6sQ1E4UZympEK1
                       servant-server-0.9.1.1@servant-server-0.9.1.1-9171CElIoTq4wzgmteNLu3
                       socks-0.5.5@socks-0.5.5-GieRokcgjQCIzUyRn9wVby
@@ -188,7 +191,7 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
-import  -/  client-0.1.0.0@client-0.1.0.0-8NXI3X32iBlLvxLevGv7c9:Lib a7f21ba153f50cfe56eaee01836a3700
+import  -/  client-0.1.0.0@client-0.1.0.0-CJvieVI3ZKK2Ux7gcPiQG7:Lib 60d9faf88ae7026158489ad576f2b9f6
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
 d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule :: GHC.Types.Module
@@ -202,12 +205,12 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-d94176413f2919e25470ed134bf7d27f
+b768daee8f9b1988595238cd86e81552
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.mainMethod1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-fd519827b5a39574234452f550b1a331
+1e7270155b3b081e4ebb19dc1cbc7a7e
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
