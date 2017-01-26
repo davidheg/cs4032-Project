@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-23 21:21:18.089281 UTC
+2017-01-26 17:50:20.202856 UTC
 
-interface client-0.1.0.0-I0irSA4gjQiBwQ8I5M9ABV:Lib 8001
-  interface hash: b47ac1dc586501560e7bbf41cc2356bb
-  ABI hash: 022d9f66795e5f39a06d9f3fdded961d
-  export-list hash: e64487fea080ef6d7dd2adb82e4098e0
+interface client-0.1.0.0-8NXI3X32iBlLvxLevGv7c9:Lib 8001
+  interface hash: 2a9da2bc352b5a59e1e2e1f99cc9c3e2
+  ABI hash: a7f21ba153f50cfe56eaee01836a3700
+  export-list hash: 632a3d7a7fc2bb5a74451b8a795d4b89
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 572b5b759962bfb7b26242ee5d07baf1
   sig of: Nothing
@@ -96,7 +96,7 @@ package dependencies: HTTP-4000.3.3@HTTP-4000.3.3-JMFhmeoXqbBIjfEWxmijf9
                       unix-compat-0.4.2.0@unix-compat-0.4.2.0-GNHotEMWE5dJ4oYFhgibIV
                       unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW
                       uri-bytestring-0.2.2.1@uri-bytestring-0.2.2.1-LMJUdG9s1QpIQ10mPWMO6d
-                      use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-DBIOAI1raYWKEecOkYJbaG
+                      use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-JqqAo5tB3F5rh963yPHwO
                       utf8-string-1.0.1.1@utf8-string-1.0.1.1-2T8mBCuEDlXDo8zed8Onw4
                       uuid-types-1.0.3@uuid-types-1.0.3-1qmdgBeDGlbCUibOmxVGqx
                       vault-0.3.0.6@vault-0.3.0.6-CA9Xj82tAPe9nD32xVMgDG
@@ -133,7 +133,8 @@ orphans: aeson-0.11.2.1@aeson-0.11.2.1-5ZQWuTFmffALcfpzDCXoOz:Data.Aeson.Types.G
          time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
          time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
          transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
-         use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-DBIOAI1raYWKEecOkYJbaG:UseHaskellAPI
+         use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-JqqAo5tB3F5rh963yPHwO:AuthenticationAPI
+         use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-JqqAo5tB3F5rh963yPHwO:UseHaskellAPI
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
 family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Internal.Types
@@ -175,7 +176,8 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashMap.Base
                          unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW:Data.HashSet
                          uri-bytestring-0.2.2.1@uri-bytestring-0.2.2.1-LMJUdG9s1QpIQ10mPWMO6d:URI.ByteString.Types
-                         use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-DBIOAI1raYWKEecOkYJbaG:UseHaskellAPI
+                         use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-JqqAo5tB3F5rh963yPHwO:AuthenticationAPI
+                         use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-JqqAo5tB3F5rh963yPHwO:UseHaskellAPI
                          uuid-types-1.0.3@uuid-types-1.0.3-1qmdgBeDGlbCUibOmxVGqx:Data.UUID.Types.Internal
                          uuid-types-1.0.3@uuid-types-1.0.3-1qmdgBeDGlbCUibOmxVGqx:Data.UUID.Types.Internal.Builder
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector
@@ -219,112 +221,33 @@ import  -/  http-types-0.9.1@http-types-0.9.1-8WdUZL4twHzANJbxvb1Aoj:Network.HTT
 import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock b91051c7767d1f23314064be1d4311d7
 import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock.POSIX a0c5708011f4e3cb1d85608a99ae773a
 import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock.UTC fd9f3bc9549d9de1cb313e496610c238
-import  -/  use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-DBIOAI1raYWKEecOkYJbaG:UseHaskellAPI 1fca81a133c5a5d9ae60e0f74c44fb8d
-2d1dbf9a8928727693c8bad3340f2d2e
-  $tc'FileUploaded :: GHC.Types.TyCon
-  {- HasNoCafRefs, Strictness: m,
-     Unfolding: (GHC.Types.TyCon
-                   5448531075218340284##
-                   4504356460710993975##
-                   Lib.$trModule
-                   Lib.$tc'FileUploaded1) -}
-95241f160848faecdc1ff14850ccd5fb
-  $tc'FileUploaded1 :: GHC.Types.TrName
-  {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS "'FileUploaded"#) -}
-5f1b40243b2819ea3d99b1d2ffe42cda
-  $tcFileUploaded :: GHC.Types.TyCon
-  {- HasNoCafRefs, Strictness: m,
-     Unfolding: (GHC.Types.TyCon
-                   11574923506903892847##
-                   9325518405964006529##
-                   Lib.$trModule
-                   Lib.$tcFileUploaded1) -}
-9e0a58bac6225a06762d9cfc582be7d4
-  $tcFileUploaded1 :: GHC.Types.TrName
-  {- HasNoCafRefs, Strictness: m1,
-     Unfolding: (GHC.Types.TrNameS "FileUploaded"#) -}
-9ec6f9024e9a8f2d76d6b0838bf1886c
+import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Format b6d4cc5df3f9159b1156baa52a254cf6
+import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Locale 2ce8413933ae0199a4bf6c15ee5db27c
+import  -/  use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-JqqAo5tB3F5rh963yPHwO:AuthenticationAPI 06a9247a5bcf4a76e3d1887900dfee87
+import  -/  use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-JqqAo5tB3F5rh963yPHwO:UseHaskellAPI 64ee961c9060fba1fb3b3a8715050352
+a227b098dac94588903fe8e2cd0d7d35
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module Lib.$trModule2 Lib.$trModule1) -}
-ebaeeb14a4412c1a202ff9f42ed6eb0b
+ede995efefbda74dbd5c86ccdc8990e2
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Lib"#) -}
-6a09cea44e6e999b9b2daadc7777a319
+9423355ba1216fa500cfd2bcf4823aef
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "client-0.1.0.0-I0irSA4gjQiBwQ8I5M9ABV"#) -}
-6e5b12f0de735d2891b5b8b7b22134ba
-  data FileUploaded
-    = FileUploaded {filename :: GHC.Base.String,
-                    time :: GHC.Types.IO Data.Time.Clock.UTC.UTCTime}
-6d6a3575f80375bc062b3b8089c78e0b
-  filename :: Lib.FileUploaded -> GHC.Base.String
-  RecSel Left Lib.FileUploaded
-  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
-     Unfolding: InlineRule (1, True, False)
-                (\ (ds :: Lib.FileUploaded) ->
-                 case ds of wild { Lib.FileUploaded ds1 ds2 -> ds1 }) -}
-68a2e82cbd1aeade0d167d2b474b13b9
+                   "client-0.1.0.0-8NXI3X32iBlLvxLevGv7c9"#) -}
+d3afb09e69e39e16fbbbb61b00ef6cb2
   mainMethod :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.mainMethod1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-78a6d5b9a92a63b7ca3c7c2efe7077f8
+ea3cfb8ed054f6e7fef268e355aeccac
   mainMethod1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 1, Strictness: <S,U>,
-     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
-                 case Network.HTTP.Client.TLS.tlsManagerSettings of ww { Network.HTTP.Client.Types.ManagerSettings ww1 ww2 ww3 ww4 ww5 ww6 ww7 ww8 ww9 ww10 ww11 ->
-                 case Network.HTTP.Client.Manager.$wnewManager
-                        ww1
-                        ww2
-                        ww3
-                        ww4
-                        ww5
-                        ww6
-                        ww7
-                        ww8
-                        ww9
-                        ww10
-                        ww11
-                        s of ds1 { (#,#) ipv ipv1 ->
-                 case Network.HTTP.Client.TLS.globalManager
-                        `cast`
-                      (GHC.IORef.N:IORef[0] <Network.HTTP.Client.Types.Manager>_N) of wild { GHC.STRef.STRef var# ->
-                 case GHC.Prim.writeMutVar#
-                        @ GHC.Prim.RealWorld
-                        @ Network.HTTP.Client.Types.Manager
-                        var#
-                        ipv1
-                        ipv of s2# { DEFAULT ->
-                 case GHC.IO.Handle.Text.hPutStr2
-                        GHC.IO.Handle.FD.stdout
-                        Lib.mainMethod3
-                        GHC.Types.True
-                        s2# of ds2 { (#,#) ipv2 ipv3 ->
-                 Lib.mainMethod2 ipv2 } } } } }) -}
-833030e4b72aa3e148ee3160d2b0fabc
-  mainMethod2 ::
-    GHC.Prim.State# GHC.Prim.RealWorld
-    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
   {- Arity: 1, Strictness: <S,U> -}
-10e95668977e3c0d165e664d116cdbd3
-  mainMethod3 :: [GHC.Types.Char]
-  {- Unfolding: (GHC.CString.unpackCString#
-                   "Please enter what task you wish to perform"#) -}
-bea83b7b60246e772252aa6045e4eed0
-  time ::
-    Lib.FileUploaded -> GHC.Types.IO Data.Time.Clock.UTC.UTCTime
-  RecSel Left Lib.FileUploaded
-  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
-     Unfolding: InlineRule (1, True, False)
-                (\ (ds :: Lib.FileUploaded) ->
-                 case ds of wild { Lib.FileUploaded ds1 ds2 -> ds2 }) -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

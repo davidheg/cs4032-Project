@@ -154,7 +154,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "client-0.1.0.0-I0irSA4gjQiBwQ8I5M9ABV"
+#define CURRENT_COMPONENT_ID "client-0.1.0.0-8NXI3X32iBlLvxLevGv7c9"
 
-#define CURRENT_PACKAGE_KEY "client-0.1.0.0-I0irSA4gjQiBwQ8I5M9ABV"
+#define CURRENT_PACKAGE_KEY "client-0.1.0.0-8NXI3X32iBlLvxLevGv7c9"
 

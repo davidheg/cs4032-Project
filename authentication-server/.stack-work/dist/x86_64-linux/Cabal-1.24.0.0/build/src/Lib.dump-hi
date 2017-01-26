@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-26 13:52:22.307364 UTC
+2017-01-26 17:39:10.097684 UTC
 
 interface authentication-server-0.1.0.0-Gqw00IX2kziK0HuIL7LXbB:Lib 8001
-  interface hash: 87e00c1ae86385b3f281e942ca9fe5b9
-  ABI hash: c19e47e33d8e3aa07b5b79f2cb618bb6
+  interface hash: 05351ee4a7273d6951f33fbcb3dfe3e6
+  ABI hash: 1ac4def181bc12913cae62f5873787ca
   export-list hash: 06a1fa3cf59b365ebd631913eac32b80
   orphan hash: 1686edbc90d7779cffba2513dc348275
   flag hash: 232b91cb96073461cf6c3dcd6a42e778
@@ -908,12 +908,12 @@ babc03b668e69e6915b55108c4e3d5c1
                          Lib.startApp38
                          Lib.startApp37
                          ww) #) } }) -}
-65a0685370866bb8be987d7a0f852e9a
+c7df068fe2f77085c70e7bf081b2a8a2
   startApp :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.startApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-caaea13c2b165c1a1f9fa9c679140ff0
+2815880a3cef9275e06a4f7712e53121
   startApp1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -1158,7 +1158,7 @@ c8caf759bc56d75bad4b4100b54ebe09
                    (b1 :: ())
                    (req :: Network.Wai.Internal.Request) ->
                  Lib.startApp20) -}
-6566d965ce856d71004eadcec629be10
+b6856f863d46ee2afb8d8770e6b6772e
   startApp2 ::
     (Network.Wai.Logger.ApacheLogger, GHC.Types.IO ())
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1809,9 +1809,9 @@ e42c4c4b342972f210e8fea1d77d8c37
                            200
                            '[Servant.API.ContentTypes.JSON]
                            AuthenticationAPI.Token)) }) -}
-6e90f138d561c6295edbd6700cefbfaf
+174eae3881f1fe104b6be35f7deeade2
   startApp42 :: GHC.Types.Int
-  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 8080#) -}
+  {- HasNoCafRefs, Unfolding: (GHC.Types.I# 2020#) -}
 80b74c1a968a6f42028bda08917c57df
   startApp43 ::
     GHC.Prim.State# GHC.Prim.RealWorld

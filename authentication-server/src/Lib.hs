@@ -32,7 +32,7 @@ module Lib
 -- must be prefixed with `Y.`. One can always prefix a libraries functions with the import string, when calling them.
 -- You will occasionally have reason to import libraries that have common function names by coincidence. You can use
 -- qualified imports of full prefixes to disambiguate. The compiler will tell you where the problem is if this occurs.
-import           AuthenticationAPI            
+import           AuthenticationAPI 
 import           Control.Concurrent           (forkIO, threadDelay)
 import           Control.Monad                (when)
 import           Control.Monad.IO.Class
@@ -141,7 +141,7 @@ startApp = withLogging $ \ aplogger -> do
 
   forkIO $ taskScheduler 5
 
-  let settings = setPort 8080 $ setLogger aplogger defaultSettings
+  let settings = setPort 2020 $ setLogger aplogger defaultSettings
   runSettings settings app
 
 -- this is the original startApp that stack new servant builds
