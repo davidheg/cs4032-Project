@@ -10,7 +10,7 @@ authentication-server:
     # - http_proxy=http://www-proxy.scss.tcd.ie:8080
   command: /usr/local/bin/authentication-server-exe
   ports:
-    - "8080:8080"
+    - "2020:2020"
   links:
     - database
 database:

@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-18 16:03:25.355009 UTC
+2017-01-26 12:44:52.95361 UTC
 
-interface authentication-server-0.1.0.0-I8DHertIJwM8Y89CQu4UW0:RestClient [family instance module] 8001
-  interface hash: aac7358e9f0f16b1bb29904b427a81c6
-  ABI hash: ed1b1b77e295d8cc3baaeceb51cb8366
-  export-list hash: b4962a1b54bb4975ebb1d4e5972c10b9
-  orphan hash: 4613775a268f7451f668e808eca22a9c
+interface authentication-server-0.1.0.0-Gqw00IX2kziK0HuIL7LXbB:RestClient [family instance module] 8001
+  interface hash: 765a7561f6291d23878300286875e1a0
+  ABI hash: 71e309e87b3d7787572153260e4397dc
+  export-list hash: 862ea326afba4532624be8adaf668f79
+  orphan hash: 7f0f1871d7ec266e2d6a5f1e93aad1e8
   flag hash: 95f7c97b5ad9e544ea7cc113abdbe862
   sig of: Nothing
   used TH splices: False
@@ -154,7 +154,7 @@ import  -/  servant-client-0.9.1.1@servant-client-0.9.1.1-F4beMBFBUa96Q3jlcLsioP
 import  -/  servant-client-0.9.1.1@servant-client-0.9.1.1-F4beMBFBUa96Q3jlcLsioP:Servant.Common.Req 0371fb59d671a7c47a473d51da25a42b
 import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text 6515f3179e27a91345842b6e634f584c
 import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Internal 530216acfbfab25df053b0caac6d6a57
-6e121533c8a2ef54b6a6fefcf45fad58
+d5fc71af6c10e0bd77151e2ccb4109d2
   $fEqPackage :: GHC.Classes.Eq RestClient.Package
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -162,7 +162,7 @@ import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Internal 
                   @ RestClient.Package
                   RestClient.$fEqPackage_$c==
                   RestClient.$fEqPackage_$c/= -}
-6e121533c8a2ef54b6a6fefcf45fad58
+d5fc71af6c10e0bd77151e2ccb4109d2
   $fEqPackage_$c/= ::
     RestClient.Package -> RestClient.Package -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -175,7 +175,7 @@ import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Internal 
                  case w1 of ww6 { RestClient.Package ww7 ->
                  case ww7 of ww8 { Data.Text.Internal.Text ww9 ww10 ww11 ->
                  RestClient.$w$c/= ww3 ww4 ww5 ww9 ww10 ww11 } } } }) -}
-6e121533c8a2ef54b6a6fefcf45fad58
+d5fc71af6c10e0bd77151e2ccb4109d2
   $fEqPackage_$c== ::
     RestClient.Package -> RestClient.Package -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -185,7 +185,7 @@ import  -/  text-1.2.2.1@text-1.2.2.1-5QpmrLQApEZ4Ly9nMHWY0s:Data.Text.Internal 
                  case ds of wild { RestClient.Package a1 ->
                  case ds1 of wild1 { RestClient.Package b1 ->
                  Data.Text.$fEqText_$c== a1 b1 } }) -}
-c81ea4b5c7b265a41e9e38ce2a03e817
+11a77cf53192ddbc4beaaf1b897b281e
   $fEqUserDetailed :: GHC.Classes.Eq RestClient.UserDetailed
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -193,7 +193,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                   @ RestClient.UserDetailed
                   RestClient.$fEqUserDetailed_$c==
                   RestClient.$fEqUserDetailed_$c/= -}
-c81ea4b5c7b265a41e9e38ce2a03e817
+11a77cf53192ddbc4beaaf1b897b281e
   $fEqUserDetailed_$c/= ::
     RestClient.UserDetailed
     -> RestClient.UserDetailed -> GHC.Types.Bool
@@ -204,7 +204,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                  case RestClient.$fEqUserDetailed_$c== a b of wild {
                    GHC.Types.False -> GHC.Types.True
                    GHC.Types.True -> GHC.Types.False }) -}
-c81ea4b5c7b265a41e9e38ce2a03e817
+11a77cf53192ddbc4beaaf1b897b281e
   $fEqUserDetailed_$c== ::
     RestClient.UserDetailed
     -> RestClient.UserDetailed -> GHC.Types.Bool
@@ -229,7 +229,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                    ww15
                    ww10
                    ww11 } } } }) -}
-762d449d33738722889a027252402496
+90a9654eca1f953513836ae07ca283b1
   $fEqUserSummary :: GHC.Classes.Eq RestClient.UserSummary
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -237,7 +237,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                   @ RestClient.UserSummary
                   RestClient.$fEqUserSummary_$c==
                   RestClient.$fEqUserSummary_$c/= -}
-762d449d33738722889a027252402496
+90a9654eca1f953513836ae07ca283b1
   $fEqUserSummary_$c/= ::
     RestClient.UserSummary -> RestClient.UserSummary -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -247,7 +247,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                  case RestClient.$fEqUserSummary_$c== a b of wild {
                    GHC.Types.False -> GHC.Types.True
                    GHC.Types.True -> GHC.Types.False }) -}
-762d449d33738722889a027252402496
+90a9654eca1f953513836ae07ca283b1
   $fEqUserSummary_$c== ::
     RestClient.UserSummary -> RestClient.UserSummary -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs,
@@ -260,7 +260,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                  case w1 of ww7 { RestClient.UserSummary ww8 ww9 ->
                  case ww8 of ww10 { Data.Text.Internal.Text ww11 ww12 ww13 ->
                  RestClient.$w$c==1 ww4 ww5 ww6 ww2 ww11 ww12 ww13 ww9 } } } }) -}
-6e121533c8a2ef54b6a6fefcf45fad58
+d5fc71af6c10e0bd77151e2ccb4109d2
   $fFromJSONPackage ::
     Data.Aeson.Types.FromJSON.FromJSON RestClient.Package
   DFunId
@@ -269,7 +269,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                   @ RestClient.Package
                   RestClient.$fFromJSONPackage_$cparseJSON
                   RestClient.$fFromJSONPackage_$cparseJSONList -}
-6e121533c8a2ef54b6a6fefcf45fad58
+d5fc71af6c10e0bd77151e2ccb4109d2
   $fFromJSONPackage1 ::
     [Data.Aeson.Types.Internal.Parser RestClient.Package]
     -> forall (f :: * -> *) r.
@@ -278,7 +278,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
        -> Data.Aeson.Types.Internal.Success [RestClient.Package] f r
        -> f r
   {- Arity: 4, HasNoCafRefs, Strictness: <S,1*U><L,U><L,U><L,C(U)> -}
-f71fcbffd48c096952c8d561fee6c966
+35ce251b27c434ff97979d167cb2eec8
   $fFromJSONPackage10 ::
     GHC.Generics.M1
       GHC.Generics.S
@@ -303,10 +303,10 @@ f71fcbffd48c096952c8d561fee6c966
                              (GHC.Generics.K1 GHC.Generics.R Data.Text.Internal.Text)
                              a) ->
                  GHC.Types.True) -}
-d6dba15731906755e72c81b258c721ad
+3f1dff2855e3cb4ace18f93d781e737f
   $fFromJSONPackage2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "[a]"#) -}
-5811bb7bc0cd3f87b4822c128180a141
+54dfd6dcaa5c004a4447d3c688c33d01
   $fFromJSONPackage3 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -391,7 +391,7 @@ d6dba15731906755e72c81b258c721ad
                                          'GHC.Generics.DecidedLazy)
                                       (GHC.Generics.Rec0 Data.Text.Internal.Text)
                                       a)>_R))) -}
-74054b0d5c3d0330c7265c2435dbaa34
+3bd124543633fa4a4762582d598d054e
   $fFromJSONPackage4 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -407,10 +407,10 @@ d6dba15731906755e72c81b258c721ad
                             Data.Aeson.Types.Generic.Zero a1)
                    (w2 :: Data.Aeson.Types.Internal.Value) ->
                  RestClient.$w$dGFromJSON @ a1 w2) -}
-b3ba52de4bcf3c1370086738d509b0bf
+9d0e80f0aa6e585db1e78ccfb0c78684
   $fFromJSONPackage5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Text"#) -}
-d391e99b24102f0728677c0d113f788e
+6b1599178144e603a3031f9a777a71d8
   $fFromJSONPackage6 ::
     GHC.Generics.SingI ('GHC.Base.Just "packageName")
   {- Unfolding: InlineRule (0, True, True)
@@ -421,7 +421,7 @@ d391e99b24102f0728677c0d113f788e
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
                                                        GHC.Types.Symbol>_N) <'GHC.Base.Just
                                                                                "packageName">_N) -}
-620c180047c816cb201a304f32e3c9b6
+f4f40a7ce18920554cca7928044fecaa
   $fFromJSONPackage7 ::
     GHC.Generics.R:SingMaybeb
       GHC.Types.Symbol ('GHC.Base.Just "packageName")
@@ -433,7 +433,7 @@ d391e99b24102f0728677c0d113f788e
                    RestClient.$fFromJSONPackage8
                      `cast`
                    (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"packageName">_N)) -}
-e41831d2a0310b1005d951f3c954e8cd
+cd5bfbad544900304d35e3581d9f6e0e
   $fFromJSONPackage8 :: GHC.Generics.R:SingSymbols "packageName"
   {- Strictness: m,
      Unfolding: (GHC.Generics.SSym
@@ -443,10 +443,10 @@ e41831d2a0310b1005d951f3c954e8cd
                    (Trans
                         (Sym (GHC.TypeLits.N:SSymbol[0] <"packageName">_P))
                         (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"packageName">_N))) -}
-394498226efb6436b3b668e7ed995c8a
+9ef1a7e887c6a77f2e60256bee35f4a5
   $fFromJSONPackage9 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "packageName"#) -}
-6e121533c8a2ef54b6a6fefcf45fad58
+d5fc71af6c10e0bd77151e2ccb4109d2
   $fFromJSONPackage_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser RestClient.Package
@@ -556,7 +556,7 @@ e41831d2a0310b1005d951f3c954e8cd
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <RestClient.Package>_R))) -}
-6e121533c8a2ef54b6a6fefcf45fad58
+d5fc71af6c10e0bd77151e2ccb4109d2
   $fFromJSONPackage_$cparseJSONList ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser [RestClient.Package]
@@ -593,7 +593,7 @@ e41831d2a0310b1005d951f3c954e8cd
                         `cast`
                       (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                                 <[RestClient.Package]>_R)) } }) -}
-0ebeea4004432720596f9b2abb9f5565
+522c715ed34c9610374c16ccbd09bd1e
   $fFromJSONPackage_$s$fSelectorMetaMetaSel ::
     GHC.Generics.Selector
       ('GHC.Generics.MetaSel
@@ -655,7 +655,7 @@ e41831d2a0310b1005d951f3c954e8cd
                      GHC.Generics.$WSDecidedLazy
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
-4108af47d81461fd816252657ff5047c
+f97e52011af42867eed4f4e6ad2a1e09
   $fFromJSONPackage_$s$fSelectorMetaMetaSel_$cselName ::
     forall k (t :: GHC.Generics.Meta
                    -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
@@ -679,13 +679,13 @@ e41831d2a0310b1005d951f3c954e8cd
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  RestClient.$fFromJSONPackage9) -}
-6e121533c8a2ef54b6a6fefcf45fad58
+d5fc71af6c10e0bd77151e2ccb4109d2
   $fFromJSONPackage_go ::
     GHC.Prim.Int#
     -> [Data.Aeson.Types.Internal.Value]
     -> [Data.Aeson.Types.Internal.Parser RestClient.Package]
   {- Arity: 2, Strictness: <L,U><S,1*U> -}
-c81ea4b5c7b265a41e9e38ce2a03e817
+11a77cf53192ddbc4beaaf1b897b281e
   $fFromJSONUserDetailed ::
     Data.Aeson.Types.FromJSON.FromJSON RestClient.UserDetailed
   DFunId
@@ -694,7 +694,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                   @ RestClient.UserDetailed
                   RestClient.$fFromJSONUserDetailed_$cparseJSON
                   RestClient.$fFromJSONUserDetailed_$cparseJSONList -}
-c81ea4b5c7b265a41e9e38ce2a03e817
+11a77cf53192ddbc4beaaf1b897b281e
   $fFromJSONUserDetailed1 ::
     [Data.Aeson.Types.Internal.Parser RestClient.UserDetailed]
     -> forall (f :: * -> *) r.
@@ -703,7 +703,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
        -> Data.Aeson.Types.Internal.Success [RestClient.UserDetailed] f r
        -> f r
   {- Arity: 4, HasNoCafRefs, Strictness: <S,1*U><L,U><L,U><L,C(U)> -}
-2238bbf3c4ca42b7ab3998e8e386911f
+8183237160b3819d52668c3ba02c014b
   $fFromJSONUserDetailed10 ::
     GHC.Generics.SingI ('GHC.Base.Just "userid")
   {- Unfolding: InlineRule (0, True, True)
@@ -714,7 +714,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
                                                        GHC.Types.Symbol>_N) <'GHC.Base.Just
                                                                                "userid">_N) -}
-d3229c0c50c4bb5f02a004866abbfda3
+a48cb471eed8fbfe76ebfa5aee910ba6
   $fFromJSONUserDetailed11 ::
     GHC.Generics.R:SingMaybeb
       GHC.Types.Symbol ('GHC.Base.Just "userid")
@@ -726,7 +726,7 @@ d3229c0c50c4bb5f02a004866abbfda3
                    RestClient.$fFromJSONUserDetailed12
                      `cast`
                    (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"userid">_N)) -}
-45542793184016a7dcc3ae8603088f17
+95a42dbc197fa3c4d302ed17e90f4f27
   $fFromJSONUserDetailed12 :: GHC.Generics.R:SingSymbols "userid"
   {- Strictness: m,
      Unfolding: (GHC.Generics.SSym
@@ -736,10 +736,10 @@ d3229c0c50c4bb5f02a004866abbfda3
                    (Trans
                         (Sym (GHC.TypeLits.N:SSymbol[0] <"userid">_P))
                         (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"userid">_N))) -}
-705565e0f80a69050ed1d1f260f95ef0
+8e9b35d9ab50164b44d5e7c6313d21fb
   $fFromJSONUserDetailed13 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "userid"#) -}
-57706e9563356f295e74b601774dfaee
+25c2997cdb8269402ffe7b0180433050
   $fFromJSONUserDetailed14 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -779,7 +779,7 @@ d3229c0c50c4bb5f02a004866abbfda3
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <GHC.Generics.K1 GHC.Generics.R [RestClient.Group] a1>_R))) -}
-9a873a47060b8b36204513ecadc50b34
+4d3bb8b2fadddcaddec522a407cbe61f
   $fFromJSONUserDetailed15 ::
     GHC.Generics.SingI ('GHC.Base.Just "groups")
   {- Unfolding: InlineRule (0, True, True)
@@ -790,7 +790,7 @@ d3229c0c50c4bb5f02a004866abbfda3
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
                                                        GHC.Types.Symbol>_N) <'GHC.Base.Just
                                                                                "groups">_N) -}
-0fbf8cc5789eddc51ddd51af03c05671
+0d9c8b4dd08936223df080a4be97e94e
   $fFromJSONUserDetailed16 ::
     GHC.Generics.R:SingMaybeb
       GHC.Types.Symbol ('GHC.Base.Just "groups")
@@ -802,7 +802,7 @@ d3229c0c50c4bb5f02a004866abbfda3
                    RestClient.$fFromJSONUserDetailed17
                      `cast`
                    (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"groups">_N)) -}
-47e50cbe61678c1d20e508789f68b840
+8f797c5ca52e4a1f89086ba15646726d
   $fFromJSONUserDetailed17 :: GHC.Generics.R:SingSymbols "groups"
   {- Strictness: m,
      Unfolding: (GHC.Generics.SSym
@@ -812,10 +812,10 @@ d3229c0c50c4bb5f02a004866abbfda3
                    (Trans
                         (Sym (GHC.TypeLits.N:SSymbol[0] <"groups">_P))
                         (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"groups">_N))) -}
-83d354e9de9f1a1ea16c51716b3eedcf
+04d9e4df1cff32986e83ff035738a653
   $fFromJSONUserDetailed18 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "groups"#) -}
-24824a273fdca3571a8404b8b68ab360
+8d4bfd3e15741eba09aad8a62b630438
   $fFromJSONUserDetailed19 ::
     (GHC.Generics.:*:)
       (GHC.Generics.M1
@@ -870,7 +870,7 @@ d3229c0c50c4bb5f02a004866abbfda3
                                                  (GHC.Generics.Rec0 [RestClient.Group]))
                              a) ->
                  GHC.Types.False) -}
-38a06ac9ebb8e8eb6685b42b5299b6cc
+9cd9d44f46084692c963b27944e717a3
   $fFromJSONUserDetailed2 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -913,7 +913,7 @@ d3229c0c50c4bb5f02a004866abbfda3
                    (w2 :: GHC.Base.Maybe Data.Text.Internal.Text)
                    (w3 :: Data.Aeson.Types.Internal.Value) ->
                  RestClient.$w$dConsFromJSON' @ a w w1 w3) -}
-b61e9e2390c34aa8deb1b641a67249a3
+a8ee419d771aa3b612992ff753d23d21
   $fFromJSONUserDetailed3 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -929,7 +929,7 @@ b61e9e2390c34aa8deb1b641a67249a3
                             Data.Aeson.Types.Generic.Zero a1)
                    (w2 :: Data.Aeson.Types.Internal.Value) ->
                  RestClient.$w$dGFromJSON1 @ a1 w2) -}
-11afad207bfc4473153557e5a348e753
+0b7fae0c7c91bf817be8ece1c6347ac6
   $fFromJSONUserDetailed4 ::
     GHC.Generics.SingI ('GHC.Base.Just "username")
   {- Unfolding: InlineRule (0, True, True)
@@ -940,7 +940,7 @@ b61e9e2390c34aa8deb1b641a67249a3
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Base.Maybe
                                                        GHC.Types.Symbol>_N) <'GHC.Base.Just
                                                                                "username">_N) -}
-a44cb3a9ffcd3888c9ad4e70a9f9a0ef
+d89232963d426848d4fdb3c64fff07d0
   $fFromJSONUserDetailed5 ::
     GHC.Generics.R:SingMaybeb
       GHC.Types.Symbol ('GHC.Base.Just "username")
@@ -952,7 +952,7 @@ a44cb3a9ffcd3888c9ad4e70a9f9a0ef
                    RestClient.$fFromJSONUserDetailed6
                      `cast`
                    (Sym (GHC.Generics.D:R:SingSymbols0[0]) <"username">_N)) -}
-4eae4de183e231e88ae7b6ca7e5d7067
+40211cd78f1a6dc5eb5ed2fffa9552dd
   $fFromJSONUserDetailed6 :: GHC.Generics.R:SingSymbols "username"
   {- Strictness: m,
      Unfolding: (GHC.Generics.SSym
@@ -962,10 +962,10 @@ a44cb3a9ffcd3888c9ad4e70a9f9a0ef
                    (Trans
                         (Sym (GHC.TypeLits.N:SSymbol[0] <"username">_P))
                         (Sym (GHC.TypeLits.N:KnownSymbol[0]) <"username">_N))) -}
-085beb2ba70db08f26deebe4be319d36
+ec9cb01b2385f90d9f622ef8282a8646
   $fFromJSONUserDetailed7 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "username"#) -}
-085a014f1e9621151e973fad5845e295
+309ac490ef5bbaf779e1ecb51cdcd604
   $fFromJSONUserDetailed8 ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -981,10 +981,10 @@ a44cb3a9ffcd3888c9ad4e70a9f9a0ef
                             Data.Aeson.Types.Generic.Zero a1)
                    (w2 :: Data.Aeson.Types.Internal.Value) ->
                  RestClient.$w$dGFromJSON2 @ a1 w2) -}
-9f73dc8a9c6a684676532c85e18bcbab
+f00a95eefd4224ce7cddbbbcf4d2c897
   $fFromJSONUserDetailed9 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Int"#) -}
-c81ea4b5c7b265a41e9e38ce2a03e817
+11a77cf53192ddbc4beaaf1b897b281e
   $fFromJSONUserDetailed_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser RestClient.UserDetailed
@@ -1197,7 +1197,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                                               <'GHC.Generics.MetaData
                                                  "UserDetailed"
                                                  "RestClient"
-                                                 "authentication-server-0.1.0.0-I8DHertIJwM8Y89CQu4UW0"
+                                                 "authentication-server-0.1.0.0-Gqw00IX2kziK0HuIL7LXbB"
                                                  'GHC.Types.False>_P
                                               <GHC.Generics.M1
                                                  GHC.Generics.C
@@ -1233,7 +1233,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <RestClient.UserDetailed>_R))) -}
-c81ea4b5c7b265a41e9e38ce2a03e817
+11a77cf53192ddbc4beaaf1b897b281e
   $fFromJSONUserDetailed_$cparseJSONList ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser [RestClient.UserDetailed]
@@ -1270,7 +1270,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                         `cast`
                       (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                                 <[RestClient.UserDetailed]>_R)) } }) -}
-c81ea4b5c7b265a41e9e38ce2a03e817
+11a77cf53192ddbc4beaaf1b897b281e
   $fFromJSONUserDetailed_$cto ::
     GHC.Generics.Rep RestClient.UserDetailed x
     -> RestClient.UserDetailed
@@ -1287,7 +1287,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                                      <'GHC.Generics.MetaData
                                         "UserDetailed"
                                         "RestClient"
-                                        "authentication-server-0.1.0.0-I8DHertIJwM8Y89CQu4UW0"
+                                        "authentication-server-0.1.0.0-Gqw00IX2kziK0HuIL7LXbB"
                                         'GHC.Types.False>_P
                                      <GHC.Generics.M1
                                         GHC.Generics.C
@@ -1393,7 +1393,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                              <GHC.Generics.K1 GHC.Generics.R [RestClient.Group]>_R <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <[RestClient.Group]>_R <x>_P)) } }) -}
-ee3fad41e7d578a3644a06003a30f46f
+e5b77a7a9b53c6c79ebf37e47c412674
   $fFromJSONUserDetailed_$s$fSelectorMetaMetaSel ::
     GHC.Generics.Selector
       ('GHC.Generics.MetaSel
@@ -1455,7 +1455,7 @@ ee3fad41e7d578a3644a06003a30f46f
                      GHC.Generics.$WSDecidedLazy
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
-8a2ce10d1dbd2be455c1a915cc0d9d30
+db7a55d5f0c7e1226fbbda602672abf6
   $fFromJSONUserDetailed_$s$fSelectorMetaMetaSel1 ::
     GHC.Generics.Selector
       ('GHC.Generics.MetaSel
@@ -1517,7 +1517,7 @@ ee3fad41e7d578a3644a06003a30f46f
                      GHC.Generics.$WSDecidedLazy
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
-16a4361df7772ceae762a0bdb5582cdf
+149e888832d31cc38f0fc8c67521d134
   $fFromJSONUserDetailed_$s$fSelectorMetaMetaSel2 ::
     GHC.Generics.Selector
       ('GHC.Generics.MetaSel
@@ -1579,7 +1579,7 @@ ee3fad41e7d578a3644a06003a30f46f
                      GHC.Generics.$WSDecidedLazy
                        `cast`
                      (Sym (GHC.Generics.N:SingI[0]) <GHC.Generics.DecidedStrictness>_N <'GHC.Generics.DecidedLazy>_N)) -}
-858c80a954553056f86c8c51085e6873
+aba832456d07b3d26b6bc593b185410e
   $fFromJSONUserDetailed_$s$fSelectorMetaMetaSel_$cselName ::
     forall k (t :: GHC.Generics.Meta
                    -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
@@ -1603,7 +1603,7 @@ ee3fad41e7d578a3644a06003a30f46f
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  RestClient.$fFromJSONUserDetailed7) -}
-e521116fbbf5989d416c7154a7b15d8b
+0a104d644e2b955838b811e79500d9b7
   $fFromJSONUserDetailed_$s$fSelectorMetaMetaSel_$cselName1 ::
     forall k (t :: GHC.Generics.Meta
                    -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
@@ -1627,7 +1627,7 @@ e521116fbbf5989d416c7154a7b15d8b
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  RestClient.$fFromJSONUserDetailed13) -}
-2e6ed142c3f4b845abb9f456d7ae1c5c
+add32d8fee7b7d0d0223b215cde17f93
   $fFromJSONUserDetailed_$s$fSelectorMetaMetaSel_$cselName2 ::
     forall k (t :: GHC.Generics.Meta
                    -> (GHC.Types.* -> GHC.Types.*) -> k -> *) (f :: GHC.Types.*
@@ -1651,13 +1651,13 @@ e521116fbbf5989d416c7154a7b15d8b
                                 'GHC.Generics.NoSourceStrictness
                                 'GHC.Generics.DecidedLazy) f a) ->
                  RestClient.$fFromJSONUserDetailed18) -}
-c81ea4b5c7b265a41e9e38ce2a03e817
+11a77cf53192ddbc4beaaf1b897b281e
   $fFromJSONUserDetailed_go ::
     GHC.Prim.Int#
     -> [Data.Aeson.Types.Internal.Value]
     -> [Data.Aeson.Types.Internal.Parser RestClient.UserDetailed]
   {- Arity: 2, Strictness: <L,U><S,1*U> -}
-762d449d33738722889a027252402496
+90a9654eca1f953513836ae07ca283b1
   $fFromJSONUserSummary ::
     Data.Aeson.Types.FromJSON.FromJSON RestClient.UserSummary
   DFunId
@@ -1666,7 +1666,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                   @ RestClient.UserSummary
                   RestClient.$fFromJSONUserSummary_$cparseJSON
                   RestClient.$fFromJSONUserSummary_$cparseJSONList -}
-762d449d33738722889a027252402496
+90a9654eca1f953513836ae07ca283b1
   $fFromJSONUserSummary1 ::
     [Data.Aeson.Types.Internal.Parser RestClient.UserSummary]
     -> forall (f :: * -> *) r.
@@ -1675,12 +1675,12 @@ c81ea4b5c7b265a41e9e38ce2a03e817
        -> Data.Aeson.Types.Internal.Success [RestClient.UserSummary] f r
        -> f r
   {- Arity: 4, HasNoCafRefs, Strictness: <S,1*U><L,U><L,U><L,C(U)> -}
-762d449d33738722889a027252402496
+90a9654eca1f953513836ae07ca283b1
   $fFromJSONUserSummary_$cparseJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser RestClient.UserSummary
   {- Arity: 1, Strictness: <S,1*U> -}
-762d449d33738722889a027252402496
+90a9654eca1f953513836ae07ca283b1
   $fFromJSONUserSummary_$cparseJSONList ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser [RestClient.UserSummary]
@@ -1717,13 +1717,13 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                         `cast`
                       (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                                 <[RestClient.UserSummary]>_R)) } }) -}
-762d449d33738722889a027252402496
+90a9654eca1f953513836ae07ca283b1
   $fFromJSONUserSummary_go ::
     GHC.Prim.Int#
     -> [Data.Aeson.Types.Internal.Value]
     -> [Data.Aeson.Types.Internal.Parser RestClient.UserSummary]
   {- Arity: 2, Strictness: <L,U><S,1*U> -}
-6e121533c8a2ef54b6a6fefcf45fad58
+d5fc71af6c10e0bd77151e2ccb4109d2
   $fGenericPackage :: GHC.Generics.Generic RestClient.Package
   DFunId
   {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -1731,7 +1731,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                   @ RestClient.Package
                   RestClient.$fGenericPackage_$cfrom
                   RestClient.$fGenericPackage_$cto -}
-6e121533c8a2ef54b6a6fefcf45fad58
+d5fc71af6c10e0bd77151e2ccb4109d2
   $fGenericPackage_$cfrom ::
     RestClient.Package -> GHC.Generics.Rep RestClient.Package x
   {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U(U,U,U))>m,
@@ -1772,7 +1772,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                                                <'GHC.Generics.MetaData
                                                   "Package"
                                                   "RestClient"
-                                                  "authentication-server-0.1.0.0-I8DHertIJwM8Y89CQu4UW0"
+                                                  "authentication-server-0.1.0.0-Gqw00IX2kziK0HuIL7LXbB"
                                                   'GHC.Types.False>_P
                                                <GHC.Generics.M1
                                                   GHC.Generics.C
@@ -1791,7 +1791,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                                                         GHC.Generics.R
                                                         Data.Text.Internal.Text))>_R))
                                      (Sub (Sym (RestClient.Rep_Package[0]))))) <x>_N)) }) -}
-6e121533c8a2ef54b6a6fefcf45fad58
+d5fc71af6c10e0bd77151e2ccb4109d2
   $fGenericPackage_$cto ::
     GHC.Generics.Rep RestClient.Package x -> RestClient.Package
   {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
@@ -1809,7 +1809,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                                        <'GHC.Generics.MetaData
                                           "Package"
                                           "RestClient"
-                                          "authentication-server-0.1.0.0-I8DHertIJwM8Y89CQu4UW0"
+                                          "authentication-server-0.1.0.0-Gqw00IX2kziK0HuIL7LXbB"
                                           'GHC.Types.False>_P
                                        <GHC.Generics.M1
                                           GHC.Generics.C
@@ -1849,7 +1849,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                                                GHC.Generics.R Data.Text.Internal.Text>_R))) <x>_N)
                         (GHC.Generics.N:K1[0]
                              <GHC.Generics.R>_P <Data.Text.Internal.Text>_R <x>_P))) -}
-c81ea4b5c7b265a41e9e38ce2a03e817
+11a77cf53192ddbc4beaaf1b897b281e
   $fGenericUserDetailed ::
     GHC.Generics.Generic RestClient.UserDetailed
   DFunId
@@ -1858,7 +1858,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                   @ RestClient.UserDetailed
                   RestClient.$fGenericUserDetailed_$cfrom
                   RestClient.$fFromJSONUserDetailed_$cto -}
-c81ea4b5c7b265a41e9e38ce2a03e817
+11a77cf53192ddbc4beaaf1b897b281e
   $fGenericUserDetailed_$cfrom ::
     RestClient.UserDetailed
     -> GHC.Generics.Rep RestClient.UserDetailed x
@@ -1988,7 +1988,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                                      <'GHC.Generics.MetaData
                                         "UserDetailed"
                                         "RestClient"
-                                        "authentication-server-0.1.0.0-I8DHertIJwM8Y89CQu4UW0"
+                                        "authentication-server-0.1.0.0-Gqw00IX2kziK0HuIL7LXbB"
                                         'GHC.Types.False>_P
                                      <GHC.Generics.M1
                                         GHC.Generics.C
@@ -2023,7 +2023,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                                                                                  GHC.Generics.R
                                                                                  [RestClient.Group])))>_R))
                            (Sub (Sym (RestClient.Rep_UserDetailed[0])))) <x>_N) }) -}
-6e121533c8a2ef54b6a6fefcf45fad58
+d5fc71af6c10e0bd77151e2ccb4109d2
   $fShowPackage :: GHC.Show.Show RestClient.Package
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -2032,22 +2032,22 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                   RestClient.$fShowPackage_$cshowsPrec
                   RestClient.$fShowPackage_$cshow
                   RestClient.$fShowPackage_$cshowList -}
-6e121533c8a2ef54b6a6fefcf45fad58
+d5fc71af6c10e0bd77151e2ccb4109d2
   $fShowPackage1 :: RestClient.Package -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ (w :: RestClient.Package) (w1 :: GHC.Base.String) ->
                  case w of ww { RestClient.Package ww1 ->
                  RestClient.$w$cshowsPrec 0# ww1 w1 }) -}
-5291fd7f0454756e6798de2b56834273
+7876ec8e6a65402eee8ecc9f3083682b
   $fShowPackage2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
-7ecc94129ebaf21646723fcf16f36939
+729286ef4c068a7058c22eb020d28cec
   $fShowPackage3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "packageName = "#) -}
-14749ead069f3bb9779679c206d71e13
+cfacd650a1f732e2deb6b8c29e163028
   $fShowPackage4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Package {"#) -}
-6e121533c8a2ef54b6a6fefcf45fad58
+d5fc71af6c10e0bd77151e2ccb4109d2
   $fShowPackage_$cshow :: RestClient.Package -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U(U,U,U))>,
      Unfolding: InlineRule (1, True, False)
@@ -2056,13 +2056,13 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-6e121533c8a2ef54b6a6fefcf45fad58
+d5fc71af6c10e0bd77151e2ccb4109d2
   $fShowPackage_$cshowList :: [RestClient.Package] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ RestClient.Package
                    RestClient.$fShowPackage1) -}
-6e121533c8a2ef54b6a6fefcf45fad58
+d5fc71af6c10e0bd77151e2ccb4109d2
   $fShowPackage_$cshowsPrec ::
     GHC.Types.Int -> RestClient.Package -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U(1*U(U,U,U))><L,U>,
@@ -2074,7 +2074,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { RestClient.Package ww3 ->
                  RestClient.$w$cshowsPrec ww1 ww3 w2 } }) -}
-c81ea4b5c7b265a41e9e38ce2a03e817
+11a77cf53192ddbc4beaaf1b897b281e
   $fShowUserDetailed :: GHC.Show.Show RestClient.UserDetailed
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -2083,29 +2083,29 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                   RestClient.$fShowUserDetailed_$cshowsPrec
                   RestClient.$fShowUserDetailed_$cshow
                   RestClient.$fShowUserDetailed_$cshowList -}
-c81ea4b5c7b265a41e9e38ce2a03e817
+11a77cf53192ddbc4beaaf1b897b281e
   $fShowUserDetailed1 :: RestClient.UserDetailed -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ (w :: RestClient.UserDetailed)
                    (w1 :: GHC.Base.String) ->
                  case w of ww { RestClient.UserDetailed ww1 ww2 ww3 ->
                  RestClient.$w$cshowsPrec1 0# ww1 ww2 ww3 w1 }) -}
-10d6ca3ecacb4fe3c449f6308138f4ad
+c4965ab13538231dca64bb283aeb544e
   $fShowUserDetailed2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "groups = "#) -}
-dafcdb2e8bb9270442b666311b041a9d
+97d1caaca2d5662305b35d7deba2bc61
   $fShowUserDetailed3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "userid = "#) -}
-c85ccd813f9f6643cb7765f5747a8b34
+e7a5695345d7a736f0a43dcf3d75fa2f
   $fShowUserDetailed4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
-f2edf740861ad28251124e32a284a970
+d3e69817eab685fd5dab24af0ccfcc65
   $fShowUserDetailed5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "username = "#) -}
-3d9bc4c0c10a0525f5be06631b0429f9
+eefced1d96152ddc4a9ed54eda99b2f2
   $fShowUserDetailed6 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "UserDetailed {"#) -}
-c81ea4b5c7b265a41e9e38ce2a03e817
+11a77cf53192ddbc4beaaf1b897b281e
   $fShowUserDetailed_$cshow ::
     RestClient.UserDetailed -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U(U,U,U),1*U(U),1*U)>,
@@ -2115,14 +2115,14 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-c81ea4b5c7b265a41e9e38ce2a03e817
+11a77cf53192ddbc4beaaf1b897b281e
   $fShowUserDetailed_$cshowList ::
     [RestClient.UserDetailed] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ RestClient.UserDetailed
                    RestClient.$fShowUserDetailed1) -}
-c81ea4b5c7b265a41e9e38ce2a03e817
+11a77cf53192ddbc4beaaf1b897b281e
   $fShowUserDetailed_$cshowsPrec ::
     GHC.Types.Int -> RestClient.UserDetailed -> GHC.Show.ShowS
   {- Arity: 3,
@@ -2135,7 +2135,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { RestClient.UserDetailed ww3 ww4 ww5 ->
                  RestClient.$w$cshowsPrec1 ww1 ww3 ww4 ww5 w2 } }) -}
-762d449d33738722889a027252402496
+90a9654eca1f953513836ae07ca283b1
   $fShowUserSummary :: GHC.Show.Show RestClient.UserSummary
   DFunId
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -2144,23 +2144,23 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                   RestClient.$fShowUserSummary_$cshowsPrec
                   RestClient.$fShowUserSummary_$cshow
                   RestClient.$fShowUserSummary_$cshowList -}
-762d449d33738722889a027252402496
+90a9654eca1f953513836ae07ca283b1
   $fShowUserSummary1 :: RestClient.UserSummary -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (\ (w :: RestClient.UserSummary)
                    (w1 :: GHC.Base.String) ->
                  case w of ww { RestClient.UserSummary ww1 ww2 ->
                  RestClient.$w$cshowsPrec2 0# ww1 ww2 w1 }) -}
-a457142f8b7558954b306b669c4d12f8
+5bdad90ecc6764581e3a93b1f19fe72a
   $fShowUserSummary2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "UserSummary {"#) -}
-adde602de957360a36a45ede49b1e310
+13c5082071267994b01f5602790c07c2
   $fShowUserSummary3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "summaryUserid = "#) -}
-4f43c7332fed19ed4ff36edb50c7c395
+d18da1348cd915ff411edb578b89ba84
   $fShowUserSummary4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "summaryUsername = "#) -}
-762d449d33738722889a027252402496
+90a9654eca1f953513836ae07ca283b1
   $fShowUserSummary_$cshow ::
     RestClient.UserSummary -> GHC.Base.String
   {- Arity: 1, Strictness: <S,1*U(1*U(U,U,U),1*U(U))>,
@@ -2170,14 +2170,14 @@ adde602de957360a36a45ede49b1e310
                    GHC.Show.shows22
                    x
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-762d449d33738722889a027252402496
+90a9654eca1f953513836ae07ca283b1
   $fShowUserSummary_$cshowList ::
     [RestClient.UserSummary] -> GHC.Show.ShowS
   {- Arity: 2,
      Unfolding: (GHC.Show.showList__
                    @ RestClient.UserSummary
                    RestClient.$fShowUserSummary1) -}
-762d449d33738722889a027252402496
+90a9654eca1f953513836ae07ca283b1
   $fShowUserSummary_$cshowsPrec ::
     GHC.Types.Int -> RestClient.UserSummary -> GHC.Show.ShowS
   {- Arity: 3,
@@ -2190,7 +2190,7 @@ adde602de957360a36a45ede49b1e310
                  case w of ww { GHC.Types.I# ww1 ->
                  case w1 of ww2 { RestClient.UserSummary ww3 ww4 ->
                  RestClient.$w$cshowsPrec2 ww1 ww3 ww4 w2 } }) -}
-55da9df8461460619c54022f5637d1eb
+605708f40933c950caaf51606dfa1851
   $s$fFromJSON[] ::
     Data.Aeson.Types.FromJSON.FromJSON [RestClient.Package]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -2202,7 +2202,7 @@ adde602de957360a36a45ede49b1e310
                   (Data.Aeson.Types.FromJSON.$fFromJSONKey[]_$cparseJSONList
                      @ RestClient.Package
                      RestClient.$fFromJSONPackage) -}
-1fb88434ac24259f5295b66ef44a14b6
+94a786e5c679a158a0b30d2f07e3ac64
   $s$fFromJSON[]1 ::
     Data.Aeson.Types.FromJSON.FromJSON [RestClient.UserSummary]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -2214,7 +2214,7 @@ adde602de957360a36a45ede49b1e310
                   (Data.Aeson.Types.FromJSON.$fFromJSONKey[]_$cparseJSONList
                      @ RestClient.UserSummary
                      RestClient.$fFromJSONUserSummary) -}
-9dcbe1312c774781821761150f81eef5
+35a2956be36b16769aa06103c4a88df2
   $s$fMimeUnrenderTYPEJSONa ::
     Servant.API.ContentTypes.MimeUnrender
       Servant.API.ContentTypes.JSON RestClient.UserDetailed
@@ -2227,7 +2227,7 @@ adde602de957360a36a45ede49b1e310
                      @ RestClient.UserDetailed
                      RestClient.$fFromJSONUserDetailed)
                   RestClient.$s$fMimeUnrenderTYPEJSONa_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender -}
-7b16d9e112c969b84e196977d9cef518
+fcc8ce9f520ca03dfbe3243173179e9e
   $s$fMimeUnrenderTYPEJSONa1 ::
     Servant.API.ContentTypes.MimeUnrender
       Servant.API.ContentTypes.JSON [RestClient.Package]
@@ -2240,7 +2240,7 @@ adde602de957360a36a45ede49b1e310
                      @ [RestClient.Package]
                      RestClient.$s$fMimeUnrenderTYPEJSONa_$dFromJSON)
                   RestClient.$s$fMimeUnrenderTYPEJSONa_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender1 -}
-267eae3b636ffcf89b61baba6c8dc076
+7ada15f8874f49a6ca82c13f27a9005d
   $s$fMimeUnrenderTYPEJSONa2 ::
     Servant.API.ContentTypes.MimeUnrender
       Servant.API.ContentTypes.JSON [RestClient.UserSummary]
@@ -2253,17 +2253,17 @@ adde602de957360a36a45ede49b1e310
                      @ [RestClient.UserSummary]
                      RestClient.$s$fMimeUnrenderTYPEJSONa_$dFromJSON1)
                   RestClient.$s$fMimeUnrenderTYPEJSONa_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender2 -}
-83b736ef334430fe76ea55d626a58211
+4dc7663194c2fdd5321f194aa7340d57
   $s$fMimeUnrenderTYPEJSONa_$dFromJSON ::
     Data.Aeson.Types.FromJSON.FromJSON [RestClient.Package]
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True) RestClient.$s$fFromJSON[] -}
-749a2d1f69678a1edfdcd3a613acb523
+3c37e91bb294955b2e147fdf800bf3a8
   $s$fMimeUnrenderTYPEJSONa_$dFromJSON1 ::
     Data.Aeson.Types.FromJSON.FromJSON [RestClient.UserSummary]
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True) RestClient.$s$fFromJSON[]1 -}
-34ddc53f83a3bc34cb1f5c8582ff81a2
+dfc091bd0de619ff975f1609d8a682fc
   $s$fMimeUnrenderTYPEJSONa_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
     -> Data.ByteString.Lazy.Internal.ByteString
@@ -2276,7 +2276,7 @@ adde602de957360a36a45ede49b1e310
                    @ RestClient.UserDetailed
                    RestClient.$fFromJSONUserDetailed
                    eta) -}
-40f69dfe251f37159f2a377ec3bff3fa
+3f3c318503be15d21e4885b524cec886
   $s$fMimeUnrenderTYPEJSONa_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender1 ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
     -> Data.ByteString.Lazy.Internal.ByteString
@@ -2289,7 +2289,7 @@ adde602de957360a36a45ede49b1e310
                    @ [RestClient.Package]
                    RestClient.$s$fMimeUnrenderTYPEJSONa_$dFromJSON
                    eta) -}
-294df0e2659e0c2aa0ee7a7926c944fc
+374f3604c9c7e29a750eab1b8f366a03
   $s$fMimeUnrenderTYPEJSONa_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender2 ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
     -> Data.ByteString.Lazy.Internal.ByteString
@@ -2302,10 +2302,10 @@ adde602de957360a36a45ede49b1e310
                    @ [RestClient.UserSummary]
                    RestClient.$s$fMimeUnrenderTYPEJSONa_$dFromJSON1
                    eta) -}
-244ba63f3e5c56e02ad118af8b93a02f
+80a55ee44533d0dc71d26e622d5a389f
   $sclient2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "packages"#) -}
-710f9c5dc7afbeb940c087834615f5bc
+6d2f084704ffec9b80c704afdef47d08
   $sclient3 ::
     Data.Proxy.Proxy
       (Servant.API.Verbs.Verb
@@ -2356,18 +2356,18 @@ adde602de957360a36a45ede49b1e310
                            '[Servant.API.ContentTypes.JSON]
                            RestClient.UserDetailed))
                    w4 }) -}
-b407abbb64b63493c7e4e332daf397a9
+c9dd29d492bafc67abea1a9bcd745881
   $sclient4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackAppendCString#
                    "/"#
                    RestClient.$sclient5) -}
-5c5046a322a285068e04e98562e4f289
+c8a786b2539c256e547104f3a0dce338
   $sclient5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "user"#) -}
-70d907d3b1d9807bd1431970e5c538d4
+f8797ab333fc8354712172e2d1f375b1
   $sclient6 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "users"#) -}
-06e206a3bcd2c11c796f9e4bee6e81a2
+e6dc311c9eab6302c69cbd189020a2c7
   $sclient_$d~~ ::
     '[Servant.API.ContentTypes.JSON]
     GHC.Types.~~ '[Servant.API.ContentTypes.JSON]
@@ -2378,94 +2378,94 @@ b407abbb64b63493c7e4e332daf397a9
                    @ '[Servant.API.ContentTypes.JSON]
                    @ '[Servant.API.ContentTypes.JSON]
                    @~ <'[Servant.API.ContentTypes.JSON]>_N) -}
-21f90ec55f384d40a45b7536c8809bd0
+89b068be31a03dd8b88dcdb497288a9c
   $tc'Package :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   659596968460911693##
-                   14001798781099159516##
+                   7906604075535587751##
+                   17746867281338027487##
                    RestClient.$trModule
                    RestClient.$tc'Package1) -}
-52f8eefca13643bca79ab8237eac82cf
+c32d9d16f93e00438d6c5266357d6e5e
   $tc'Package1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'Package"#) -}
-a09a43c8d098ea7f73659945598d3156
+98b94374e977dec51a2b3493c1976589
   $tc'UserDetailed :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   13672384724316652763##
-                   1320539367967059797##
+                   2903263295459063341##
+                   3820361186941875308##
                    RestClient.$trModule
                    RestClient.$tc'UserDetailed1) -}
-fa2ce2e90d673db4741685909595bdc3
+a48917d5a275870fb7c730f0485651db
   $tc'UserDetailed1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'UserDetailed"#) -}
-4a6352c8a8eec38fe6753488ec928b81
+b32ac6e3b143228d417c649289a68281
   $tc'UserSummary :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   1708688090203361677##
-                   17547804623848575673##
+                   11687662586126100975##
+                   6415114159512770431##
                    RestClient.$trModule
                    RestClient.$tc'UserSummary1) -}
-88017a0112b1bc6b1af1f0423475e8c6
+b5ecfc961d0afff67f9e34973bf8bb09
   $tc'UserSummary1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'UserSummary"#) -}
-065a8e6bf873ff971b93150da27bceb2
+afadb1f75c0f1e9afe7306f438a6a32f
   $tcPackage :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   9456384546316707839##
-                   12054662053899125938##
+                   17894712234204375016##
+                   11415206140652024425##
                    RestClient.$trModule
                    RestClient.$tcPackage1) -}
-e290245535eba3da911f11d93c6f8172
+9e68905f0b21990dd9dbe06e82a1ad03
   $tcPackage1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Package"#) -}
-f9d32bacca3c6f4fb229f1e38e4c69d2
+5c4230ca1ef4b38ac663ffdec5c684b8
   $tcUserDetailed :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   8554900423266380706##
-                   1527057992084566679##
+                   13751515176508787422##
+                   5015727929369433978##
                    RestClient.$trModule
                    RestClient.$tcUserDetailed1) -}
-4ff9ed14d35b91c8ed523d50139b9754
+0b4b29f75c12b5be386a9f49d8d9c68a
   $tcUserDetailed1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "UserDetailed"#) -}
-0f7800ed8b90aa16024fc33989f49e91
+01770990b7b15778ba37ad8e990afaad
   $tcUserSummary :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   3082725272186596865##
-                   10042650797678777089##
+                   5137713869763603461##
+                   11422912702434898205##
                    RestClient.$trModule
                    RestClient.$tcUserSummary1) -}
-14988e031acf1ce2eb7606d55cd68a50
+9132d92017c44a0cc158e28ee439320c
   $tcUserSummary1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "UserSummary"#) -}
-03f4bdd9fdc392a50cfa0d6ed7e3919c
+b63ca40a7a00ba67177d177bbab1af8a
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    RestClient.$trModule2
                    RestClient.$trModule1) -}
-d3858acc3b482d9a8a35a8c86bc3cb69
+66ab8fb0052ee3e5bd54f1ea4d9c8075
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "RestClient"#) -}
-8ed35c11f361a7cfbd008a2feb8241e3
+c8cb429d8acb3572b2bda8d76f4f8fda
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "authentication-server-0.1.0.0-I8DHertIJwM8Y89CQu4UW0"#) -}
-49f2594788c16145845e7ea908ef11ab
+                   "authentication-server-0.1.0.0-Gqw00IX2kziK0HuIL7LXbB"#) -}
+2e84f53b8a2b3bf2657228a1e3d2f2b7
   $w$c/= ::
     GHC.Prim.ByteArray#
     -> GHC.Prim.Int#
@@ -2505,7 +2505,7 @@ d3858acc3b482d9a8a35a8c86bc3cb69
                              GHC.Prim.realWorld# of wild { (#,#) ds11 ds12 ->
                       case GHC.Prim.narrow32Int# ds12 of wild1 {
                         DEFAULT -> GHC.Types.True 0# -> GHC.Types.False } } }) -}
-7d41315a7f9ce18e2a6c9be218d4033f
+96aa08dbd3f38f383d1c5fae0fa10aab
   $w$c== ::
     GHC.Prim.ByteArray#
     -> GHC.Prim.Int#
@@ -2567,7 +2567,7 @@ d3858acc3b482d9a8a35a8c86bc3cb69
                                   Data.Text.$fEqText
                                   ww4
                                   ww9 } } } } } }) -}
-ed54b29cdf91448744844737af1d7027
+3905f36497a0577976506fdee9aad91a
   $w$c==1 ::
     GHC.Prim.ByteArray#
     -> GHC.Prim.Int#
@@ -2613,7 +2613,7 @@ ed54b29cdf91448744844737af1d7027
                       case GHC.Prim.narrow32Int# ds12 of wild1 {
                         DEFAULT -> GHC.Types.False
                         0# -> GHC.Classes.eqInt ww3 ww7 } } }) -}
-4a933e4e3df8ccd0e6ace4c43c304e57
+62e638d9f3a4992c20c4ed2fcb3bb040
   $w$cshowsPrec ::
     GHC.Prim.Int#
     -> Data.Text.Internal.Text -> GHC.Base.String -> GHC.Base.String
@@ -2647,7 +2647,7 @@ ed54b29cdf91448744844737af1d7027
                         @ GHC.Types.Char
                         GHC.Show.shows9
                         (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w)) }) -}
-7912f2a45fd4555882c3743cc02c966b
+8351546281f50b82f0f3be235371cdd9
   $w$cshowsPrec1 ::
     GHC.Prim.Int#
     -> RestClient.Username
@@ -2745,7 +2745,7 @@ ed54b29cdf91448744844737af1d7027
                         @ GHC.Types.Char
                         GHC.Show.shows9
                         (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w)) }) -}
-be273752eee9235954cba771ce887656
+8ef9f45cb2eb4d2f00d7d0ebb74e9187
   $w$cshowsPrec2 ::
     GHC.Prim.Int#
     -> RestClient.Username
@@ -2800,7 +2800,7 @@ be273752eee9235954cba771ce887656
                            @ GHC.Types.Char
                            RestClient.$fShowUserSummary2
                            (g (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w))) }) -}
-f2848daae90854d5a0cbc0ce93ba3530
+9bdaf8d96b5172906a93ec13c29c374b
   $w$dConsFromJSON' ::
     Data.Aeson.Types.Internal.Options
     -> Data.Aeson.Types.FromJSON.FromArgs
@@ -3194,7 +3194,7 @@ f2848daae90854d5a0cbc0ce93ba3530
                                                                (GHC.Generics.Rec0
                                                                   [RestClient.Group]))
                                            a)>_R))) }) -}
-0f32454972ed23c72aba621ab4d96487
+f63d2c54cbd826842a121e555be24129
   $w$dGFromJSON ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser
@@ -3244,7 +3244,7 @@ f2848daae90854d5a0cbc0ce93ba3530
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <GHC.Generics.K1 GHC.Generics.R Data.Text.Internal.Text a1>_R))) -}
-8b4af1c1caaebe32baca1575599aa76c
+e026265bb7bba18e5fdeae853000cd57
   $w$dGFromJSON1 ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser
@@ -3294,7 +3294,7 @@ f2848daae90854d5a0cbc0ce93ba3530
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <GHC.Generics.K1 GHC.Generics.R Data.Text.Internal.Text a1>_R))) -}
-8e1015e62f638a9fb70c1b0ee25d8d16
+3016292bd820268d87468e2401f3d335
   $w$dGFromJSON2 ::
     Data.Aeson.Types.Internal.Value
     -> Data.Aeson.Types.Internal.Parser
@@ -3369,9 +3369,9 @@ f2848daae90854d5a0cbc0ce93ba3530
                    `cast`
                  (Sym (Data.Aeson.Types.Internal.N:Parser[0]
                            <GHC.Generics.K1 GHC.Generics.R GHC.Types.Int a1>_R))) -}
-a41420baf7b86d3431b7a8183d480538
+bf3b443ff2a14f33c4a4e272049c9aaa
   type Group = Data.Text.Internal.Text
-ee8eb1958ca77a9078fb96f7e6c3d19b
+19ade36c19c489834beaf1590b8e8c7f
   type HackageAPI =
     ("users"
      Servant.API.Sub.:> Servant.API.Verbs.Get
@@ -3386,16 +3386,16 @@ ee8eb1958ca77a9078fb96f7e6c3d19b
                                                                 Servant.API.Sub.:> Servant.API.Verbs.Get
                                                                                      '[Servant.API.ContentTypes.JSON]
                                                                                      [RestClient.Package]))
-6e121533c8a2ef54b6a6fefcf45fad58
+d5fc71af6c10e0bd77151e2ccb4109d2
   data Package = Package {packageName :: Data.Text.Internal.Text}
-6e121533c8a2ef54b6a6fefcf45fad58
+d5fc71af6c10e0bd77151e2ccb4109d2
   axiom Rep_Package::
       GHC.Generics.Rep RestClient.Package
         = GHC.Generics.D1
             ('GHC.Generics.MetaData
                "Package"
                "RestClient"
-               "authentication-server-0.1.0.0-I8DHertIJwM8Y89CQu4UW0"
+               "authentication-server-0.1.0.0-Gqw00IX2kziK0HuIL7LXbB"
                'GHC.Types.False)
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
@@ -3407,14 +3407,14 @@ ee8eb1958ca77a9078fb96f7e6c3d19b
                      'GHC.Generics.NoSourceStrictness
                      'GHC.Generics.DecidedLazy)
                   (GHC.Generics.Rec0 Data.Text.Internal.Text)))
-c81ea4b5c7b265a41e9e38ce2a03e817
+11a77cf53192ddbc4beaaf1b897b281e
   axiom Rep_UserDetailed::
       GHC.Generics.Rep RestClient.UserDetailed
         = GHC.Generics.D1
             ('GHC.Generics.MetaData
                "UserDetailed"
                "RestClient"
-               "authentication-server-0.1.0.0-I8DHertIJwM8Y89CQu4UW0"
+               "authentication-server-0.1.0.0-Gqw00IX2kziK0HuIL7LXbB"
                'GHC.Types.False)
             (GHC.Generics.C1
                ('GHC.Generics.MetaCons
@@ -3440,18 +3440,18 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                                                         'GHC.Generics.NoSourceStrictness
                                                         'GHC.Generics.DecidedLazy)
                                                      (GHC.Generics.Rec0 [RestClient.Group]))))
-c81ea4b5c7b265a41e9e38ce2a03e817
+11a77cf53192ddbc4beaaf1b897b281e
   data UserDetailed
     = UserDetailed {username :: RestClient.Username,
                     userid :: GHC.Types.Int,
                     groups :: [RestClient.Group]}
-762d449d33738722889a027252402496
+90a9654eca1f953513836ae07ca283b1
   data UserSummary
     = UserSummary {summaryUsername :: RestClient.Username,
                    summaryUserid :: GHC.Types.Int}
-7924373e0bed68cc2e3964081b69b0e5
+32e9e3fbd0d83e21c355b4876d0921c3
   type Username = Data.Text.Internal.Text
-64b9a6653c6e2400bec14fd03ebb4696
+1e05c4b8ea1c1be4e6d77b0a2d4055b9
   getPackages :: Servant.Common.Req.ClientM [RestClient.Package]
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -3476,7 +3476,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                                        Servant.Common.Req.ServantError GHC.Types.IO>_R
                                     <[RestClient.Package]>_N))
                           (Sym (Servant.Common.Req.N:ClientM[0]) <[RestClient.Package]>_N))) -}
-5642d36768f0033f7e4c5c28770754d8
+3ce2869b411f856b0bd1ddbca31e30d2
   getPackages1 ::
     Servant.Common.Req.ClientEnv
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -3525,7 +3525,7 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                               @ [Network.HTTP.Types.Header.Header]
                               @ [RestClient.Package]
                               y) } #) }) -}
-60639be7eefbda8b69609d0dab235446
+494fe2b9fb058b7b1b5bd3c399cb6ca3
   getPackages2 :: Servant.Common.Req.Req
   {- Unfolding: (Servant.Common.Req.Req
                    RestClient.getPackages3
@@ -3537,18 +3537,18 @@ c81ea4b5c7b265a41e9e38ce2a03e817
                          Network.HTTP.Media.MediaType.Internal.MediaType))
                    (GHC.Types.[] @ Network.HTTP.Media.MediaType.Internal.MediaType)
                    (GHC.Types.[] @ (GHC.Base.String, Data.Text.Internal.Text))) -}
-5cbb59fdda32339926c7d2b518c04e44
+ae6e674a9b26a7d09bfa40659a92fccb
   getPackages3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.Base.++
                    @ GHC.Types.Char
                    (GHC.Types.[] @ GHC.Types.Char)
                    RestClient.getPackages4) -}
-a414d7a20e91076a23be14d1b98d3673
+487ad5cbf77191b1481003023ec44903
   getPackages4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackAppendCString#
                    "/"#
                    RestClient.$sclient2) -}
-61c2271aa136b65b69abe1c5d540a258
+970da7c38d151c7557a3ef5d46426c21
   getPackages_eta1 ::
     Servant.Common.Req.ClientM
       ([Network.HTTP.Types.Header.Header], [RestClient.Package])
@@ -3559,7 +3559,7 @@ a414d7a20e91076a23be14d1b98d3673
                    (Data.Proxy.Proxy @ GHC.Types.* @ Servant.API.ContentTypes.JSON)
                    Network.HTTP.Types.Method.methodGet
                    RestClient.getPackages2) -}
-39b5aa0fe178874d2b3b4b772fda6023
+c003e39f00d931803905bbb4aa45324e
   getUser ::
     RestClient.Username
     -> Servant.Common.Req.ClientM RestClient.UserDetailed
@@ -3574,7 +3574,7 @@ a414d7a20e91076a23be14d1b98d3673
                                <'Network.HTTP.Types.Method.GET>_N
                                <'[Servant.API.ContentTypes.JSON]>_N
                                <200>_N)) -}
-3ba00096c2f445b6dbe400ef07a79980
+6cae92170c7496aaeaa4ebf2c8074df9
   getUser1 ::
     Data.Text.Internal.Text
     -> Servant.Client.Client
@@ -3615,7 +3615,7 @@ a414d7a20e91076a23be14d1b98d3673
                                               RestClient.UserDetailed))
                    RestClient.getUser2
                    w5) -}
-979123170afaf807d27a4cb7abb8d762
+9e55f23e726f90d34555ccbedb4d3975
   getUser2 :: Servant.Common.Req.Req
   {- Strictness: m,
      Unfolding: (Servant.Common.Req.Req
@@ -3628,13 +3628,13 @@ a414d7a20e91076a23be14d1b98d3673
                          Network.HTTP.Media.MediaType.Internal.MediaType))
                    (GHC.Types.[] @ Network.HTTP.Media.MediaType.Internal.MediaType)
                    (GHC.Types.[] @ (GHC.Base.String, Data.Text.Internal.Text))) -}
-bc87fed602e5c99d76fdc9fb59f2ab8c
+2377c0e0afd8141cca1e9bca5797b403
   getUser3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.Base.++
                    @ GHC.Types.Char
                    (GHC.Types.[] @ GHC.Types.Char)
                    RestClient.$sclient4) -}
-c247c9bc9485610e6dcf0a9be2f3a20c
+5b178ae825db181f0363188fcb9548d9
   getUsers :: Servant.Common.Req.ClientM [RestClient.UserSummary]
   {- Arity: 2, Strictness: <L,U><S,U>,
      Unfolding: InlineRule (0, True, True)
@@ -3659,7 +3659,7 @@ c247c9bc9485610e6dcf0a9be2f3a20c
                                        Servant.Common.Req.ServantError GHC.Types.IO>_R
                                     <[RestClient.UserSummary]>_N))
                           (Sym (Servant.Common.Req.N:ClientM[0]) <[RestClient.UserSummary]>_N))) -}
-ed9f6c1789d93585ab21fea4db638c9a
+d0135f5b1d0015fa6f57fed58bde55a3
   getUsers1 ::
     Servant.Common.Req.ClientEnv
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -3710,7 +3710,7 @@ ed9f6c1789d93585ab21fea4db638c9a
                               @ [Network.HTTP.Types.Header.Header]
                               @ [RestClient.UserSummary]
                               y) } #) }) -}
-3aa07146ca6b17ddf1bcceae78e6b744
+a254b41bb56ed4e1de2da56ff44f9817
   getUsers2 :: Servant.Common.Req.Req
   {- Unfolding: (Servant.Common.Req.Req
                    RestClient.getUsers3
@@ -3722,18 +3722,18 @@ ed9f6c1789d93585ab21fea4db638c9a
                          Network.HTTP.Media.MediaType.Internal.MediaType))
                    (GHC.Types.[] @ Network.HTTP.Media.MediaType.Internal.MediaType)
                    (GHC.Types.[] @ (GHC.Base.String, Data.Text.Internal.Text))) -}
-d5ec6680d03168db1d2e55d53a30c05e
+c9c8fdc442e8258854e60ff8a597bc4d
   getUsers3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.Base.++
                    @ GHC.Types.Char
                    (GHC.Types.[] @ GHC.Types.Char)
                    RestClient.getUsers4) -}
-e96cd97956a4ef219297b22d924b52bc
+bfa8f9ba8cadf8d5fcb27b38f1d54534
   getUsers4 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackAppendCString#
                    "/"#
                    RestClient.$sclient6) -}
-33f4f859d3b7d6534a14458714f4d990
+3191a1eb21b650fb02e64fecebdd4b93
   getUsers_eta1 ::
     Servant.Common.Req.ClientM
       ([Network.HTTP.Types.Header.Header], [RestClient.UserSummary])
@@ -3744,47 +3744,47 @@ e96cd97956a4ef219297b22d924b52bc
                    (Data.Proxy.Proxy @ GHC.Types.* @ Servant.API.ContentTypes.JSON)
                    Network.HTTP.Types.Method.methodGet
                    RestClient.getUsers2) -}
-1b92c126bc6d9bfbca03d957d3279ecf
+d1b6c2d117871194e5ab5c707de7a74f
   groups :: RestClient.UserDetailed -> [RestClient.Group]
   RecSel Left RestClient.UserDetailed
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: RestClient.UserDetailed) ->
                  case ds of wild { RestClient.UserDetailed ds1 ds2 ds3 -> ds3 }) -}
-08105942852d47aa4e919106d8cbac95
+2a206670962c78010f90ba575d1aa9bf
   hackageAPI :: Data.Proxy.Proxy RestClient.HackageAPI
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.Proxy.Proxy @ * @ RestClient.HackageAPI) -}
-83a63c7fa796ef08051c8ca6e94b5b07
+711744ec571dc9f63989ff8e6cb8ab89
   packageName :: RestClient.Package -> Data.Text.Internal.Text
   RecSel Left RestClient.Package
   {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U(U,U,U))>m,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: RestClient.Package) ->
                  case ds of wild { RestClient.Package ds1 -> ds1 }) -}
-67257e0b2b511916e904ba15c81b0a7e
+a07cb8ff09efde87fb58474009a846b6
   summaryUserid :: RestClient.UserSummary -> GHC.Types.Int
   RecSel Left RestClient.UserSummary
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U(U))>m,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: RestClient.UserSummary) ->
                  case ds of wild { RestClient.UserSummary ds1 ds2 -> ds2 }) -}
-0aea34cd65724214d94b17c02eb959e4
+961989c921bb711d648ad5db286917ec
   summaryUsername :: RestClient.UserSummary -> RestClient.Username
   RecSel Left RestClient.UserSummary
   {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U(U,U,U),A)>m,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: RestClient.UserSummary) ->
                  case ds of wild { RestClient.UserSummary ds1 ds2 -> ds1 }) -}
-4be7e29cc4716d6bb14f96b5a394fb07
+661389796d06e46f05a05b6badcd0569
   userid :: RestClient.UserDetailed -> GHC.Types.Int
   RecSel Left RestClient.UserDetailed
   {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U(U),A)>m,
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: RestClient.UserDetailed) ->
                  case ds of wild { RestClient.UserDetailed ds1 ds2 ds3 -> ds2 }) -}
-8989d1e5afbc4e3be51cf5452b13daf8
+714f477cfad311d493e7c00fb256c165
   username :: RestClient.UserDetailed -> RestClient.Username
   RecSel Left RestClient.UserDetailed
   {- Arity: 1, HasNoCafRefs,
