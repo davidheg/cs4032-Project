@@ -38,12 +38,16 @@ import           Control.Monad                (when)
 import           Control.Monad.IO.Class
 import           Control.Monad.Trans.Except   (ExceptT)
 import           Control.Monad.Trans.Resource
+import           Crypto.Cipher.AES
 import           Data.Aeson
 import           Data.Aeson.TH
 import           Data.Bson.Generic
 import qualified Data.ByteString.Lazy         as L
+import qualified Data.ByteString.Char8        as C
 import qualified Data.List                    as DL
 import           Data.Maybe                   (catMaybes)
+import           Data.Strings
+import           Data.String.Utils
 import           Data.Text                    (pack, unpack)
 import           Data.Time.Clock              (UTCTime, getCurrentTime)
 import           Data.Time.Format             (defaultTimeLocale, formatTime)
@@ -174,15 +178,22 @@ server = login
   
   where
     login :: LoginRequest -> Handler Token
-    login request@(LoginRequest user key ) = liftIO $ do
-      warnLog $ "Searching for user for username: " ++ user
+    login request@(LoginRequest pass key) = liftIO $ do
+      warnLog $ "Searching for user for username: " ++ key
 
       users <- withMongoDbConnection $ do
-          docs <- find (select ["username" =: user] "USER_RECORD") >>= drainCursor
+          docs <- find (select ["username" =: (strip key)] "USER_RECORD") >>= drainCursor
           --warnLog $ "retrieved data: " ++ show docs
           return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe UserInfo) docs
-      let token = (Token "ticket" "key" "timeout" user)
-      return token
+      let password = getPassword users
+      let sentPass = decryptDataType pass password
+      if sentPass == password 
+        then do
+          let token = (Token "ticket" "key" "timeout" sentPass)
+          return token
+        else do
+          let token = (Token "FALSE" "FALSE" "FALSE" "FALSE")
+          return token
 
     register :: UserInfo -> Handler Bool
     register user@(UserInfo username pasword) = liftIO $ do
@@ -194,6 +205,28 @@ server = login
       withMongoDbConnection $ upsert (select ["username" =: username] "USER_RECORD") $ toBSON user
 
       return True  -- as this is a simple demo I'm not checking anything
+
+
+getPassword :: [UserInfo] -> String
+getPassword (x:xs) = getPass x
+
+getPass :: UserInfo -> String
+getPass (UserInfo _ password) = return password !! 0
+
+decryptDataType :: String -> String -> String
+decryptDataType sent actual = do
+        let key = initAES (C.pack(padString actual))
+        let paddedString = padString sent
+        let byteString = C.pack paddedString
+        let decryptedBytes = decryptECB key byteString
+        let restoredString = C.unpack decryptedBytes
+        let stripped = strip restoredString
+        return stripped !! 0
+
+padString :: String -> String
+padString input
+      |mod (strLen (input)) 16 == 0 = input
+      |otherwise = padString (input ++ " ")
 
 -- | error stuff
 custom404Error msg = err404 { errBody = msg }

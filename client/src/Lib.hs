@@ -21,6 +21,7 @@ import Data.Aeson
 import GHC.Generics
 import Data.List
 import Data.List.Utils
+import Data.Strings
 import System.Exit
 import UseHaskellAPI
 import AuthenticationAPI
@@ -97,8 +98,6 @@ outputResponse response = do
 register :: String -> IO ()
 register input = do 
           let inputs = words (strip input)
-          let key =   initAES (pack(inputs !! 1))
-          print (show key)
           let user = AuthenticationAPI.UserInfo (inputs !! 0) (inputs !! 1)
           initialRequest <-  parseRequest ("POST " ++ authentication_server ++ "/register")
           let request = setRequestBodyJSON user initialRequest
@@ -109,13 +108,16 @@ register input = do
 login :: String -> IO ()
 login input = do
           let inputs = words (strip input)
+          let key =  initAES (pack( padString (inputs !! 1)))
           let currentUser = AuthenticationAPI.UserInfo (inputs !! 0) (inputs !! 1)
-          let loginReq = LoginRequest input "key"
+          let password = unpack (encryptECB key (pack (padString (inputs !! 1))))
+          let loginReq = LoginRequest password (inputs !! 0)
           initialRequest <-  parseRequest ("GET " ++ authentication_server ++ "/login")
           let request = setRequestBodyJSON loginReq initialRequest
           manager <- getGlobalManager
           withResponse request manager $ \response  -> do
             outputResponse response 
+
 getReadme ::IO ()
 getReadme = do 
         request <- parseRequest (file_server ++ "/getREADME")
@@ -226,3 +228,8 @@ addFile files new = (files ++ [new])
 
 getTime :: UTCTime -> String
 getTime = formatTime defaultTimeLocale "%FT%T%q%z"
+
+padString :: String -> String
+padString input
+      |mod (strLen (input)) 16 == 0 = input
+      |otherwise = padString (input ++ " ")

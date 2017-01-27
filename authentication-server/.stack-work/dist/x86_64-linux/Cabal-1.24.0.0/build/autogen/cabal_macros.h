@@ -7,6 +7,13 @@
   (major1) == 0 && (major2) <  1 || \
   (major1) == 0 && (major2) == 1 && (minor) <= 0)
 
+/* package MissingH-1.4.0.1 */
+#define VERSION_MissingH "1.4.0.1"
+#define MIN_VERSION_MissingH(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  4 || \
+  (major1) == 1 && (major2) == 4 && (minor) <= 0)
+
 /* package aeson-1.0.2.1 */
 #define VERSION_aeson "1.0.2.1"
 #define MIN_VERSION_aeson(major1,major2,minor) (\
@@ -41,6 +48,13 @@
   (major1) <  0 || \
   (major1) == 0 && (major2) <  10 || \
   (major1) == 0 && (major2) == 10 && (minor) <= 8)
+
+/* package cipher-aes-0.2.11 */
+#define VERSION_cipher_aes "0.2.11"
+#define MIN_VERSION_cipher_aes(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  2 || \
+  (major1) == 0 && (major2) == 2 && (minor) <= 11)
 
 /* package hslogger-1.2.10 */
 #define VERSION_hslogger "1.2.10"
@@ -97,6 +111,13 @@
   (major1) <  0 || \
   (major1) == 0 && (major2) <  9 || \
   (major1) == 0 && (major2) == 9 && (minor) <= 1)
+
+/* package strings-1.1 */
+#define VERSION_strings "1.1"
+#define MIN_VERSION_strings(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  1 || \
+  (major1) == 1 && (major2) == 1 && (minor) <= 0)
 
 /* package text-1.2.2.1 */
 #define VERSION_text "1.2.2.1"
@@ -203,7 +224,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "authentication-server-0.1.0.0-Gqw00IX2kziK0HuIL7LXbB"
+#define CURRENT_COMPONENT_ID "authentication-server-0.1.0.0-IzU5vb9vjCQA9EmYK15YfI"
 
-#define CURRENT_PACKAGE_KEY "authentication-server-0.1.0.0-Gqw00IX2kziK0HuIL7LXbB"
+#define CURRENT_PACKAGE_KEY "authentication-server-0.1.0.0-IzU5vb9vjCQA9EmYK15YfI"
 

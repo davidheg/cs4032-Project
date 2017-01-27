@@ -29,7 +29,8 @@ library
                  MissingH,
                  json,
                  time,
-                 cipher-aes
+                 cipher-aes,
+                 strings
   default-language:    Haskell2010
 
 executable client-exe
