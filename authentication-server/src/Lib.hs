@@ -177,23 +177,31 @@ server = login
     :<|> register
   
   where
-    login :: LoginRequest -> Handler Token
-    login request@(LoginRequest pass key) = liftIO $ do
-      warnLog $ "Searching for user for username: " ++ key
+    login :: LoginRequest -> Handler (Maybe LoginResponse)
+    login request@(LoginRequest userInfo) = liftIO $ do
+      let user = read userInfo :: UserInfo
 
+      warnLog $ "Searching for user for username: " ++ key
       users <- withMongoDbConnection $ do
           docs <- find (select ["username" =: (strip key)] "USER_RECORD") >>= drainCursor
           --warnLog $ "retrieved data: " ++ show docs
           return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe UserInfo) docs
-      let password = getPassword users
-      let sentPass = decryptDataType pass password
-      if sentPass == password 
+      if users == [] 
         then do
-          let token = (Token "ticket" "key" "timeout" sentPass)
-          return token
+          let response = Nothing
+          return response
         else do
-          let token = (Token "FALSE" "FALSE" "FALSE" "FALSE")
-          return token
+          let password = getPassword users
+          let sentPass = decryptDataType pass password
+          if sentPass == password 
+            then do
+              let token = encrypt (show (Token "ticket" "key" "timeout" (show users)))
+              let response = Just (LoginResponse token)
+              return response
+            else do
+              let response = Nothing
+              return response
+        
 
     register :: UserInfo -> Handler Bool
     register user@(UserInfo username pasword) = liftIO $ do
@@ -206,6 +214,8 @@ server = login
 
       return True  -- as this is a simple demo I'm not checking anything
 
+getName:: UserInfo -> String
+getPassword (UserInfo username _) = return username !! 0
 
 getPassword :: [UserInfo] -> String
 getPassword (x:xs) = getPass x

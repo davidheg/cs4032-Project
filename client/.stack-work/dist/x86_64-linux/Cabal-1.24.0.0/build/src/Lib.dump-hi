@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-27 23:31:41.226773 UTC
+2017-01-27 23:49:57.59668 UTC
 
 interface client-0.1.0.0-KOko9VJA9Vl5nHt3BPx4AP:Lib 8001
-  interface hash: cd39018ad17401a05813f92703cdb2ef
+  interface hash: 13f11591c070ee5052993bcce8fc6953
   ABI hash: 8d9ecd7ba4f27e5ea72d2d6187e694ca
   export-list hash: 519cb153414fc83f9614cc515a36871a
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
@@ -231,7 +231,7 @@ import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock.POSIX a0c5708011f4e3cb1d85
 import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Clock.UTC fd9f3bc9549d9de1cb313e496610c238
 import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Format b6d4cc5df3f9159b1156baa52a254cf6
 import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Locale 2ce8413933ae0199a4bf6c15ee5db27c
-import  -/  use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-JqqAo5tB3F5rh963yPHwO:AuthenticationAPI 06a9247a5bcf4a76e3d1887900dfee87
+import  -/  use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-JqqAo5tB3F5rh963yPHwO:AuthenticationAPI 45b4d13af06ab4a233b9ed7d929330f8
 import  -/  use-haskell-api-0.1.0.0@use-haskell-api-0.1.0.0-JqqAo5tB3F5rh963yPHwO:UseHaskellAPI 64ee961c9060fba1fb3b3a8715050352
 023f16001db605d3101555f73a29ada3
   $trModule :: GHC.Types.Module

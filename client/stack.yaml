@@ -41,7 +41,7 @@ packages:
       commit: e078def65d0dee1ea7e3205f445e47d5937851f3
   - location:
       git: https://github.com/davidheg/Cs4032-use-haskell-api.git
-      commit: e3285e26a5a5f4262c50e34182f39bbde48c906d
+      commit: 5a4d92d835abab498c32b86258b9a8e1fbbf65f0
 
 # (e.g., acme-missiles-0.3)
 extra-deps: [servant-client-0.9.1.1, servant-0.9.1.1, servant-server-0.9.1.1, http-api-data-0.3.2,strings-1.1]
