@@ -361,12 +361,9 @@ server = loadEnvironmentVariable
 
     uploadFile :: EncryptedMessage -> Handler Bool
     uploadFile request@(EncryptedMessage userString fileString ticket) = liftIO $ do
-       warnLog $ "This is the request: " ++ (show request)
        let decryptedTicket =  C.unpack ( decryptECB serverKey (C.pack (padString ticket)))
-       warnLog $ "This is the ticket: " ++ decryptedTicket
        let key  = initAES (C.pack (padString (decryptedTicket)))
        let decryptedFile =  C.unpack (decryptECB key (C.pack (padString (fileString))))
-       warnLog $ "This is the file: " ++ decryptedFile
        let file = read (strip decryptedFile) :: UserFile
        let filename = getName file
        warnLog $ "Storing file under name " ++ (filename) ++ "."

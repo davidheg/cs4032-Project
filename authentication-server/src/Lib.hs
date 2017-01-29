@@ -203,7 +203,6 @@ server = login
             then do
               g <- getStdGen
               let randString = randomStr
-              warnLog $ "This is the random string" ++ randString
              --let byteString = C.pack (padString randString)
               let key = initAES (C.pack(padString password))
               let ticket = C.unpack ( encryptECB serverkey (C.pack randString ))

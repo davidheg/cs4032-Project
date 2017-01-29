@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-29 21:18:21.506158 UTC
+2017-01-29 21:44:57.525825 UTC
 
 interface authentication-server-0.1.0.0-XPSZPS4u205VErnTRs4yd:Lib 8001
-  interface hash: e7a96daca86fd3c798bcfd90e285c83e
-  ABI hash: c6992106b53d779c218220cc726c81b3
-  export-list hash: 2ce2796524f042b21c33c145ee7983a7
-  orphan hash: 9d765f4a94d009ffea8fd57c21e5e392
+  interface hash: 395b3864a3c6d976c764d0649a5ccef7
+  ABI hash: 6ed147092dae9f741840326402027292
+  export-list hash: 33e3c4e0282148fb7676822451f429e8
+  orphan hash: 12384c20870fb63edf3940a91f724a7e
   flag hash: 232b91cb96073461cf6c3dcd6a42e778
   sig of: Nothing
   used TH splices: False
@@ -645,30 +645,8 @@ dcaa22f3e17a9b14886c0b1850b68415
                      `cast`
                    (Data.Aeson.Encoding.Internal.N:Encoding'[0]
                         <Data.Aeson.Types.Internal.Value>_P)) -}
-cb9ba5d62b2480c6961973fdfd9619fa
+a0c30b6527b39de9a09d25a0929ca07c
   $s$fAllMimeUnrender:a ::
-    Servant.API.ContentTypes.AllMimeUnrender
-      '[Servant.API.ContentTypes.JSON] AuthenticationAPI.LoginRequest
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ '[Servant.API.ContentTypes.JSON]
-                  @ AuthenticationAPI.LoginRequest
-                  (Servant.API.ContentTypes.$fAllMimeUnrender:a_$cp1AllMimeUnrender
-                     @ Servant.API.ContentTypes.JSON
-                     @ AuthenticationAPI.LoginRequest
-                     @ '[]
-                     Lib.$s$fAllMimeUnrender:a_$dMimeUnrender
-                     (Servant.API.ContentTypes.$fAllMimeUnrender[]a
-                        @ AuthenticationAPI.LoginRequest))
-                  (Servant.API.ContentTypes.$fAllMimeUnrender:a_$callMimeUnrender
-                     @ Servant.API.ContentTypes.JSON
-                     @ AuthenticationAPI.LoginRequest
-                     @ '[]
-                     Lib.$s$fAllMimeUnrender:a_$dMimeUnrender
-                     (Servant.API.ContentTypes.$fAllMimeUnrender[]a
-                        @ AuthenticationAPI.LoginRequest)) -}
-287b9cd19b4017662192ab0beee75667
-  $s$fAllMimeUnrender:a1 ::
     Servant.API.ContentTypes.AllMimeUnrender
       '[Servant.API.ContentTypes.JSON] AuthenticationAPI.UserInfo
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -679,45 +657,54 @@ cb9ba5d62b2480c6961973fdfd9619fa
                      @ Servant.API.ContentTypes.JSON
                      @ AuthenticationAPI.UserInfo
                      @ '[]
-                     Lib.$s$fAllMimeUnrender:a_$dMimeUnrender1
+                     Lib.$s$fAllMimeUnrender:a_$dMimeUnrender
                      (Servant.API.ContentTypes.$fAllMimeUnrender[]a
                         @ AuthenticationAPI.UserInfo))
                   (Servant.API.ContentTypes.$fAllMimeUnrender:a_$callMimeUnrender
                      @ Servant.API.ContentTypes.JSON
                      @ AuthenticationAPI.UserInfo
                      @ '[]
-                     Lib.$s$fAllMimeUnrender:a_$dMimeUnrender1
+                     Lib.$s$fAllMimeUnrender:a_$dMimeUnrender
                      (Servant.API.ContentTypes.$fAllMimeUnrender[]a
                         @ AuthenticationAPI.UserInfo)) -}
-1b766bfeb607d0cd7f135104ddb45070
+3eacbb64f09e37a8e3f3d34e4746e749
+  $s$fAllMimeUnrender:a1 ::
+    Servant.API.ContentTypes.AllMimeUnrender
+      '[Servant.API.ContentTypes.JSON] AuthenticationAPI.LoginRequest
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ '[Servant.API.ContentTypes.JSON]
+                  @ AuthenticationAPI.LoginRequest
+                  (Servant.API.ContentTypes.$fAllMimeUnrender:a_$cp1AllMimeUnrender
+                     @ Servant.API.ContentTypes.JSON
+                     @ AuthenticationAPI.LoginRequest
+                     @ '[]
+                     Lib.$s$fAllMimeUnrender:a_$dMimeUnrender1
+                     (Servant.API.ContentTypes.$fAllMimeUnrender[]a
+                        @ AuthenticationAPI.LoginRequest))
+                  (Servant.API.ContentTypes.$fAllMimeUnrender:a_$callMimeUnrender
+                     @ Servant.API.ContentTypes.JSON
+                     @ AuthenticationAPI.LoginRequest
+                     @ '[]
+                     Lib.$s$fAllMimeUnrender:a_$dMimeUnrender1
+                     (Servant.API.ContentTypes.$fAllMimeUnrender[]a
+                        @ AuthenticationAPI.LoginRequest)) -}
+b86a33ea93d6ddfdba5472ade9f31f0c
   $s$fAllMimeUnrender:a_$dMimeUnrender ::
-    Servant.API.ContentTypes.MimeUnrender
-      Servant.API.ContentTypes.JSON AuthenticationAPI.LoginRequest
-  {- Strictness: m,
-     Unfolding: InlineRule (0, True, True)
-                Lib.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa -}
-7c7942ed697ec93ce8a67515465146ae
-  $s$fAllMimeUnrender:a_$dMimeUnrender1 ::
     Servant.API.ContentTypes.MimeUnrender
       Servant.API.ContentTypes.JSON AuthenticationAPI.UserInfo
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
-                Lib.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa1 -}
-1cd58e7edc8b788d5673afe9b7f54429
-  $s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa ::
+                Lib.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa -}
+437c1fcc3feb57b377ced5ae4a3eb57b
+  $s$fAllMimeUnrender:a_$dMimeUnrender1 ::
     Servant.API.ContentTypes.MimeUnrender
       Servant.API.ContentTypes.JSON AuthenticationAPI.LoginRequest
-  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
-     Unfolding: DFun:.
-                  @ *
-                  @ Servant.API.ContentTypes.JSON
-                  @ AuthenticationAPI.LoginRequest
-                  (Servant.API.ContentTypes.$fMimeUnrenderTYPEJSONa_$cp1MimeUnrender
-                     @ AuthenticationAPI.LoginRequest
-                     AuthenticationAPI.$fFromJSONLoginRequest)
-                  Lib.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender -}
-69be0d413c848b137c0e948a65e42af1
-  $s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa1 ::
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Lib.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa1 -}
+05b6df4bc04fb1eaeaf99a02e3e0f94a
+  $s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa ::
     Servant.API.ContentTypes.MimeUnrender
       Servant.API.ContentTypes.JSON AuthenticationAPI.UserInfo
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -728,9 +715,35 @@ cb9ba5d62b2480c6961973fdfd9619fa
                   (Servant.API.ContentTypes.$fMimeUnrenderTYPEJSONa_$cp1MimeUnrender
                      @ AuthenticationAPI.UserInfo
                      AuthenticationAPI.$fFromJSONUserInfo)
+                  Lib.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender -}
+2e765d4282b0a285b114836bf29311e2
+  $s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa1 ::
+    Servant.API.ContentTypes.MimeUnrender
+      Servant.API.ContentTypes.JSON AuthenticationAPI.LoginRequest
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ *
+                  @ Servant.API.ContentTypes.JSON
+                  @ AuthenticationAPI.LoginRequest
+                  (Servant.API.ContentTypes.$fMimeUnrenderTYPEJSONa_$cp1MimeUnrender
+                     @ AuthenticationAPI.LoginRequest
+                     AuthenticationAPI.$fFromJSONLoginRequest)
                   Lib.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender1 -}
-e27d81660fe9b6f233c295ec3eed21c9
+257292115c2da712ff7e10e20d35fe80
   $s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender ::
+    Data.Proxy.Proxy Servant.API.ContentTypes.JSON
+    -> Data.ByteString.Lazy.Internal.ByteString
+    -> Data.Either.Either GHC.Base.String AuthenticationAPI.UserInfo
+  {- Arity: 2, Strictness: <L,A><S,1*U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Data.Proxy.Proxy Servant.API.ContentTypes.JSON)
+                   (eta :: Data.ByteString.Lazy.Internal.ByteString) ->
+                 Servant.API.ContentTypes.eitherDecodeLenient
+                   @ AuthenticationAPI.UserInfo
+                   AuthenticationAPI.$fFromJSONUserInfo
+                   eta) -}
+8f81465b8634b20123cc4748e9660b86
+  $s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender1 ::
     Data.Proxy.Proxy Servant.API.ContentTypes.JSON
     -> Data.ByteString.Lazy.Internal.ByteString
     -> Data.Either.Either
@@ -742,19 +755,6 @@ e27d81660fe9b6f233c295ec3eed21c9
                  Servant.API.ContentTypes.eitherDecodeLenient
                    @ AuthenticationAPI.LoginRequest
                    AuthenticationAPI.$fFromJSONLoginRequest
-                   eta) -}
-8bb112336fd2039ebd3f552c889b909f
-  $s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender1 ::
-    Data.Proxy.Proxy Servant.API.ContentTypes.JSON
-    -> Data.ByteString.Lazy.Internal.ByteString
-    -> Data.Either.Either GHC.Base.String AuthenticationAPI.UserInfo
-  {- Arity: 2, Strictness: <L,A><S,1*U>,
-     Unfolding: InlineRule (1, True, True)
-                (\ (ds :: Data.Proxy.Proxy Servant.API.ContentTypes.JSON)
-                   (eta :: Data.ByteString.Lazy.Internal.ByteString) ->
-                 Servant.API.ContentTypes.eitherDecodeLenient
-                   @ AuthenticationAPI.UserInfo
-                   AuthenticationAPI.$fFromJSONUserInfo
                    eta) -}
 131105b61593663c06371b7ee12451a1
   $s$fToJSONMaybe_$ctoEncoding ::
@@ -785,7 +785,7 @@ e27d81660fe9b6f233c295ec3eed21c9
 3795cd05320c8646f9feb2b6e1a81a5f
   $sserve3 :: GHC.Integer.Type.Integer
   {- HasNoCafRefs, Unfolding: (200) -}
-ac54272d431aa12d0c2c469e28347ac1
+9088481715725d6f26927673a8a8a793
   $sserve4 ::
     Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
     -> Data.ByteString.Lazy.Internal.ByteString
@@ -800,7 +800,7 @@ ac54272d431aa12d0c2c469e28347ac1
                  Servant.API.ContentTypes.$w$chandleCTypeH
                    @ '[Servant.API.ContentTypes.JSON]
                    @ AuthenticationAPI.UserInfo
-                   Lib.$s$fAllMimeUnrender:a1
+                   Lib.$s$fAllMimeUnrender:a
                    w2
                    w3) -}
 43084641d79e3af4275e75a02190f1c2
@@ -824,7 +824,7 @@ ac54272d431aa12d0c2c469e28347ac1
 0a730e27d9ae38a13536b5ec9a4cf3be
   $sserve6 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "register"#) -}
-d8e6ebc209eda944b2a0ac212e622ebe
+b14ecaca44ff29898f0f25f3122a77fd
   $sserve8 ::
     Data.Proxy.Proxy '[Servant.API.ContentTypes.JSON]
     -> Data.ByteString.Lazy.Internal.ByteString
@@ -839,7 +839,7 @@ d8e6ebc209eda944b2a0ac212e622ebe
                  Servant.API.ContentTypes.$w$chandleCTypeH
                    @ '[Servant.API.ContentTypes.JSON]
                    @ AuthenticationAPI.LoginRequest
-                   Lib.$s$fAllMimeUnrender:a
+                   Lib.$s$fAllMimeUnrender:a1
                    w2
                    w3) -}
 0b427b812656df275d6fcacf516ad46a
@@ -1033,12 +1033,12 @@ b116cd157bc75233a3aaa3f69eb3cb8f
             Servant.Server.Internal.ServantErr.ServantErr
             (GHC.Base.Maybe AuthenticationAPI.LoginResponse) #)
   {- Arity: 2, Strictness: <L,U><S,U>, Inline: [0] -}
-c67a46d84152c09a6102bc575b20060d
+12de3bbde4dd4c3f593f9eb130d45d13
   startApp :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.startApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-21a418743845d3cd13aafed226c96801
+ce052ee518abe47c5ae47036de9c7c02
   startApp1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -1087,12 +1087,12 @@ eb7246d40317571dd374971659ff9773
                    "Environment variable: "#
                    c
                    n) -}
-aaec1d9a9ba20658ea748176d9cb64cb
+108e9e915e371f0bf194acf67c6f580a
   startApp13 :: Network.Wai.Application
   {- Arity: 2,
      Unfolding: (Servant.Server.Internal.RoutingApplication.toApplication
                    Lib.startApp14) -}
-2c79f18c8215190b126efdd3e9770a80
+283bbb8c66e61d9bbb740c7443a8a8a9
   startApp14 ::
     Network.Wai.Internal.Request
     -> (Servant.Server.Internal.RoutingApplication.RouteResult
@@ -1110,7 +1110,7 @@ aaec1d9a9ba20658ea748176d9cb64cb
                    GHC.Tuple.()
                    eta
                    eta1) -}
-e5d034644132e7815746c559eebe68fc
+c73be76395981eaf2e3e5c3ab97f07e0
   startApp15 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -1121,7 +1121,7 @@ e5d034644132e7815746c559eebe68fc
                    (GHC.Types.[]
                       @ (()
                          -> Servant.Server.Internal.RoutingApplication.RoutingApplication))) -}
-95adf9aced0a3dd7461c044b21d1b7ee
+55fb4eba8269c8d9c44fbc75d6a98a3b
   startApp16 ::
     Data.Map.Base.Map
       Data.Text.Internal.Text
@@ -1148,7 +1148,7 @@ e5d034644132e7815746c559eebe68fc
                       @ (Servant.Server.Internal.Router.Router'
                            ()
                            Servant.Server.Internal.RoutingApplication.RoutingApplication)) } }) -}
-a3925aa1b281381c50459afdc6872346
+27c1f3f9ce92414d4a953ac510d88c3a
   startApp17 :: Servant.Server.Internal.Router.Router ()
   {- Unfolding: (Servant.Server.Internal.$w$croute2
                    @ *
@@ -1283,7 +1283,7 @@ e2f12b7b79e070bc2db43108de0b2b60
                    (b1 :: ())
                    (req :: Network.Wai.Internal.Request) ->
                  Lib.startApp20) -}
-cd14e7adc2854bd4c0206fb087089cd1
+76078c6c9525fed3126e5fc6bb8703da
   startApp2 ::
     (Network.Wai.Logger.ApacheLogger, GHC.Types.IO ())
     -> GHC.Prim.State# GHC.Prim.RealWorld
@@ -1603,7 +1603,7 @@ aa4d008a62a5b0c9ed3e9c349330d20f
 efad07dd72062e8762a4dfeb8a1afaa3
   startApp3 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "DEBUG"#) -}
-655496be7d2f6b8b114462f7c8c4a25d
+f1c3c9f2012db256888fc9aaa569d005
   startApp30 ::
     Servant.Server.Internal.Router.Router'
       () Servant.Server.Internal.RoutingApplication.RoutingApplication
@@ -1614,7 +1614,7 @@ efad07dd72062e8762a4dfeb8a1afaa3
                    (GHC.Types.[]
                       @ (()
                          -> Servant.Server.Internal.RoutingApplication.RoutingApplication))) -}
-f41043fa11c3b24f5d49e5aa43b11cb7
+f8ea2666a66b5db1860b0a2fa0d441f1
   startApp31 ::
     Data.Map.Base.Map
       Data.Text.Internal.Text
@@ -1641,7 +1641,7 @@ f41043fa11c3b24f5d49e5aa43b11cb7
                       @ (Servant.Server.Internal.Router.Router'
                            ()
                            Servant.Server.Internal.RoutingApplication.RoutingApplication)) } }) -}
-edcbdc7fbc977238252299a000fbe996
+d4d94884f1cae98c55ab0d0757bf070c
   startApp32 :: Servant.Server.Internal.Router.Router ()
   {- Unfolding: (Servant.Server.Internal.$w$croute2
                    @ *
@@ -1996,7 +1996,7 @@ fcaef0dc19cc2e706fc2685d2904bb06
                    @ GHC.Types.Char
                    GHC.Show.shows8
                    (GHC.Types.[] @ GHC.Types.Char)) -}
-aa52ef3c4fbd5238c24112b54b2fe064
+2864bd82a49e9dfaf957aa4c8aa5036d
   startApp_r :: Servant.Server.Internal.Router.Router ()
   {- Unfolding: (Servant.Server.Internal.Router.choice
                    @ ()
@@ -2068,7 +2068,7 @@ aa52ef3c4fbd5238c24112b54b2fe064
                                                @ '[]
                                                $dMimeUnrender
                                                $dAllMimeUnrender
-  = Lib.$s$fAllMimeUnrender:a
+  = Lib.$s$fAllMimeUnrender:a1
 "SPEC/Lib $fAllMimeUnrender:a @ JSON @ UserInfo @ '[]" [ALWAYS] forall ($dMimeUnrender :: Servant.API.ContentTypes.MimeUnrender
                                                                                             Servant.API.ContentTypes.JSON
                                                                                             AuthenticationAPI.UserInfo)
@@ -2080,7 +2080,7 @@ aa52ef3c4fbd5238c24112b54b2fe064
                                                @ '[]
                                                $dMimeUnrender
                                                $dAllMimeUnrender
-  = Lib.$s$fAllMimeUnrender:a1
+  = Lib.$s$fAllMimeUnrender:a
 "SPEC/Lib $fMimeRenderTYPEJSONa @ (Maybe LoginResponse)" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.ToJSON.ToJSON
                                                                                         (GHC.Base.Maybe
                                                                                            AuthenticationAPI.LoginResponse))
@@ -2102,22 +2102,22 @@ aa52ef3c4fbd5238c24112b54b2fe064
                                                                                    AuthenticationAPI.LoginRequest)
   Servant.API.ContentTypes.$fMimeUnrenderTYPEJSONa @ AuthenticationAPI.LoginRequest
                                                    $dFromJSON
-  = Lib.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa
+  = Lib.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa1
 "SPEC/Lib $fMimeUnrenderTYPEJSONa @ UserInfo" [ALWAYS] forall ($dFromJSON :: Data.Aeson.Types.FromJSON.FromJSON
                                                                                AuthenticationAPI.UserInfo)
   Servant.API.ContentTypes.$fMimeUnrenderTYPEJSONa @ AuthenticationAPI.UserInfo
                                                    $dFromJSON
-  = Lib.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa1
+  = Lib.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa
 "SPEC/Lib $fMimeUnrenderTYPEJSONa_$cmimeUnrender @ LoginRequest" [ALWAYS] forall ($dFromJSON :: Data.Aeson.Types.FromJSON.FromJSON
                                                                                                   AuthenticationAPI.LoginRequest)
   Servant.API.ContentTypes.$fMimeUnrenderTYPEJSONa_$cmimeUnrender @ AuthenticationAPI.LoginRequest
                                                                   $dFromJSON
-  = Lib.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender
+  = Lib.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender1
 "SPEC/Lib $fMimeUnrenderTYPEJSONa_$cmimeUnrender @ UserInfo" [ALWAYS] forall ($dFromJSON :: Data.Aeson.Types.FromJSON.FromJSON
                                                                                               AuthenticationAPI.UserInfo)
   Servant.API.ContentTypes.$fMimeUnrenderTYPEJSONa_$cmimeUnrender @ AuthenticationAPI.UserInfo
                                                                   $dFromJSON
-  = Lib.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender1
+  = Lib.$s$fAllMimeUnrender:a_$s$fMimeUnrenderTYPEJSONa_$cmimeUnrender
 "SPEC/Lib $fToJSONMaybe @ LoginResponse" [ALWAYS] forall ($dToJSON :: Data.Aeson.Types.ToJSON.ToJSON
                                                                         AuthenticationAPI.LoginResponse)
   Data.Aeson.Types.ToJSON.$fToJSONMaybe @ AuthenticationAPI.LoginResponse

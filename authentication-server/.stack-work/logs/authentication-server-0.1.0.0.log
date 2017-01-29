@@ -1,7 +1,7 @@
 Preprocessing library authentication-server-0.1.0.0...
 [2 of 2] Compiling Lib              ( src/Lib.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Lib.o )
 
-src/Lib.hs:262:1: warning: [-Woverlapping-patterns]
+src/Lib.hs:261:1: warning: [-Woverlapping-patterns]
     Pattern match is redundant
     In an equation for ‘custom404Error’: custom404Error file = ...
 Preprocessing executable 'authentication-server-exe' for

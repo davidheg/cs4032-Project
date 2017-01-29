@@ -126,9 +126,7 @@ login input = do
               print decryptedtoken
               let token@(Token ticket key time user) = read (strip decryptedtoken) :: Token
               let userInfo = read (strip user) :: AuthenticationAPI.UserInfo
-              print ("This is the key on receival: " ++ key)
               let sessionKey = initAES (pack key)
-              print ("This is the ticket on receival: " ++ ticket)
               writeFile "UserDetails" ((getUsername userInfo) ++ "|" ++ key ++ "|" ++ (strip ticket))
               print "Login Successful"
             Nothing -> do 
@@ -192,14 +190,12 @@ uploadFile inputs = do
                   let user = strip (userDetails !! 0)
                   let key = (strip (userDetails !! 1))
                   let ticket = userDetails !! 2
-                  print ("This is the ticket when its loaded from the file: " ++ ticket)
                   putStrLn "Please enter the usernames of anyone you would like to share to the file with"
                   names <- getLine
                   let users = user ++ " " ++ names 
                   initialRequest <-  parseRequest ("POST " ++ file_server ++ "/uploadFile")
                   contents <- readFile path
                   let newFile = (UserFile name path users contents)
-                  print ("This is the key after being loaded from the file: " ++ key)
                   let sessionKey = initAES (pack key) 
                   let encryptedFile = unpack (encryptECB sessionKey (pack (padString (show newFile))))
                   let userRequest = (EncryptedMessage user encryptedFile ticket)
