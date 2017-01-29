@@ -69,9 +69,10 @@ import           System.Log.Handler.Simple
 import           System.Log.Handler.Syslog
 import           System.Log.Logger
 import           System.Random
+import           System.IO.Unsafe
 import           Test.RandomStrings
 
-server-authentication-key = initAES pack("DistroServerKey ")
+serverkey = initAES (C.pack "DistroServerKey1")
 -- | The Servant library has a very elegant model for defining a REST API. We shall demonstrate here. First, we shall
 -- define the data types that will be passed in the REST calls. We will define a simple data type that passes some data
 -- from client to the server first. There is nothing special about the data being passed - this is a demonstration
@@ -180,6 +181,7 @@ server = login
     :<|> register   
   
   where
+
     login :: LoginRequest -> Handler (Maybe LoginResponse)
     login request@(LoginRequest userInfo) = liftIO $ do
       let user = read userInfo :: UserInfo
@@ -200,10 +202,13 @@ server = login
           if sentPass == password 
             then do
               g <- getStdGen
-              randString <- randomString randomChar8 16
-              let byteString = C.pack (padString randString)
+              let randString = randomStr
+              warnLog $ "This is the random string" ++ randString
+             --let byteString = C.pack (padString randString)
               let key = initAES (C.pack(padString password))
-              let stringToken = show (Token "ticket" randString "timeout" (show users))
+              let ticket = C.unpack ( encryptECB serverkey (C.pack randString ))
+              let stringToken = show (Token ticket randString "timeout" (show (users !! 0)))
+              warnLog $ stringToken
               let byteToken = C.pack (padString stringToken)
               let encryptedToken = encryptECB key byteToken
               let token = C.unpack encryptedToken
@@ -248,6 +253,9 @@ padString :: String -> String
 padString input
       |mod (strLen (input)) 16 == 0 = input
       |otherwise = padString (input ++ " ")
+
+randomStr :: String
+randomStr = take 16 $ randomRs ('a','z') $ unsafePerformIO newStdGen
 
 -- | error stuff
 custom404Error msg = err404 { errBody = msg }

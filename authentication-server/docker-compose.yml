@@ -16,4 +16,4 @@ authentication-server:
 database:
   image: mongo:3.0.2
   ports:
-    - "27017:27017"
+    - "27016:27016"

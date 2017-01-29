@@ -38,15 +38,18 @@ import           Control.Monad                (when)
 import           Control.Monad.IO.Class
 import           Control.Monad.Trans.Except   (ExceptT)
 import           Control.Monad.Trans.Resource
+import           Crypto.Cipher.AES
 import           Data.Aeson
 import           Data.Aeson.TH
 import           Data.Bson.Generic
+import qualified Data.ByteString.Char8        as C
 import qualified Data.ByteString.Lazy         as L
 import qualified Data.List                    as DL
 import           Data.Maybe                   (catMaybes)
 import           Data.Text                    (pack, unpack)
-import           Data.Time.Clock              (UTCTime, getCurrentTime)
+import           Data.Time.Clock              (UTCTime, getCurrentTime, diffUTCTime)
 import           Data.Time.Format             (defaultTimeLocale, formatTime)
+import           Data.Strings
 import           Data.String.Utils
 import           Database.MongoDB
 import           GHC.Generics
@@ -67,7 +70,7 @@ import           System.Log.Handler.Simple
 import           System.Log.Handler.Syslog
 import           System.Log.Logger
 
-server-authentication-key = initAES pack("DistroServerKey ")
+serverKey = initAES (C.pack "DistroServerKey1")
 
 -- | The Servant library has a very elegant model for defining a REST API. We shall demonstrate here. First, we shall
 -- define the data types that will be passed in the REST calls. We will define a simple data type that passes some data
@@ -180,7 +183,6 @@ server = loadEnvironmentVariable
     :<|> performRESTCall
     :<|> uploadFile
     :<|> searchFiles
-    :<|> fileTypeTwo
     :<|> fileUpdate    
 
   where
@@ -357,54 +359,68 @@ server = loadEnvironmentVariable
              manager <- newManager defaultManagerSettings
              return (SC.ClientEnv manager (SC.BaseUrl SC.Http "hackage.haskell.org" 80 ""))
 
-    uploadFile :: UserFile -> Handler Bool
-    uploadFile file@(UserFile key path users contents) = liftIO $ do
-      let usernames =  words (strip users)
-      warnLog $ "Storing file under name " ++ key ++ "."
-      --if (searchFiles key) == []
-      --    then withMongoDbConnection $ insert_ (select ["filename" =: key] "FILE_RECORD") $ toBSON file
-      --else do
-      withMongoDbConnection $ upsert (select ["filename" =: key] "FILE_RECORD") $ toBSON file
-      return True  -- as this is a simple demo I'm not checking anything
+    uploadFile :: EncryptedMessage -> Handler Bool
+    uploadFile request@(EncryptedMessage userString fileString ticket) = liftIO $ do
+       warnLog $ "This is the request: " ++ (show request)
+       let decryptedTicket =  C.unpack ( decryptECB serverKey (C.pack (padString ticket)))
+       warnLog $ "This is the ticket: " ++ decryptedTicket
+       let key  = initAES (C.pack (padString (decryptedTicket)))
+       let decryptedFile =  C.unpack (decryptECB key (C.pack (padString (fileString))))
+       warnLog $ "This is the file: " ++ decryptedFile
+       let file = read (strip decryptedFile) :: UserFile
+       let filename = getName file
+       warnLog $ "Storing file under name " ++ (filename) ++ "."
+       --if (searchFiles key) == []
+       --    then withMongoDbConnection $ insert_ (select ["filename" =: key] "FILE_RECORD") $ toBSON file
+       --else do
+       time <- getCurrentTime
+       let timestamp = FileTime filename (iso8601 time)
+       withMongoDbConnection $ upsert (select ["filename" =: (strip filename)] "FILE_RECORD") $ toBSON file
+       withMongoDbConnection $ upsert (select ["filename" =: (strip filename)] "TIME_RECORD") $ toBSON timestamp
+       return True  -- as this is a simple demo I'm not checking anything  
 
-    searchFiles :: Maybe String -> Handler [UserFile]
-    searchFiles (Just key) = liftIO $ do
-      warnLog $ "Searching for file for key:" ++ key
+    searchFiles :: EncryptedMessage -> Handler [UserFile]
+    searchFiles request@(EncryptedMessage user file ticket) = liftIO $ do
+      let decryptedTicket = C.unpack (decryptECB serverKey (C.pack(padString (strip ticket))))
+      let key = initAES (C.pack decryptedTicket)
+      let decryptedFile = C.unpack (decryptECB key (C.pack(padString (strip file))))
+      warnLog $ "Searching for file for name:" ++ decryptedFile
 
       files <- withMongoDbConnection $ do
-        docs <- find (select ["filename" =: (strip key)] "FILE_RECORD") >>= drainCursor
+        docs <- find (select ["filename" =: (strip decryptedFile)] "FILE_RECORD") >>= drainCursor
         return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe UserFile) docs
       warnLog $ show files
       return files
-    
-    searchFiles Nothing = liftIO $ do
-      warnLog $ "No key for searching."
-      return $ ([] :: [UserFile])
 
-    fileTypeTwo :: UserRequest -> Handler Bool
-    fileTypeTwo request@(UserRequest userString fileString) = liftIO $ do
-      let userArray = split "|" userString
-      let user = UserInfo (userArray !! 0) (userArray !! 1)
-      let fileArray = split "|" fileString
-      let file = UserFile (fileArray !! 0 ) (fileArray !! 1) (fileArray !! 2) (fileArray !! 3)
-      warnLog $ "Storing file under name " ++ (fileArray !! 0) ++ "."
-      --if (searchFiles key) == []
-      --    then withMongoDbConnection $ insert_ (select ["filename" =: key] "FILE_RECORD") $ toBSON file
-      --else do
-      let timestamp = FileTime (fileArray !! 0) (show(getCurrentTime))
-      withMongoDbConnection $ upsert (select ["filename" =: (fileArray !! 0)] "FILE_RECORD") $ toBSON file
-      withMongoDbConnection $ upsert (select ["filename" =: (fileArray !! 0)] "TIME_RECORD") $ toBSON timestamp
-      return True  -- as this is a simple demo I'm not checking anything  
-    
     fileUpdate :: FileTime -> Handler Bool
     fileUpdate filetime@(FileTime filename time) = liftIO $ do
       timestamp <- withMongoDbConnection $ do
         docs <- find (select ["filename" =: (strip filename)] "TIME_RECORD") >>= drainCursor
-        return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe UserFile) docs
-      warnLog $ show files
-      return files
+        return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe FileTime) docs
+      warnLog $ show timestamp
+      let serverFileTime = timestamp !! 0
+      let lastTime = read (getTime serverFileTime) :: UTCTime
+      let newTime =  read  time :: UTCTime
+      let difference = diffUTCTime newTime lastTime
+      if (difference >= 0)
+        then do
+          return False
+        else do
+          return True
                     
 -- | error stuff
+
+getName :: UserFile -> String
+getName (UserFile name _ _ _ ) = return name !! 0
+
+getTime :: FileTime -> String
+getTime (FileTime _ time) = return time !! 0
+
+padString :: String -> String
+padString input
+      |mod (strLen (input)) 16 == 0 = input
+      |otherwise = padString (input ++ " ")
+
 custom404Error msg = err404 { errBody = msg }
 custom404Error file = err404 { errBody = file }
 

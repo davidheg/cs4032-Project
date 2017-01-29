@@ -39,7 +39,6 @@ file_server = "http://192.168.60.128:8080"
 authentication_server = "http://192.168.60.128:2020"
 currentUser = AuthenticationAPI.UserInfo "" ""
 files = []
-sessionKey = Nothing
 
 mainMethod :: IO()
 mainMethod = do
@@ -83,7 +82,7 @@ polling (x:xs) = do
 
 selectTask :: String -> IO ()
 selectTask parameters
-            |isPrefixOf "uploadFile" parameters = uploadFileType2 (drop 10 parameters)
+            |isPrefixOf "uploadFile" parameters = uploadFile (drop 10 parameters)
             |isPrefixOf "searchFiles" parameters = searchFiles (drop 11 parameters) 
             |parameters == "exit" = exitWith ExitSuccess
 
@@ -124,10 +123,13 @@ login input = do
             Just loginResponse -> do
               let encryptedToken = getToken loginResponse
               let decryptedtoken = unpack (decryptECB key (pack (padString encryptedToken)))
-              let token@(Token ticket key time user) = read decryptedtoken :: Token
-              let userInfo = read user :: AuthenticationAPI.UserInfo
-              let sessionKey = initAES (pack (padString (strip key)))
-              writeFile "UserDetails" ((show userInfo) ++ " " ++ (strip key) ++ (strip (show ticket)))
+              print decryptedtoken
+              let token@(Token ticket key time user) = read (strip decryptedtoken) :: Token
+              let userInfo = read (strip user) :: AuthenticationAPI.UserInfo
+              print ("This is the key on receival: " ++ key)
+              let sessionKey = initAES (pack key)
+              print ("This is the ticket on receival: " ++ ticket)
+              writeFile "UserDetails" ((getUsername userInfo) ++ "|" ++ key ++ "|" ++ (strip ticket))
               print "Login Successful"
             Nothing -> do 
               putStrLn "Login Unsuccessful, please try entering your username and password again"
@@ -150,7 +152,6 @@ searchMessage name = do
 
 storeMessage :: String -> IO()
 storeMessage inputs = do
-                  print (show currentUser)
                   let strings = words inputs
                   let name = strings !! 0
                   let message = strings !! 1
@@ -161,64 +162,50 @@ storeMessage inputs = do
                   withResponse request manager $ \response  -> do
                     outputResponse response
 
-uploadFile :: String -> IO()
-uploadFile inputs = do
-                  let strings = words (strip inputs)
-                  let user = strings !! 0
-                  let path = strings !! 1
-                  let components = split "/" path
-                  let i = length components
-                  let name = components !! (i -1)
-                  putStrLn "Please enter the usernames of anyone you would like to share to the file with"
-                  names <- getLine
-                  let users =  user ++ " " ++ names 
-                  initialRequest <-  parseRequest ("POST " ++ file_server ++ "/uploadFile")
-                  contents <- readFile path
-                  let content = read ("\"" ++ contents ++ "\"") :: String
-                  let newFile = UserFile name path users content
-                  let request = setRequestBodyJSON newFile initialRequest
-                  manager <- getGlobalManager
-                  withResponse request manager $ \response  -> do
-                    outputResponse response
-
 searchFiles :: String -> IO()
 searchFiles filename = do
                 initialRequest <- parseRequest ("POST " ++ file_server ++ "/searchFiles")
                 details <- readFile "UserDetails"
                 let dets = read ("\"" ++ details ++ "\"") :: String
-                let userDetails = words (strip dets)
+                let userDetails = split "|" dets
                 let user = userDetails !! 0
-                let search = SearchFile user filename
+                let key = userDetails !! 1
+                let ticket = userDetails !! 2
+                let sessionKey = initAES (pack key)
+                let encryptedFile = unpack (encryptECB sessionKey (pack (padString (show filename))))  
+                let search = (EncryptedMessage user filename ticket)
                 let request = setRequestBodyJSON search initialRequest
                 manager <- getGlobalManager
                 withResponse request manager $ \response  -> do
                   outputResponse response
 
-uploadFileType2 :: String -> IO()
-uploadFileType2 inputs = do
-                  let strings = words (strip inputs)
-                  let path = strings !! 0
+uploadFile :: String -> IO()
+uploadFile inputs = do
+                  let path = strip inputs
                   let components = split "/" path
                   let i = length components
                   let name = components !! (i -1)
                   details <- readFile "UserDetails"
-                  let dets = read ("\"" ++ details ++ "\"") :: String
-                  let userDetails = words (strip dets)
-                  let user = userDetails !! 0
-                  let key = userDetails !! 1
+                  let userDetails = split "|" details
+                  print userDetails
+                  print (length userDetails)
+                  let user = strip (userDetails !! 0)
+                  let key = (strip (userDetails !! 1))
+                  let ticket = userDetails !! 2
+                  print ("This is the ticket when its loaded from the file: " ++ ticket)
                   putStrLn "Please enter the usernames of anyone you would like to share to the file with"
                   names <- getLine
                   let users = user ++ " " ++ names 
-                  initialRequest <-  parseRequest ("POST " ++ file_server ++ "/fileTypeTwo")
+                  initialRequest <-  parseRequest ("POST " ++ file_server ++ "/uploadFile")
                   contents <- readFile path
-                  let content = read ("\"" ++ contents ++ "\"") :: String
-                  let newFile = UserFile name path users content
-                  let sessionKey = initAES (pack (padString key)) 
+                  let newFile = (UserFile name path users contents)
+                  print ("This is the key after being loaded from the file: " ++ key)
+                  let sessionKey = initAES (pack key) 
                   let encryptedFile = unpack (encryptECB sessionKey (pack (padString (show newFile))))
-                  let userRequest = UserRequest user encryptedFile
+                  let userRequest = (EncryptedMessage user encryptedFile ticket)
                   let request = setRequestBodyJSON userRequest initialRequest
                   currentTime <- getCurrentTime
-                  let newUploaded = FileTime name (getTime currentTime)
+                  let newUploaded = (FileTime name (getTime currentTime))
                   let files = addFile files newUploaded
                   manager <- getGlobalManager
                   withResponse request manager $ \response  -> do
@@ -246,6 +233,9 @@ doRestCall Nothing = do
 getUsernames :: String -> String -> [String]
 getUsernames user [] = return user
 getUsernames user names = merge [user] (words (strip names))
+
+getUsername :: AuthenticationAPI.UserInfo -> String
+getUsername (AuthenticationAPI.UserInfo name _) = return name !! 0
 
 getName :: FileTime -> String
 getName _ = ""

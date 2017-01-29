@@ -39,6 +39,8 @@ library
                      , use-haskell-api
                      , MissingH
                      , json
+                     , cipher-aes
+                     , strings
   default-language:    Haskell2010
 
 executable use-haskell-exe
