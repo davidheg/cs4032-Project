@@ -378,9 +378,9 @@ server = loadEnvironmentVariable
 
     searchFiles :: EncryptedMessage -> Handler [UserFile]
     searchFiles request@(EncryptedMessage user file ticket) = liftIO $ do
-      let decryptedTicket = C.unpack (decryptECB serverKey (C.pack(padString (strip ticket))))
-      let key = initAES (C.pack decryptedTicket)
-      let decryptedFile = C.unpack (decryptECB key (C.pack(padString (strip file))))
+      let decryptedTicket =  C.unpack ( decryptECB serverKey (C.pack (padString ticket)))
+      let key  = initAES (C.pack (padString (decryptedTicket)))
+      let decryptedFile =  C.unpack (decryptECB key (C.pack (padString file)))
       warnLog $ "Searching for file for name:" ++ decryptedFile
 
       files <- withMongoDbConnection $ do

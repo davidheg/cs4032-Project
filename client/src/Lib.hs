@@ -162,16 +162,15 @@ storeMessage inputs = do
 
 searchFiles :: String -> IO()
 searchFiles filename = do
-                initialRequest <- parseRequest ("POST " ++ file_server ++ "/searchFiles")
+                initialRequest <- parseRequest ("GET " ++ file_server ++ "/searchFiles")
                 details <- readFile "UserDetails"
-                let dets = read ("\"" ++ details ++ "\"") :: String
-                let userDetails = split "|" dets
-                let user = userDetails !! 0
-                let key = userDetails !! 1
+                let userDetails = split "|" details
+                let user =strip (userDetails !! 0)
+                let key = (strip (userDetails !! 1))
                 let ticket = userDetails !! 2
                 let sessionKey = initAES (pack key)
-                let encryptedFile = unpack (encryptECB sessionKey (pack (padString (show filename))))  
-                let search = (EncryptedMessage user filename ticket)
+                let encryptedFile = unpack (encryptECB sessionKey (pack (padString (strip filename))))  
+                let search = (EncryptedMessage user encryptedFile ticket)
                 let request = setRequestBodyJSON search initialRequest
                 manager <- getGlobalManager
                 withResponse request manager $ \response  -> do
@@ -185,8 +184,6 @@ uploadFile inputs = do
                   let name = components !! (i -1)
                   details <- readFile "UserDetails"
                   let userDetails = split "|" details
-                  print userDetails
-                  print (length userDetails)
                   let user = strip (userDetails !! 0)
                   let key = (strip (userDetails !! 1))
                   let ticket = userDetails !! 2
