@@ -51,11 +51,11 @@ packages:
       commit: e078def65d0dee1ea7e3205f445e47d5937851f3
   - location:
       git: https://github.com/davidheg/Cs4032-use-haskell-api.git
-      commit: 5a4d92d835abab498c32b86258b9a8e1fbbf65f0
+      commit: 04832e9f8ae7f6d4bf81e9f4923f49e38355e196
 
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)
-extra-deps: [strings-1.1]
+extra-deps: [strings-1.1, random-strings-0.1.1.0]
 
 
 # Override default flag values for local packages and extra-deps

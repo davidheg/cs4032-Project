@@ -10,6 +10,7 @@ module Lib
 
 import qualified Data.ByteString           as S
 import Data.ByteString.Char8     (pack, unpack)
+import qualified Data.ByteString.Lazy.Char8 as L
 import Network.HTTP
 import Network.HTTP.Simple
 import Network.HTTP.Client
@@ -21,6 +22,7 @@ import Data.Aeson
 import GHC.Generics
 import Data.List
 import Data.List.Utils
+import Data.Maybe
 import Data.Strings
 import System.Exit
 import UseHaskellAPI
@@ -35,8 +37,9 @@ ip_address = "192.168.60.128"
 port_number = 8080
 file_server = "http://192.168.60.128:8080"
 authentication_server = "http://192.168.60.128:2020"
-currentUser = AuthenticationAPI.UserInfo "davidheg" "distro"
+currentUser = AuthenticationAPI.UserInfo "" ""
 files = []
+sessionKey = Nothing
 
 mainMethod :: IO()
 mainMethod = do
@@ -54,20 +57,20 @@ mainMethod = do
               login details
           manager <- newManager tlsManagerSettings
           setGlobalManager manager
-          let check = forkIO pollServer
-          startLoop
+          let check = forkIO pollServer 
+          startLoop 
 
 startLoop :: IO ()
 startLoop = do
            putStrLn "Please enter what task you wish to perform"
            name <- getLine
-           selectTask name
+           selectTask name 
            startLoop
 
 pollServer :: IO ()
 pollServer = do
-                polling files
-                pollServer
+            polling files
+            pollServer
 
 polling :: [FileTime] -> IO ()
 polling [] = return ()
@@ -81,7 +84,7 @@ polling (x:xs) = do
 selectTask :: String -> IO ()
 selectTask parameters
             |isPrefixOf "uploadFile" parameters = uploadFileType2 (drop 10 parameters)
-            |isPrefixOf "searchFiles" parameters = searchFiles (drop 11 parameters)
+            |isPrefixOf "searchFiles" parameters = searchFiles (drop 11 parameters) 
             |parameters == "exit" = exitWith ExitSuccess
 
 outputResponse ::Network.HTTP.Client.Response BodyReader -> IO ()
@@ -108,15 +111,28 @@ register input = do
 login :: String -> IO ()
 login input = do
           let inputs = words (strip input)
-          let key =  initAES (pack( padString (inputs !! 1)))
+          let key =  initAES (pack (padString (inputs !! 1)))
           let currentUser = AuthenticationAPI.UserInfo (inputs !! 0) (inputs !! 1)
           let password = unpack (encryptECB key (pack (padString (inputs !! 1))))
-          let loginReq = LoginRequest password (inputs !! 0)
+          let loginReq = LoginRequest (show (AuthenticationAPI.UserInfo (inputs !! 0) password))
           initialRequest <-  parseRequest ("GET " ++ authentication_server ++ "/login")
           let request = setRequestBodyJSON loginReq initialRequest
           manager <- getGlobalManager
-          withResponse request manager $ \response  -> do
-            outputResponse response 
+          response <- Network.HTTP.Client.httpLbs request manager   
+          let loginMonad = (decode ((responseBody response))) :: Maybe LoginResponse 
+          case loginMonad of
+            Just loginResponse -> do
+              let encryptedToken = getToken loginResponse
+              let decryptedtoken = unpack (decryptECB key (pack (padString encryptedToken)))
+              let token@(Token ticket key time user) = read decryptedtoken :: Token
+              let userInfo = read user :: AuthenticationAPI.UserInfo
+              let sessionKey = initAES (pack (padString (strip key)))
+              writeFile "UserDetails" ((show userInfo) ++ " " ++ (strip key) ++ (strip (show ticket)))
+              print "Login Successful"
+            Nothing -> do 
+              putStrLn "Login Unsuccessful, please try entering your username and password again"
+              inputs <- getLine
+              login inputs
 
 getReadme ::IO ()
 getReadme = do 
@@ -134,6 +150,7 @@ searchMessage name = do
 
 storeMessage :: String -> IO()
 storeMessage inputs = do
+                  print (show currentUser)
                   let strings = words inputs
                   let name = strings !! 0
                   let message = strings !! 1
@@ -159,14 +176,20 @@ uploadFile inputs = do
                   contents <- readFile path
                   let content = read ("\"" ++ contents ++ "\"") :: String
                   let newFile = UserFile name path users content
-                  let request= setRequestBodyJSON newFile initialRequest
+                  let request = setRequestBodyJSON newFile initialRequest
                   manager <- getGlobalManager
                   withResponse request manager $ \response  -> do
                     outputResponse response
 
 searchFiles :: String -> IO()
 searchFiles filename = do
-                request <- parseRequest (file_server ++ "/searchFiles?filename=" ++ filename)
+                initialRequest <- parseRequest ("POST " ++ file_server ++ "/searchFiles")
+                details <- readFile "UserDetails"
+                let dets = read ("\"" ++ details ++ "\"") :: String
+                let userDetails = words (strip dets)
+                let user = userDetails !! 0
+                let search = SearchFile user filename
+                let request = setRequestBodyJSON search initialRequest
                 manager <- getGlobalManager
                 withResponse request manager $ \response  -> do
                   outputResponse response
@@ -178,16 +201,22 @@ uploadFileType2 inputs = do
                   let components = split "/" path
                   let i = length components
                   let name = components !! (i -1)
+                  details <- readFile "UserDetails"
+                  let dets = read ("\"" ++ details ++ "\"") :: String
+                  let userDetails = words (strip dets)
+                  let user = userDetails !! 0
+                  let key = userDetails !! 1
                   putStrLn "Please enter the usernames of anyone you would like to share to the file with"
                   names <- getLine
-                  let users =  "davidheg" ++ " " ++ names 
+                  let users = user ++ " " ++ names 
                   initialRequest <-  parseRequest ("POST " ++ file_server ++ "/fileTypeTwo")
                   contents <- readFile path
                   let content = read ("\"" ++ contents ++ "\"") :: String
-                  let newFile = name ++ "|" ++ path ++ "|" ++ users ++ "|" ++ content
-                  let user = "davidheg|distro"
-                  let userRequest = UserRequest user newFile
-                  let request= setRequestBodyJSON userRequest initialRequest
+                  let newFile = UserFile name path users content
+                  let sessionKey = initAES (pack (padString key)) 
+                  let encryptedFile = unpack (encryptECB sessionKey (pack (padString (show newFile))))
+                  let userRequest = UserRequest user encryptedFile
+                  let request = setRequestBodyJSON userRequest initialRequest
                   currentTime <- getCurrentTime
                   let newUploaded = FileTime name (getTime currentTime)
                   let files = addFile files newUploaded
@@ -233,3 +262,6 @@ padString :: String -> String
 padString input
       |mod (strLen (input)) 16 == 0 = input
       |otherwise = padString (input ++ " ")
+
+getToken :: LoginResponse -> String
+getToken (LoginResponse token) = return token !! 0

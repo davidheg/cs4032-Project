@@ -67,6 +67,8 @@ import           System.Log.Handler.Simple
 import           System.Log.Handler.Syslog
 import           System.Log.Logger
 
+server-authentication-key = initAES pack("DistroServerKey ")
+
 -- | The Servant library has a very elegant model for defining a REST API. We shall demonstrate here. First, we shall
 -- define the data types that will be passed in the REST calls. We will define a simple data type that passes some data
 -- from client to the server first. There is nothing special about the data being passed - this is a demonstration
@@ -391,7 +393,6 @@ server = loadEnvironmentVariable
       --else do
       let timestamp = FileTime (fileArray !! 0) (show(getCurrentTime))
       withMongoDbConnection $ upsert (select ["filename" =: (fileArray !! 0)] "FILE_RECORD") $ toBSON file
-      withMongoDbConnection $ upsert (select ["username" =: (userArray !! 0)] "USER_RECORD") $ toBSON user
       withMongoDbConnection $ upsert (select ["filename" =: (fileArray !! 0)] "TIME_RECORD") $ toBSON timestamp
       return True  -- as this is a simple demo I'm not checking anything  
     

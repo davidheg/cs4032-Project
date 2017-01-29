@@ -40,6 +40,8 @@ library
                      , cipher-aes
                      , strings
                      , MissingH
+                     , random-strings
+                     , random
   default-language:    Haskell2010
 
 executable authentication-server-exe

@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-27 23:54:19.808668 UTC
+2017-01-28 19:23:04.504507 UTC
 
 interface main@main:Main 8001
-  interface hash: c3da7f2251c6d885874087e302a94b3e
-  ABI hash: 401091489b7624af0eddd6a17d24fe6c
-  export-list hash: cee1eb3f747ec5117656dc04964dbc2c
+  interface hash: 071b6b9370989d500660e713f2b345b9
+  ABI hash: 6206112a313132d33654d7ae804e6de7
+  export-list hash: 09ffa8a3312b220ab5527cdee572381a
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: f7544585fdec1fc2a5170c5c30f0c3a9
   sig of: Nothing
@@ -21,7 +21,7 @@ package dependencies: MissingH-1.4.0.1@MissingH-1.4.0.1-Fzdg8PAf99l9XGL8cb9djB
                       array-0.5.1.1@array-0.5.1.1
                       async-2.1.1@async-2.1.1-xFiBzw9xoB8HPZAuxUY2o
                       attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR
-                      authentication-server-0.1.0.0@authentication-server-0.1.0.0-IzU5vb9vjCQA9EmYK15YfI
+                      authentication-server-0.1.0.0@authentication-server-0.1.0.0-XPSZPS4u205VErnTRs4yd
                       auto-update-0.1.4@auto-update-0.1.4-GAesfFmqoZzBz6e09kRyzb
                       base-4.9.0.0
                       base-compat-0.9.1@base-compat-0.9.1-tmPpmtbHbvIDjFWbkjGrR
@@ -83,6 +83,7 @@ package dependencies: MissingH-1.4.0.1@MissingH-1.4.0.1-Fzdg8PAf99l9XGL8cb9djB
                       psqueues-0.2.2.3@psqueues-0.2.2.3-YN2xKllZOMJLtAgRHlkEw
                       random-1.1@random-1.1-54KmMHXjttlERYcr1mvsAe
                       random-shuffle-0.0.4@random-shuffle-0.0.4-LfeDYNPfwrQ2o9p6tw2M9l
+                      random-strings-0.1.1.0@random-strings-0.1.1.0-5TyFQmdTBCAJuQzON3AMYl
                       regex-base-0.93.2@regex-base-0.93.2-4lnOy3Rb1yfISFVEXVfJuH
                       regex-compat-0.95.1@regex-compat-0.95.1-JPDhOGKcrkD8S1t3VsLLUt
                       regex-posix-0.95.2@regex-posix-0.95.2-Fy6xYMm8dnjHHt23b8RdmR
@@ -150,7 +151,7 @@ orphans: MonadRandom-0.4.2.3@MonadRandom-0.4.2.3-8TfCm6PGvGYB7omozORhov:Control.
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Fusion.Bundle
          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
 family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzFS6V3sZR:Data.Attoparsec.Internal.Types
-                         authentication-server-0.1.0.0@authentication-server-0.1.0.0-IzU5vb9vjCQA9EmYK15YfI:RestClient
+                         authentication-server-0.1.0.0@authentication-server-0.1.0.0-XPSZPS4u205VErnTRs4yd:RestClient
                          base-4.9.0.0:Control.Applicative base-4.9.0.0:Data.Complex
                          base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Compose
                          base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
@@ -203,7 +204,7 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
-import  -/  authentication-server-0.1.0.0@authentication-server-0.1.0.0-IzU5vb9vjCQA9EmYK15YfI:Lib e007ef29d801a22fdf3d9171d5119fb8
+import  -/  authentication-server-0.1.0.0@authentication-server-0.1.0.0-XPSZPS4u205VErnTRs4yd:Lib c6992106b53d779c218220cc726c81b3
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
 d6831ef04cb9301b090dfae6f7bb7ec7
@@ -218,12 +219,12 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-aa9f96de3dfe93d68bc464ef858c8efb
+de1272e04adafd0bdd6ff2e6d254694f
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.startApp1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-fbac9810af375a45e503066aa63f2e3d
+568f3fa8d060b5c84d52b29f0e834604
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)

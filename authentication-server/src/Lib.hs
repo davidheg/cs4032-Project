@@ -68,7 +68,10 @@ import           System.Log.Handler           (setFormatter)
 import           System.Log.Handler.Simple
 import           System.Log.Handler.Syslog
 import           System.Log.Logger
+import           System.Random
+import           Test.RandomStrings
 
+server-authentication-key = initAES pack("DistroServerKey ")
 -- | The Servant library has a very elegant model for defining a REST API. We shall demonstrate here. First, we shall
 -- define the data types that will be passed in the REST calls. We will define a simple data type that passes some data
 -- from client to the server first. There is nothing special about the data being passed - this is a demonstration
@@ -174,13 +177,14 @@ api = Proxy
 -- not be so. To add a news endpoint, define it in type API above, and add and implement a handler here.
 server :: Server API
 server = login
-    :<|> register
+    :<|> register   
   
   where
     login :: LoginRequest -> Handler (Maybe LoginResponse)
     login request@(LoginRequest userInfo) = liftIO $ do
       let user = read userInfo :: UserInfo
-
+      let key = getName user
+      let pass = getPass user
       warnLog $ "Searching for user for username: " ++ key
       users <- withMongoDbConnection $ do
           docs <- find (select ["username" =: (strip key)] "USER_RECORD") >>= drainCursor
@@ -195,7 +199,14 @@ server = login
           let sentPass = decryptDataType pass password
           if sentPass == password 
             then do
-              let token = encrypt (show (Token "ticket" "key" "timeout" (show users)))
+              g <- getStdGen
+              randString <- randomString randomChar8 16
+              let byteString = C.pack (padString randString)
+              let key = initAES (C.pack(padString password))
+              let stringToken = show (Token "ticket" randString "timeout" (show users))
+              let byteToken = C.pack (padString stringToken)
+              let encryptedToken = encryptECB key byteToken
+              let token = C.unpack encryptedToken
               let response = Just (LoginResponse token)
               return response
             else do
@@ -215,7 +226,7 @@ server = login
       return True  -- as this is a simple demo I'm not checking anything
 
 getName:: UserInfo -> String
-getPassword (UserInfo username _) = return username !! 0
+getName (UserInfo username _) = return username !! 0
 
 getPassword :: [UserInfo] -> String
 getPassword (x:xs) = getPass x
