@@ -1,0 +1,19 @@
+[1 of 1] Compiling Main             ( /tmp/stack19334/concurrent-extra-0.7.0.10/Setup.hs, /tmp/stack19334/concurrent-extra-0.7.0.10/.stack-work/dist/x86_64-linux/Cabal-1.24.0.0/setup/Main.o )
+Linking /tmp/stack19334/concurrent-extra-0.7.0.10/.stack-work/dist/x86_64-linux/Cabal-1.24.0.0/setup/setup ...
+Configuring concurrent-extra-0.7.0.10...
+Building concurrent-extra-0.7.0.10...
+Preprocessing library concurrent-extra-0.7.0.10...
+[1 of 8] Compiling Utils            ( Utils.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Utils.o )
+[2 of 8] Compiling Control.Concurrent.Lock ( Control/Concurrent/Lock.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Control/Concurrent/Lock.o )
+[3 of 8] Compiling Control.Concurrent.STM.Lock ( Control/Concurrent/STM/Lock.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Control/Concurrent/STM/Lock.o )
+
+Control/Concurrent/STM/Lock.hs:4:14: warning: [-Wtrustworthy-safe]
+    ‘Control.Concurrent.STM.Lock’ is marked as Trustworthy but has been inferred as safe!
+[4 of 8] Compiling Control.Concurrent.RLock ( Control/Concurrent/RLock.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Control/Concurrent/RLock.o )
+[5 of 8] Compiling Control.Concurrent.Broadcast ( Control/Concurrent/Broadcast.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Control/Concurrent/Broadcast.o )
+[6 of 8] Compiling Control.Concurrent.Event ( Control/Concurrent/Event.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Control/Concurrent/Event.o )
+[7 of 8] Compiling Control.Concurrent.ReadWriteLock ( Control/Concurrent/ReadWriteLock.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Control/Concurrent/ReadWriteLock.o )
+[8 of 8] Compiling Control.Concurrent.ReadWriteVar ( Control/Concurrent/ReadWriteVar.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Control/Concurrent/ReadWriteVar.o )
+Installing library in
+/home/dheg/.stack/snapshots/x86_64-linux/lts-7.12/8.0.1/lib/x86_64-linux-ghc-8.0.1/concurrent-extra-0.7.0.10-G3ufVyesTVkE2oT9UI4NqL
+Registering concurrent-extra-0.7.0.10...

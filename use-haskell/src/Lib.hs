@@ -394,6 +394,7 @@ server = loadEnvironmentVariable
 
     fileUpdate :: FileTime -> Handler Bool
     fileUpdate filetime@(FileTime filename time) = liftIO $ do
+      warnLog $ "Searching for update file for name:" ++ filename
       timestamp <- withMongoDbConnection $ do
         docs <- find (select ["filename" =: (strip filename)] "TIME_RECORD") >>= drainCursor
         return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe FileTime) docs

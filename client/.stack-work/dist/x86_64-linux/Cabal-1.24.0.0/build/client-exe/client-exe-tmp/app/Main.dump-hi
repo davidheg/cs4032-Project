@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2017-01-27 23:31:46.537298 UTC
+2017-02-02 15:58:05.457685 UTC
 
 interface main@main:Main 8001
-  interface hash: 6f50d8b4ca08ff81f10b53216bd2072a
-  ABI hash: 44bd8a4cebe76fdfb689bce7cedfc32e
-  export-list hash: 84e3b0b4d6406e53b44d5b202b9a0980
+  interface hash: 1bdb91f32932a78c9e4ee1e68ee2c51c
+  ABI hash: 07f8709d7c56f3c6c65aed4aa1f4a1e0
+  export-list hash: 65883865b0da604ba55e28310278e49d
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: df440aaab301f2489aff57c04e5ae4f0
   sig of: Nothing
@@ -37,7 +37,7 @@ package dependencies: HTTP-4000.3.3@HTTP-4000.3.3-JMFhmeoXqbBIjfEWxmijf9
                       case-insensitive-1.2.0.7@case-insensitive-1.2.0.7-FlqweN7AuKj9EdU2arVEt4
                       cereal-0.5.4.0@cereal-0.5.4.0-2FJYHGgtE5C3SxaZjt25xS
                       cipher-aes-0.2.11@cipher-aes-0.2.11-6IDqXzfBW6B3WK2bKJbiBh
-                      client-0.1.0.0@client-0.1.0.0-KOko9VJA9Vl5nHt3BPx4AP
+                      client-0.1.0.0@client-0.1.0.0-9cjYNSvdOZ8F53xlxteszp
                       conduit-1.2.8@conduit-1.2.8-5FcKXI45VDc6lGPbFuJAWM
                       conduit-extra-1.1.15@conduit-extra-1.1.15-53svZ1V22a02WgMiq2YICw
                       connection-0.2.6@connection-0.2.6-HdqI1haOFiwKHVrIKjItoA
@@ -97,6 +97,7 @@ package dependencies: HTTP-4000.3.3@HTTP-4000.3.3-JMFhmeoXqbBIjfEWxmijf9
                       tls-1.3.8@tls-1.3.8-5FNpX1ar5fUDvPXr9oTBwU
                       transformers-0.5.2.0@transformers-0.5.2.0
                       transformers-base-0.4.4@transformers-base-0.4.4-25SoAegOdaF8rLEnnb5jPI
+                      unbounded-delays-0.1.0.9@unbounded-delays-0.1.0.9-CXTixMaSYyFHs5PPXksFYo
                       unix-2.7.2.0@unix-2.7.2.0
                       unix-compat-0.4.2.0@unix-compat-0.4.2.0-GNHotEMWE5dJ4oYFhgibIV
                       unordered-containers-0.2.7.1@unordered-containers-0.2.7.1-Eo9jd5DMz45DhBLCG8skzW
@@ -192,7 +193,7 @@ family instance modules: attoparsec-0.13.1.0@attoparsec-0.13.1.0-5Olk1S76r1CDYzF
                          vector-0.11.0.0@vector-0.11.0.0-BEDZb5o2QOhGbIm6ky7rl6:Data.Vector.Unboxed.Base
                          zlib-0.6.1.2@zlib-0.6.1.2-4CWLN1T27kOJhNvXgy46ZV:Codec.Compression.Zlib.Stream
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
-import  -/  client-0.1.0.0@client-0.1.0.0-KOko9VJA9Vl5nHt3BPx4AP:Lib 8d9ecd7ba4f27e5ea72d2d6187e694ca
+import  -/  client-0.1.0.0@client-0.1.0.0-9cjYNSvdOZ8F53xlxteszp:Lib d26250a1215cfeaa3f2c776577bbf1c1
 import  -/  ghc-prim-0.5.0.0:GHC.Types 7378e41b7749213c8c88ceb6b0665d4c
 d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule :: GHC.Types.Module
@@ -206,12 +207,12 @@ d6831ef04cb9301b090dfae6f7bb7ec7
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "main"#) -}
-fe2ba5b8567e52aadebaaae38e09a07d
+d0a939e64f458a251658bf8d6c613d3d
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Lib.mainMethod1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-5664a062c70eff3fa1f96d5328e9f498
+5996fc46e9157fa208a8ceb09ab06cc3
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)

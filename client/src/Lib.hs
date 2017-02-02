@@ -29,6 +29,7 @@ import UseHaskellAPI
 import AuthenticationAPI
 import Data.String.Utils
 import Control.Concurrent
+import Control.Concurrent.Thread.Delay
 import Data.Time.Clock 
 import Data.Time.Format
 import Crypto.Cipher.AES
@@ -55,7 +56,6 @@ mainMethod = do
               putStrLn "Please enter your username and password"
               details <- getLine
               login details
-          let check = forkIO pollServer 
           startLoop 
 
 startLoop :: IO ()
@@ -65,33 +65,28 @@ startLoop = do
            selectTask name 
            startLoop
 
-pollServer :: IO ()
-pollServer = do
-            print "Polling"
-            contents <- readFile "FilesUploaded"
-            if contents == ""
-              then do
-                return ()
-              else do
-                let files = split "|" contents 
-                polling files
-            pollServer
-
-polling :: [String] -> IO ()
-polling (x:xs) = do 
-            let file = read x :: FileTime
-            let filename = getName file
-            request <- parseRequest (file_server ++ "/updatedFiles?filename=" ++ filename)
+pollServer :: FileTime -> IO ()
+pollServer file= do
+            initialRequest <- parseRequest (file_server ++ "/fileUpdate")
+            let request = setRequestBodyJSON file initialRequest
             manager <- getGlobalManager
             response <- Network.HTTP.Client.httpLbs request manager   
             let serverMonad = (decode ((responseBody response))) :: Maybe Bool
             case serverMonad of
               Just severResponse -> do
                 if severResponse == True
-                  then searchFiles filename
-                  else return ()
-              Nothing -> do 
-                return ()
+                  then do
+                    let filename = getName file
+                    searchFiles filename
+                    delay 10000000
+                    pollServer file
+                  else do
+                    delay 10000000
+                    pollServer file
+              Nothing -> do  
+                delay 10000000
+                pollServer file
+                    
 
 
 selectTask :: String -> IO ()
@@ -222,14 +217,15 @@ uploadFile inputs = do
               let request = setRequestBodyJSON userRequest initialRequest
               currentTime <- getCurrentTime
               let newUploaded = (FileTime name (getTime currentTime))
-              addFile newUploaded
               manager <- getGlobalManager
               response <- Network.HTTP.Client.httpLbs request manager   
               let serverMonad = (decode ((responseBody response))) :: Maybe Bool 
               case serverMonad of
                 Just severResponse -> do
                   if severResponse == True
-                    then print "Upload Successful"
+                    then do 
+                      forkIO (pollServer newUploaded)
+                      print "Upload Successful"
                     else print "Upload Unsuccessful"
                 Nothing -> do 
                   print "Upload Unsuccessful"
@@ -270,7 +266,7 @@ getUsername (AuthenticationAPI.UserInfo name _) = return name !! 0
 
 getName :: FileTime -> String
 getName _ = ""
-getName (FileTime name _) = name
+getName (FileTime name _) = return name !! 0
 
 getFile :: EncryptedReponse -> String
 getFile (EncryptedReponse user file) = return file !! 0

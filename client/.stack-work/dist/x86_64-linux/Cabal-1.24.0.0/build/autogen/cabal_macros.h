@@ -49,6 +49,13 @@
   (major1) == 0 && (major2) <  2 || \
   (major1) == 0 && (major2) == 2 && (minor) <= 11)
 
+/* package concurrent-extra-0.7.0.10 */
+#define VERSION_concurrent_extra "0.7.0.10"
+#define MIN_VERSION_concurrent_extra(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  7 || \
+  (major1) == 0 && (major2) == 7 && (minor) <= 0)
+
 /* package http-client-0.4.31.2 */
 #define VERSION_http_client "0.4.31.2"
 #define MIN_VERSION_http_client(major1,major2,minor) (\
@@ -104,6 +111,13 @@
   (major1) <  1 || \
   (major1) == 1 && (major2) <  6 || \
   (major1) == 1 && (major2) == 6 && (minor) <= 0)
+
+/* package unbounded-delays-0.1.0.9 */
+#define VERSION_unbounded_delays "0.1.0.9"
+#define MIN_VERSION_unbounded_delays(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  1 || \
+  (major1) == 0 && (major2) == 1 && (minor) <= 0)
 
 /* package use-haskell-api-0.1.0.0 */
 #define VERSION_use_haskell_api "0.1.0.0"
@@ -168,7 +182,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "client-0.1.0.0-KOko9VJA9Vl5nHt3BPx4AP"
+#define CURRENT_COMPONENT_ID "client-0.1.0.0-9cjYNSvdOZ8F53xlxteszp"
 
-#define CURRENT_PACKAGE_KEY "client-0.1.0.0-KOko9VJA9Vl5nHt3BPx4AP"
+#define CURRENT_PACKAGE_KEY "client-0.1.0.0-9cjYNSvdOZ8F53xlxteszp"
 
