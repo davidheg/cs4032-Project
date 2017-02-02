@@ -376,7 +376,7 @@ server = loadEnvironmentVariable
        withMongoDbConnection $ upsert (select ["filename" =: (strip filename)] "TIME_RECORD") $ toBSON timestamp
        return True  -- as this is a simple demo I'm not checking anything  
 
-    searchFiles :: EncryptedMessage -> Handler [UserFile]
+    searchFiles :: EncryptedMessage -> Handler EncryptedReponse
     searchFiles request@(EncryptedMessage user file ticket) = liftIO $ do
       let decryptedTicket =  C.unpack ( decryptECB serverKey (C.pack (padString ticket)))
       let key  = initAES (C.pack (padString (decryptedTicket)))
@@ -387,7 +387,10 @@ server = loadEnvironmentVariable
         docs <- find (select ["filename" =: (strip decryptedFile)] "FILE_RECORD") >>= drainCursor
         return $ catMaybes $ DL.map (\ b -> fromBSON b :: Maybe UserFile) docs
       warnLog $ show files
-      return files
+      let file = (files !! 0)
+      let encryptedFile = C.unpack (encryptECB key (C.pack (padString (show file))))
+      let response = (EncryptedReponse user encryptedFile)
+      return response
 
     fileUpdate :: FileTime -> Handler Bool
     fileUpdate filetime@(FileTime filename time) = liftIO $ do

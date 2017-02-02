@@ -51,7 +51,7 @@ packages:
       commit: e078def65d0dee1ea7e3205f445e47d5937851f3
   - location:
       git: https://github.com/davidheg/Cs4032-use-haskell-api.git
-      commit: 7a691163585d7cfd3a0c5b00efc51151ed451ef3
+      commit: 1643eafc3a0117e2da5a95ea21bb0f278a11bcd6
 
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)
