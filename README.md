@@ -60,7 +60,18 @@ and sent to the lock server. Once a user was done with a lock, they would return
 user. 
 
 ## Implementation 
+For my implementation of the datatypes that would be used to store information e.g. Files, while being sent between the servers and clients,
+when sending more than one as a time I would create a datatype that would contain varaibles that would be of the types that I wanted to send
+e.g. EncryptedRequest would contain a file type and a user type. However, this approach was unsuccesfull, as I was unable to create a method
+to convert my custom datatypes to and from Bson. Thus, all custom types stored within other types are stored as strings, and are 
+converted back into their actual datatype on arrival.
 
+Concerning the encryption of the communication between the clients and servers, the actual JSON bodies of messages are not encrypted
+but rather the contents of each datatype are encrypted as string, then converted into JSONS and added to messages. On arrival, they
+are then converted back into their datatype, and the contents are decrypted back into their normal form. If these strings 
+represent custom datatypes, they are converted into their actual datatypes. 
+
+All information stored on a server are recorded in a MONGO database unique to each server.
 
 ##API
-Please see https://github.com/davidheg/Cs4032-use-haskell-api for the servant API that was used for this project 
+Please see https://github.com/davidheg/Cs4032-use-haskell-api for the servant APIs that was used for this project 
